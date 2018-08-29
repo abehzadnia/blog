@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bayesian Statistics on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
+    <link>/post/statistics/bayesian/</link>
+    <description>Recent content in Bayesian Statistics on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/statistics/bayesian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction</title>
+      <link>/post/statistics/bayesian/1-introduction/bayesian-introduction/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/bayesian/1-introduction/bayesian-introduction/</guid>
+      <description>Bayes Rule in the discrete form, which allows us to calculate the probability of an event A given event B. This is what is called a conditional probability, and we will be working with conditional probabilities a whole lot in this module and also in the remainder of this course. One example of a conditional probability is the false positive or false negative rate of a medical test.
+\[P(A|B)= \frac{P(A\bigcap B)}{P(B)}\]</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+---
+title: Continuous Probability Distribution
+author: Alireza Behzadnia
+date: '2018-03-12'
+slug: probability_continuous_distribution
+categories: []
+tags: []
+
+---
+
+If a random variable is continuous, its probability distribution is called a continuous probability distribution.
+
+### Recap
+
+- P(X = x) is **zero** if our X is continuous
+- Continuous probability distributions **cannot** be tabulated
+    - It's conceptually impossible: we would need to have an infinite number of rows and columns to account for every single *P* between 0-1, which is infinite.
+    - This is well demonstrated in the * **Zeno's Paradox** *. Read more about [Zeno of Elea's Paradox](https://plato.stanford.edu/entries/paradox-zeno/)
+- We use PDF to calculate the density function of a probability that lies between *a* and *b*.

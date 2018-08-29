@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discrete Probability Distribution on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
+    <link>/post/statistics/probability/discrete-probability-distributions/</link>
+    <description>Recent content in Discrete Probability Distribution on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 12 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/statistics/probability/discrete-probability-distributions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Binomial Distribution</title>
+      <link>/post/statistics/probability/discrete-probability-distributions/binomial-distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/discrete-probability-distributions/binomial-distribution/</guid>
+      <description>For us to be able to use a binomial distribution, our data must come from a binomial experiment where:
+\(n\) = fixed number of trialsTrials must be independentEach trial has two possible outcome where:P(sucess) = constant for each trialP(failure) = 1 - P(sucess)ExampleKehjistanian scientists have identified the gene NPHLM on the locus 14p.61 which predisposes children to a certain lifestyle.</description>
+    </item>
+    
+    <item>
+      <title>Bernoulli distribution</title>
+      <link>/post/statistics/probability/discrete-probability-distributions/bernoulli-distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/discrete-probability-distributions/bernoulli-distribution/</guid>
+      <description>The most widely known discrete probability distribution that you probably have used but didn’t know what’s it called is: Bernoulli distribution.
+Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes which are boolean-valued discrete random variable (k=1 or k=0
+Unlike the binomial distribution, the Bernoulli distribution is only concerned with a single trial (n=1) special case of the Binomial distribution where a single experiment/trial is conducted (n=1)</description>
+    </item>
+    
+    <item>
+      <title>Discrete Probability Distribution</title>
+      <link>/post/statistics/probability/discrete-probability-distributions/probability_discrete_distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/discrete-probability-distributions/probability_discrete_distribution/</guid>
+      <description>Probability distributions demonstrate the probability of an event. As discussed before, depending on the type of the data we are interested in, the probability mass function of the event can come from various distributions.
+In this section we will discuss few famous discrete probability distributions. We won’t be talking about anything else (such as fitting our data) except for the distribution themselves.
+The most important discrete probability distributions are the Bernoulli, Binomial and Poisson distributions.</description>
+    </item>
+    
+  </channel>
+</rss>

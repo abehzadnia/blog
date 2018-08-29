@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Binomial on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
+    <link>/tags/binomial/</link>
+    <description>Recent content in Binomial on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 12 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/binomial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Discrete Probability Distribution</title>
+      <link>/post/statistics/probability/probability_discrete_distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
+      <description>Probability distributions demonstrate the probability of an event. When dealing with discrete data, probability mass function of the event can come from various distributions. The most important discrete probability distributions are the Bernoulli, Binomial and Poisson.
+Bernoulli distributionThe most widely known unknown discrete probability distribution is the Bernoulli distribution.
+Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes.</description>
+    </item>
+    
+  </channel>
+</rss>

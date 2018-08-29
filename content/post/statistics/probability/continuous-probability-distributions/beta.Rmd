@@ -1,0 +1,93 @@
+---
+title: Beta Distribution
+author: Alireza Behzadnia
+date: '2018-03-12'
+slug: probability_pdf_beta_distribution
+categories:
+  - Statistics
+  - Probability
+tags:
+  - Beta
+  - Probability Distribution
+  - Continuous distribution
+tags: []
+---
+
+We'll introduce the beta distribution by using an example:
+
+### Example
+[Diamond Blackfan anemia (DBA)](https://ghr.nlm.nih.gov/condition/diamond-blackfan-anemia) is a rare autosomal dominant bone marrow disease. Children with Diamond Blackfan anemia present with symptoms of extreme anemia during the first year of life.
+
+Unfortunately, patients have an increased risk of other serious bone marrow malfunctions. Specifically, they are prone to developing myelodysplastic syndrome (MDS), certain blood cancers such as acute myeloid leukemia (AML) and bone cancer (osteosarcoma).
+
+At [Harrogath](http://diablo.wikia.com/wiki/Harrogath) the prevalence of DBA is exceptionally high (5 in 1000). Harrogathian scientists have teamed up with Kehjistanian scientists to study the probability of developing cancer in DBA patients based on their initial LDH level.
+
+Kehjistanian scientists have a studied the tendency of DBA to develop into cancers before. Therefore, here we have the luxuary of using Bayesian statistics to update what we already know about the LDH and cancer development.
+
+** How can we use describe the *prior probability* in a meaningful way? **
+
+## Beta distribution
+
+The Beta density function is a versatile way to represent continuous outcomes like proportions or probabilities that lie between 0 and 1.
+
+The Beta can be used to describe not only the variety observed across sample, but it can
+also describe your **subjective degree of belief** (in a Bayesian sense). If you are not entirely sure that the probability is 0.22, but rather you think that is the most likely value but that there is some chance that the value is higher or lower, then maybe your personal beliefs can be described as a Beta distribution.
+
+Let's say based on previous studies, we know the mean percentage increase in LDH level and standard deviation is $\mu = 0.55$ & $\sigma =  0.09$.
+
+A *beta* distribution is defined by two parameters $\alpha ~&~ \beta$, the **probability density function** of beta distribution is defined as:
+$$\Large B(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha +\beta)}$$
+$$Note:~\Gamma(k)=(k-1)!$$
+
+The values of alpha and beta can be derived from the sample:
+$$\large E(x)=\mu=\frac{\alpha}{\alpha+\beta}$$
+$$\large Variance(x)=\sigma^2=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)} $$
+Here are some examples of beta distribution:
+```{r}
+curve( dbeta(x,1,1), xlim=c(0,1), ylim=c(0,4) )
+curve( dbeta(x,0.5,0.5), add=T, col='red' )
+curve( dbeta(x,5,1), add=T, col='green' )
+curve( dbeta(x,1,3), add=T, col='blue' )
+title(main="Beta distribution")
+legend(par('usr')[1], par('usr')[4], xjust=-1.9,
+       c('(1,1)', '(0.5,0.5)', '(5,1)', '(1,3)'),
+
+       lwd=1, #c(1,1,1,1, 2,2,2, 3,3,3),
+       lty=c(1,1,1,1, 2,2,2, 3,3,3),
+       col=c(par('fg'), 'red', 'green', 'blue' ))
+```
+
+### Example
+Back to our example:
+$$ E(x) = \mu = 0.55 =\frac{\alpha}{\alpha+\beta}$$
+
+$$Variance(x)=\sigma^2= 0.09^2=0.0081=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)} $$
+
+$$From~the~first~equation~we~have: \beta = \frac{\alpha}{0.55}-\alpha = 0.82\alpha ~~~and~~~\alpha=\frac{0.55\beta}{1-0.55} = 1.22\beta $$
+After simple algebra using beta in the second equation we'll get:
+
+$$ 0.79\alpha^2 - 0.049\alpha^3 = 0 $$
+$$  1.18\beta^2 - 0.089\beta^3 = 0 $$
+
+```{r}
+library(polynom)
+beta = polyroot(z = c(0, 0, 1.18, -0.089)) # z is a vector of polynomial coefficients in increasing order: x^0, X^1 ...
+beta # only the 3rd value is not 0
+beta = abs(beta[3])
+
+alpha = polyroot(z = c(0, 0, 0.79, -0.049))
+alpha #we choose the 3rd
+alpha = abs(alpha[3])
+
+```
+
+
+```{r}
+alpha
+beta
+curve( dbeta(x,alpha,beta) )
+
+```
+
+
+Please use `Wolfram Alpha math engine` to solve the equations.

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bayesian</title>
+      <link>/categories/bayesian/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beta</title>
+      <link>/categories/beta/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/beta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clinical Research</title>
+      <link>/categories/clinical-research/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/clinical-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>/categories/design/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploratory Data Analaysis</title>
+      <link>/categories/exploratory-data-analaysis/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/exploratory-data-analaysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Frequentist</title>
+      <link>/categories/frequentist/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/frequentist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inference</title>
+      <link>/categories/inference/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/inference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Probability</title>
+      <link>/categories/probability/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/probability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Probability Distribution</title>
+      <link>/categories/probability-distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/probability-distribution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/categories/r/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sampling</title>
+      <link>/categories/sampling/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/sampling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>/categories/statistics/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/statistics/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

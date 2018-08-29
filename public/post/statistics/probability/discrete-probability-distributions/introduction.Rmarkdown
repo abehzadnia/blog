@@ -1,0 +1,20 @@
+---
+title: "Discrete Probability Distribution"
+author: Alireza Behzadnia
+date: '2018-03-12'
+slug: probability_discrete_distribution
+categories:
+  - Statistics
+  - Probability
+tags:
+  - Statistics
+  - Probability
+  - Discrete distribution
+---
+
+Probability distributions demonstrate the probability of an event. As discussed before, depending on the type of the data we are interested in, the **probability mass function** of the *event* can come from various distributions.
+
+In this section we will discuss few famous discrete probability distributions. We won't be talking about anything else (such as fitting our data) except for the distribution themselves.
+
+The most important discrete probability distributions are the **Bernoulli**, **Binomial** and **Poisson** distributions.
+

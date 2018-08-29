@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frequentist on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
+    <link>/categories/frequentist/</link>
+    <description>Recent content in Frequentist on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/frequentist/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bayesian vs. Frequentist</title>
+      <link>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/</guid>
+      <description>Here we will look at how a Bayesian and frequentist may go about answering a simple inference question:
+BackgroundAs part of our commitment to good medical practice, we decide to conduct a quality assurance audit.
+Good Medical Practice
+1.13: “You must take steps to mintor and improve the quality of your work”
+2.22: “You must take part in systems of quality assurance and quality improvement to promote patient safety”</description>
+    </item>
+    
+  </channel>
+</rss>

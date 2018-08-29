@@ -1,0 +1,85 @@
+---
+title: "Probability Function"
+author: Alireza Behzadnia
+date: '2018-03-11'
+slug: probability_function
+
+categories:
+  - Statistics
+  - Probability
+tags:
+  - Statistics
+  - Probability
+  - PMF
+  - PDF
+
+weight: 1
+---
+
+
+
+<p>Probability function is the function of a random variable distribution, whose value provides the <em>absolute</em> or <em>relative likelihood</em> of the value of the random variable in the sample.</p>
+<!--more-->
+<p>Depending on the <em>type</em> of our random variable, we can calculate:</p>
+<ul>
+<li><strong>Absolute likelihood</strong> for a <u>discrete variable</u></li>
+<li><strong>Relative likelihood</strong> for a <u>continuous variable</u></li>
+</ul>
+<p>On this page we will discuss:</p>
+<ul>
+<li><a href="#probability-mass-function">Probability Mass Function</a></li>
+<li><a href="#probability-density-function">Probability Density Function</a></li>
+<li><a href="#pmfs-and-pdfs">Popular PMFs and PDFs</a></li>
+</ul>
+<div id="probability-mass-function" class="section level2">
+<h2>Probability Mass Function</h2>
+<p>Discrete random variables have discrete and countable values. That <strong>PMF</strong> tells us the probability that the random variable takes each of the possible values.</p>
+<p>Assume a simple random experiment of coin toss where a <strong>fair</strong> coin is tossed twice. let <span class="math inline">\(X =\)</span> number of tails we get:</p>
+<ul>
+<li><span class="math inline">\(S = {(HH),(TH),(HT),(TT)}\)</span></li>
+<li>P(X = 0) = (HH)</li>
+<li>P(X = 1) = (HT) or (TH)</li>
+<li>P(X = 2) = (TT)</li>
+</ul>
+<p>Here we can use a binomial distribution to calcualte the <strong>absolute</strong> likelihood of (X = 2); using the Probability Mass Function formula for binomial distribution:</p>
+<p><span class="math display">\[P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\\k \end{array}\right) ~ p^k ~ (1-p)^{n-k}\]</span></p>
+<p>Here we can calculate the P(X = k) for each outcome:</p>
+<pre class="r"><code>dbinom(0, 2, 0.5)</code></pre>
+<pre><code>## [1] 0.25</code></pre>
+<pre class="r"><code>dbinom(1, 2, 0.5)</code></pre>
+<pre><code>## [1] 0.5</code></pre>
+<pre class="r"><code>dbinom(2, 2, 0.5)</code></pre>
+<pre><code>## [1] 0.25</code></pre>
+<p>We can visualise <em>Probability Mass Function</em> using historframs. Let’s Visualise what will happen if we repeat this experiment 1000 times:</p>
+<pre class="r"><code>Two_cointosses_1000_times = sample(x=c(&quot;HH&quot;,&quot;HT&quot;,&quot;TT&quot;), size=1000, replace = T, prob=c(.25,.50,.25))
+barplot(table(Two_cointosses_1000_times))</code></pre>
+<p><img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>The area under the histogram is one and the area of each bar is the probability of seeing a binomial random variable, whose value is equal to the x-value at the center of the bars base.</p>
+</div>
+<div id="probability-density-function" class="section level2">
+<h2>Probability Density Function</h2>
+<p>In contrast, the normal distribution also called the <em>Gaussian</em> distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable.</p>
+<p>Consider random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.</p>
+<p>The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a <strong>probability density curve</strong>. <img src="/probability/pdf.gif" /> The total area under the density curve equals 1, and the curve represents probabilities by area.</p>
+<p>When the random variable is continuous, it has <em>probability zero of taking any single value</em>, <span class="math inline">\(P(X =x) =0\)</span>. Here we can only talk about the <strong>relative likelihood</strong> of the continuous random variable <em>within some interval</em>. Continuous random variables have <strong>probability density functions</strong> or pdfs instead of probability mass functions. <img src="/probability/pdf2.gif" /></p>
+<p>The PDF curve of a random variable <span class="math inline">\(X\)</span> with <span class="math inline">\(M =\mu\)</span> and <span class="math inline">\(SD = \sigma\)</span>: <span class="math display">\[\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} \]</span></p>
+<p>Here the area under the curve, or the <strong>density</strong> would be: <span class="math display">\[ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx\]</span></p>
+</div>
+<div id="pmfs-and-pdfs" class="section level2">
+<h2>PMFs and PDFs</h2>
+<p>There are many types of PMFs and PDFs, here are a handful of most famous distributions:</p>
+<ul>
+<li>Discrete (<em>PMF</em>)
+<ul>
+<li>Binomial</li>
+<li>Poisson</li>
+</ul></li>
+<li>Continuous (<em>PDF</em>)
+<ul>
+<li>Normal distribution</li>
+<li>Uniform</li>
+<li>Beta</li>
+<li>Gamma</li>
+</ul></li>
+</ul>
+</div>
