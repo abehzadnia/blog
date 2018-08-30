@@ -74,7 +74,7 @@
 
 <meta itemprop="datePublished" content="2018-04-11T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-04-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1350">
+<meta itemprop="wordCount" content="1354">
 
 
 
@@ -130,7 +130,11 @@
           <ul class="mobile-submenu-list">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -268,7 +272,11 @@
           <ul class="submenu">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -336,6 +344,7 @@
   </ul>
 </nav>
 
+
   </header>
 
   <div id="mobile-panel">
@@ -350,10 +359,11 @@
       <div class="post-meta">
         <span class="post-time"> 2018-04-11 </span>
         <div class="post-category">
-            <a href="/categories/exploratory-data-analaysis/"> Exploratory Data Analaysis </a>
+            <a href="/categories/statistics/"> Statistics </a>
+            <a href="/categories/eda/"> EDA </a>
             
           </div>
-        <span class="more-meta"> 1350 words </span>
+        <span class="more-meta"> 1354 words </span>
           <span class="more-meta"> 7 min read </span>
 
         
@@ -401,7 +411,8 @@
 
 <p>Covariance between two varaiables <code>\(X\)</code> and <code>\(Y\)</code> can be calculated as:</p>
 
-<p><code>$$Cov[XY] = \sigma_XY = E\ [\ (X - \overline{X})\ (Y - \overline{Y})\ ] \\ \ \\ = \frac{1}{N - 1} \sum_{i = 1}^{N}(x_i - \overline{X})(y_i - \overline{Y})$$</code></p>
+<p>$$ Cov[XY] = \sigma<em>XY = E\ [\ (X - \overline{X})\ (Y - \overline{Y})\ ] = &hellip; $$
+$$ &hellip; = \frac{1}{N - 1} \sum</em>{i = 1}^{N}(x_i - \overline{X})(y_i - \overline{Y}) $$</p>
 
 <p>Covariance is a generalised version of the variance formula. For example, for a single variable we&rsquo;d have <code>\(Cov[XX] = E\ [\ (X - \overline{X})^2\ ] = Var[X]\)</code>.</p>
 
@@ -932,6 +943,11 @@ ggplot<span class="p">(</span>esoph<span class="p">,</span> aes<span class="p">(
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Elicitation and Conjugacy</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         
           <a class="next" href="/post/statistics/eda/eda_univariate_analysis/">
             <span class="next-text nav-default">Univariate Analysis</span>
@@ -1033,12 +1049,26 @@ ggplot<span class="p">(</span>esoph<span class="p">,</span> aes<span class="p">(
 
   
   
-</div>
-
-<script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+</div>
 
     </footer>
 
@@ -1050,13 +1080,6 @@ src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
 <script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 

@@ -2,11 +2,14 @@
 title: Beta Distribution
 author: Alireza Behzadnia
 date: '2018-03-12'
-slug: beta-distribution
+slug: probability_pdf_beta_distribution
 categories:
+  - Statistics
+  - Probability
+tags:
   - Beta
   - Probability Distribution
-tags: []
+  - Continuous distribution
 ---
 
 We'll introduce the beta distribution by using an example:
@@ -46,8 +49,8 @@ curve( dbeta(x,5,1), add=T, col='green' )
 curve( dbeta(x,1,3), add=T, col='blue' )
 title(main="Beta distribution")
 legend(par('usr')[1], par('usr')[4], xjust=-1.9,
-       c('(1,1)', '(0.5,0.5)', '(5,1)', '(1,3)'), 
-      
+       c('(1,1)', '(0.5,0.5)', '(5,1)', '(1,3)'),
+
        lwd=1, #c(1,1,1,1, 2,2,2, 3,3,3),
        lty=c(1,1,1,1, 2,2,2, 3,3,3),
        col=c(par('fg'), 'red', 'green', 'blue' ))
@@ -86,5 +89,4 @@ curve( dbeta(x,alpha,beta) )
 ```
 
 
-Please use `Wolfram Alpha math engine` to solve the equations. 
-
+Please use `Wolfram Alpha math engine` to solve the equations.

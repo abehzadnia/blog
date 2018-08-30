@@ -14,6 +14,8 @@ tags:
   - Bernoulli
   - Poisson
   - Binomial
+
+weight: 2
 ---
 
 Probability distributions demonstrate the probability of an event. When dealing with discrete data, **probability mass function** of the *event* can come from various distributions. The most important discrete probability distributions are the **Bernoulli**, **Binomial** and **Poisson**.
@@ -92,4 +94,3 @@ for (i in 1:N){{
 }}
 hist(x, main = "Distribution of NPHLM mutation in a sample of 200")
 ```
-

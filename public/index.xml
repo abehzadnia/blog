@@ -6,10 +6,138 @@
     <description>Recent content on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bayesian vs. Frequentist</title>
+      <link>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</guid>
+      
+        <description>&lt;p&gt;Here we will look at how a Bayesian and frequentist may go about answering a simple inference question:&lt;/p&gt;
+&lt;div id=&#34;background&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Background&lt;/h3&gt;
+&lt;p&gt;As part of our commitment to good medical practice, we decide to conduct a quality assurance audit.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Good Medical Practice&lt;br /&gt;
+1.13: &lt;em&gt;“You must take steps to mintor and improve the quality of your work”&lt;/em&gt;&lt;br /&gt;
+2.22: &lt;em&gt;“You must take part in systems of quality assurance and quality improvement to promote patient safety”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We decide to audit how frequently cannulas are being changed in the ICU and HDU departments. According to &lt;a href=&#34;https://www.nice.org.uk/guidance/qs61/chapter/quality-statement-5-vascular-access-devices&#34;&gt;NICE: Infection prevention and control&lt;/a&gt; guidance, an indwelling intravascular catheter used to deliver parenteral nutrition should be changed every 24 hours.&lt;/p&gt;
+&lt;div id=&#34;study&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Study&lt;/h4&gt;
+&lt;p&gt;In our audit we would like to know how closely our wards adhere to this guidance. After a discussion with colleagues we decide that total adherence can be defined as &lt;em&gt;P&lt;/em&gt;(cannula changed every 24 hours) &amp;gt; 0.9%; partial adherence &lt;em&gt;P&lt;/em&gt;(change) &amp;gt;0.8% and anything &amp;lt;0.8 is considered inadequate adherence to the guidelines.&lt;/p&gt;
+&lt;p&gt;We decide to follow all the patients currently admitted for 24 hours. Due to the small number of admissions requiring parenteral nutrition at our ICU and HDU, our sample size is only 5.&lt;/p&gt;
+&lt;p&gt;After 24 hours we find: 4 of the patients had their cannula changed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;frequentists-approach&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Frequentist’s Approach:&lt;/h3&gt;
+&lt;p&gt;If we decide to wear the frequentist hat, we first need to set our hypothesis:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;H&lt;sub&gt;0&lt;/sub&gt; : Our unit does follow the guidline
+&lt;ul&gt;
+&lt;li&gt;P(cannula change in 24 hours) = 0.90&lt;br /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;H&lt;sub&gt;a&lt;/sub&gt;: Our unit does NOT follow the guideline
+&lt;ul&gt;
+&lt;li&gt;P(cannula change in 24 hours) &amp;lt; 0.90&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can answer our question using the binomial distribution: - We have 5 patients (i.e. &lt;strong&gt;fixed&lt;/strong&gt; number of trials; &lt;span class=&#34;math inline&#34;&gt;\(n=5\)&lt;/span&gt;) - The care of each patient is &lt;strong&gt;independent&lt;/strong&gt; - Although, this may not be realistic to assume; but ideally, healthcare providers treat every patient equally - We &lt;em&gt;assume&lt;/em&gt; the probability of success or cannula change in 24 hours to be fixed at 90%.&lt;/p&gt;
+&lt;p&gt;With the binomial requirements meants; we can proceed to use binomial distribution.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We set out significance level at 0.05 (&lt;span class=&#34;math inline&#34;&gt;\(\alpha = 0.05\)&lt;/span&gt;)
+&lt;ul&gt;
+&lt;li&gt;If the P(patient to not have their cannula changed) is &amp;gt; 0.05, we fail to reject the H&lt;sub&gt;0&lt;/sub&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In other words, if the &lt;em&gt;p-value&lt;/em&gt; &amp;gt; 0.05, only 9 out of 10 patients in our units have their cannulas changed every 24 hours.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(k = 4, n = 5\)&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(P(K \leq 4| n=5, p = 0.90)\)&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sum(dbinom(0:4, size = 5, prob = 0.9))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.40951&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Since our &lt;em&gt;p-value&lt;/em&gt; is greater than &lt;span class=&#34;math inline&#34;&gt;\(\alpha = 0.05\)&lt;/span&gt;, we accept the null hypothesis: - &lt;strong&gt;H&lt;sub&gt;0&lt;/sub&gt; = our unit does follow the guidance&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;bayesians-approach&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Bayesian’s Approach:&lt;/h4&gt;
+&lt;p&gt;Now let’s look at our data through the Bayesian glass.The first strikingly different a Bayesian must do is to set up &lt;em&gt;hypotheses&lt;/em&gt; instead of a &lt;em&gt;null hypothesis&lt;/em&gt;: - H&lt;sub&gt;1&lt;/sub&gt; = &lt;em&gt;complete adherence&lt;/em&gt; - H&lt;sub&gt;2&lt;/sub&gt; = &lt;em&gt;partial adherence&lt;/em&gt; - H&lt;sub&gt;3&lt;/sub&gt; = &lt;em&gt;non-adherence&lt;/em&gt; - &lt;em&gt;lets assume, &amp;lt;0.80 ~ 0.70&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;These hypotheses are in fact our &lt;strong&gt;models&lt;/strong&gt; in the Bayesian language. Here, we would like to evaluate the probability of each model being true.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prior&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Prior&lt;/h4&gt;
+&lt;p&gt;We may or may not have prior probability of each model based on previous audits or pilot studies. In our example, let’s assume we don’t have any data available.&lt;/p&gt;
+&lt;p&gt;In this instance, we would then give equal probability to all the models:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;P&lt;/em&gt;(H&lt;sub&gt;1&lt;/sub&gt;)=&lt;em&gt;P&lt;/em&gt;(H&lt;sub&gt;2&lt;/sub&gt;)=&lt;em&gt;P&lt;/em&gt;(H&lt;sub&gt;3&lt;/sub&gt;)=&lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{3}\)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;models = c(0.9, 0.8, 0.7)
+prior = c(rep(1/3, 3))
+names(prior) = models
+prior&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       0.9       0.8       0.7 
+## 0.3333333 0.3333333 0.3333333&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;likelihood&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Likelihood&lt;/h4&gt;
+&lt;p&gt;We can calculate our $P(data|model):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;likelihood = dbinom(4, size = 5, prob = models)
+names(likelihood) = models
+likelihood&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##     0.9     0.8     0.7 
+## 0.32805 0.40960 0.36015&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(likelihood, main = &amp;quot;Likelihood&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt; So far, our 2nd model looks promising.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;posteriori&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Posteriori&lt;/h4&gt;
+&lt;p&gt;Now, we can update our prioir &lt;span class=&#34;math inline&#34;&gt;\(P(model|data) =\frac{P(data|model) \times P(model)}{P(data)}\)&lt;/span&gt; and&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;evidence = sum(likelihood * prior)
+posterior = (prior * likelihood)/evidence
+posterior&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       0.9       0.8       0.7 
+## 0.2988249 0.3731099 0.3280652&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(posterior, main = &amp;quot;Posterior&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;conclusion&lt;/h4&gt;
+&lt;p&gt;When looking at unit as a Bayesian, we then would conclude that we are only &lt;strong&gt;partially&lt;/strong&gt; following the guidelines.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;who-is-correct&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Who is correct?&lt;/h2&gt;
+&lt;p&gt;The Frequentist is very sensitive to the sample size. &lt;em&gt;Strength in number!!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Let’s redo the calculations assuming we’ve looked at 50 patients when 40 have had their cannula changed within 24 hours.&lt;/p&gt;
+&lt;div id=&#34;frequentist&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Frequentist&lt;/h4&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sum(dbinom(0:40, size = 50, prob = 0.9))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.02453794&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We have to &lt;strong&gt;reject&lt;/strong&gt; the null hypothesis!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bayesian&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Bayesian&lt;/h4&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;models = c(0.9, 0.8, 0.7)
+prior = c(rep(1/3, 3))
+likelihood = dbinom(40, size = 50, prob = models)
+names(likelihood) = models
+evidence = sum(likelihood * prior)
+posterior = (prior * likelihood)/evidence
+posterior&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        0.9        0.8        0.7 
+## 0.07841767 0.72212604 0.19945628&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(posterior, main = &amp;quot;Posterior&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The second model is clearly the best.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>Introduction</title>
@@ -73,6 +201,233 @@
 &lt;p&gt;One definition of probability of an event is its relative frequency in a large number of trials. For example, if you can repeat flipping a coin indefinitely and count how many heads you get and divide that number by the number of flips, the value you obtain should be 0.5. In other words the probability of event E is defined as the proportion of times the event occurs and n trials when n goes to infinity. This is the frequentist definition of probability, suppose now that you’re indifferent between winning a dollar if event E occurs or winning a dollar if you draw a blue chip from a box with 1,000 x p blue chips and 1,000 x (1-p) white chips. This means that you’re equating the probability of events E, that’s P(E), to the probability of drawing a blue chip from this box. In other words P(E) = p. This definition of probability, based on your degree of belief, is the Bayesian definition.&lt;/p&gt;
 &lt;p&gt;The frequentist definition of probability allows to define a probability for the confidence interval procedure but not for specific fixed sample. And the case of a specific fixed sample, when the data do not change, we will either always capture the true parameter or never capture it. In other words, for given confidence interval the true parameter is either in it or not. This is the same as saying that the probability that a given confidence interval captures the true parameter, is either zero or one.&lt;/p&gt;
 &lt;p&gt;he Bayesian definition is a bit more flexible. Since it’s a measure of belief it allows us to describe the unknown true parameter not as a fixed value but with a probability distribution. This will let us construct something like a confidence interval, except we will be able to make probabilistic statements about the parameter falling within that range.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Discrete Probability Distribution</title>
+      <link>/post/statistics/probability/probability_discrete_distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
+      
+        <description>&lt;p&gt;Probability distributions demonstrate the probability of an event. When dealing with discrete data, &lt;strong&gt;probability mass function&lt;/strong&gt; of the &lt;em&gt;event&lt;/em&gt; can come from various distributions. The most important discrete probability distributions are the &lt;strong&gt;Bernoulli&lt;/strong&gt;, &lt;strong&gt;Binomial&lt;/strong&gt; and &lt;strong&gt;Poisson&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;bernoulli-distribution&#34;&gt;Bernoulli distribution&lt;/h2&gt;
+
+&lt;p&gt;The most widely known &lt;em&gt;unknown&lt;/em&gt; discrete probability distribution is the &lt;strong&gt;Bernoulli distribution&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Named after the Swiss mathematician &lt;a href=&#34;https://en.wikipedia.org/wiki/Jacob_Bernoulli&#34;&gt;Jacob Bernoulli&lt;/a&gt;, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes. Each outcome is a Boolean-valued discrete random variable (&lt;em&gt;k=1&lt;/em&gt; or &lt;em&gt;k=0&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Unlike the binomial distribution, the Bernoulli distribution is used in &lt;strong&gt;single trial (n=1)&lt;/strong&gt; experiments. This is a special case of the Binomial distribution where a single experiment/trial is conducted (n=1).&lt;/p&gt;
+
+&lt;p&gt;$ X $ is a discrete random variable that belongs to the Bernoulli distribution if:
+$$ P(X=1) = p = 1 - P(X = 0) = 1 - q $$&lt;/p&gt;
+
+&lt;h3 id=&#34;bernoulli-probability-mass-function&#34;&gt;Bernoulli Probability Mass Function&lt;/h3&gt;
+
+&lt;p&gt;The probability mass function can be written as:&lt;/p&gt;
+
+&lt;div&gt;$$ f(k;p) = \left\{ \begin{array}{lcl}p &amp;\mbox{if}&amp;k=1 \\ 1-p &amp;\mbox{if}&amp;k=0 \end{array} \right. $$&lt;/div&gt;
+
+&lt;p&gt;Can be expressed as:&lt;/p&gt;
+
+&lt;p&gt;$$ f(k;p) = p^k(1-p)^{1-k} ~for~k\in {0,1}  $$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;A &lt;strong&gt;binomial variable&lt;/strong&gt; of parameters (n,p) is the &lt;strong&gt;sum of $ n $ Bernoulli variables&lt;/strong&gt; of parameter p.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;While focusing on locating the NPHLM gene, the &lt;a href=&#34;http://diablo.wikia.com/wiki/Kehjistan&#34;&gt;Kehjistanian&lt;/a&gt; scientists also discovered that, for any given birth at any given day, there is a fixed 0.60 chance that the newborn is a female.&lt;/p&gt;
+
+&lt;p&gt;If on average there is one birth every 2 minutes, what is the projected population of males in Caldeum over 20 years?&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;n &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;365&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+x &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; n&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; replace&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; prob&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;.6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;.4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;plot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;cumsum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+     main&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Cummulative sums of males (a Bernoulli variable)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;binomial-distribution&#34;&gt;Binomial distribution&lt;/h2&gt;
+
+&lt;p&gt;The binomial distribution describes the probability of having exactly &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; successes in &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; independent Bernoulli trials, given that the probability of &lt;em&gt;k = 1&lt;/em&gt; is &lt;strong&gt;&lt;em&gt;p&lt;/em&gt;&lt;/strong&gt;. It is important to note that the success rate of the binary event remains constant for all n independent trials.&lt;/p&gt;
+
+&lt;p&gt;To use a binomial distribution, data must come from a &lt;strong&gt;binomial experiment&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$ n $ = fixed number of trials&lt;/li&gt;
+&lt;li&gt;Trials must be &lt;strong&gt;independent&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Each trial has &lt;strong&gt;two possible outcome&lt;/strong&gt; where:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;P&lt;/em&gt;(sucess) = constant for each trial&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;P&lt;/em&gt;(failure) = 1 - &lt;em&gt;P&lt;/em&gt;(sucess)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Given the requirements are met, the probability distribution of our binary event has a mean of $ np $ and variance of $ np(1-p) $&lt;/p&gt;
+
+&lt;h3 id=&#34;example-1&#34;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;Kehjistanian scientists have identified the gene NPHLM on the locus 14p.61 which predisposes children to a certain lifestyle.&lt;/p&gt;
+
+&lt;p&gt;It is estimated that 1 in 40 child under the age of 16 have this mutation. According to the last census at &lt;a href=&#34;http://diablo.wikia.com/wiki/Caldeum&#34;&gt;Caldeum&lt;/a&gt;, number of kids under 16 is roughly 400,000.&lt;/p&gt;
+
+&lt;p&gt;A sample of 200 has been collected. How many children with NPHLM mutation can we expect to find?&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;N &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;400000&lt;/span&gt;
+n &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt;
+p &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;40&lt;/span&gt;
+x &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;rep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;N&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;kr&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;i &lt;span class=&#34;kr&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;N&lt;span class=&#34;p&#34;&gt;){{&lt;/span&gt;
+  x&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;runif&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;n&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;p&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+hist&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; main &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Distribution of NPHLM mutation in a sample of 200&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Inference</title>
+      <link>/post/statistics/bayesian/2-inference/bayesian-inference/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/bayesian/2-inference/bayesian-inference/</guid>
+      
+        <description>&lt;p&gt;In order to have a better understanding of the difference between the frequentist approach and the Bayesian approach to interference let’s use the following example:&lt;/p&gt;
+&lt;div id=&#34;efficacy-of-ru-486-as-an-emergency-pill&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Efficacy of RU-486 as an emergency pill&lt;/h2&gt;
+&lt;p&gt;A randomized control trial was carried out to ask the question of whether Mifepristone (RU486) can be an effective morning after contraceptive. The study participants were 40 women who came to a health clinic asking for emergency contraception. &lt;strong&gt;Method:&lt;/strong&gt; 20 women were randomly assigned to receive RU-486, and another 20 to receive standard therapy, consisting of high doses of estrogen and synthetic progesterone. &lt;strong&gt;Results:&lt;/strong&gt; In the treatment group (RU-486), 4 became pregnant. In the control group, 16 became pregnant.&lt;/p&gt;
+&lt;p&gt;How can we infere from our data? Let’s look at both aproaches:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;div id=&#34;frequentist-approach&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Frequentist approach&lt;/h3&gt;
+&lt;p&gt;In the frequentist approach, we first need to set our hypotheses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;P&lt;/em&gt; = &lt;em&gt;P&lt;/em&gt;(pregnancy comes from the treatment group)&lt;/li&gt;
+&lt;li&gt;Null hypothesis (H&lt;sub&gt;0&lt;/sub&gt;) = P is equal to 0.5.
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;~P&lt;/em&gt; = 1 - &lt;em&gt;P&lt;/em&gt; = 0.5.&lt;/li&gt;
+&lt;li&gt;The pregnancy is equally likely to come from either the treatment or the control group.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Alternative hypothesis (H&lt;sub&gt;a&lt;/sub&gt;) = P &amp;lt; 0.5
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;~P&lt;/em&gt; &amp;gt; &lt;em&gt;P&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;The pregnancy is more likely to come from the control group and less likely from the treatment group.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Within the frequentist paradigm, we need a p-value. &lt;strong&gt;P-value&lt;/strong&gt; can be defined as the probability of an observed outcome given that the null hypothesis is true. Here we have 20 trials (&lt;span class=&#34;math inline&#34;&gt;\(n = 20\)&lt;/span&gt;) where the outcome of each trial is &lt;strong&gt;independent&lt;/strong&gt; of the others and we have based on our H&lt;sub&gt;0&lt;/sub&gt;, each trial has a probability of &lt;span class=&#34;math inline&#34;&gt;\(p = 0.5\)&lt;/span&gt;. The outcome of each trial can be either: 1. success (pregnancy prevented) or 2. failure (pregnancy occured).&lt;/p&gt;
+&lt;p&gt;Based on the study set up we can use binomial distribution to calculate the probability of observing 4 pregnancies (&lt;span class=&#34;math inline&#34;&gt;\(k = 4\)&lt;/span&gt;), in 20 trials (&lt;span class=&#34;math inline&#34;&gt;\(n= 20\)&lt;/span&gt;, given the probability of pregnancy occuring in each trial is &lt;span class=&#34;math inline&#34;&gt;\(p = 0.5\)&lt;/span&gt; - assuming H&lt;sub&gt;0&lt;/sub&gt; is true.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(p - value = P(k \leq 4)\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sum(dbinom(0:4, size = 20, p = 0.5))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.005908966&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This means,that the chances of observing 4 or fewer pregnancies in the treatment group is approximately 0.0059 - which is a small probability. Therefore, we can reject the null hypothesis and conclude that the data provides convincing evidence for the treatment being effective.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bayesian-approach&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bayesian approach&lt;/h3&gt;
+&lt;p&gt;Within the Bayesian framework too we first need to define our hypotheses. In Bayesian framework hypotheses can be seen as &lt;strong&gt;models&lt;/strong&gt; that the data come from&lt;/p&gt;
+&lt;p&gt;We begin by delineating each of the plasible models. It is plausible for &lt;em&gt;P&lt;/em&gt;(pregnancy comes from the treatment group) to take any value from 0 to 1. However, we’ll simplify the number of models we need to consider in this study by only considering a continuous parameter space for p that ranges from 10% to 90%. This means, we will look at 9 different models where each model the probability of pregnancy occuring given that they receieved treatment. For example, &lt;em&gt;model 1&lt;/em&gt; (10%) states that if one of the participants becomes pregnant, the probability of them having received RU-486 is only 10%. Therefore,the likelihood of them being in the control group is 90%.&lt;/p&gt;
+&lt;div id=&#34;prior&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Prior&lt;/h4&gt;
+&lt;p&gt;Next, we need to specify the prior probabilities assigned to these models (or hypotheses). The prior probabilities encapsulates what we know about possibility of the models (from previous research perhaps) before conducting the experiment. We will discuss further on how these prior probabilities are assigned. For now, we place &lt;span class=&#34;math inline&#34;&gt;\(P(model = 0.5) = 0.52\)&lt;/span&gt; and the rest will be devided accross other models equally &lt;span class=&#34;math inline&#34;&gt;\(\frac{0.48}{8} =0.06\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Therefore, if &lt;strong&gt;participant A&lt;/strong&gt; becomes pregnant, it’s 50% likely that she received treatment (&lt;span class=&#34;math inline&#34;&gt;\(\small P(model=0.5)=0.52\)&lt;/span&gt;, i.e. highest probability). This is based on the prior probability of the model 0.5:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\large Prior= P(model)\]&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;models = seq(from = 0.10, to = 0.90, by = 0.10)
+prior = c(rep(0.06, 4), 0.52, rep(0.06, 4))
+names(prior) = models
+barplot(prior, main = &amp;quot;Prior probabilities&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/1index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;likelihood&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Likelihood&lt;/h4&gt;
+&lt;p&gt;Now we’re ready to calculate the probability of observed data, given each of the models that we’re considering. This probability is called the &lt;strong&gt;likelihood&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In this example, this is the &lt;em&gt;probability of the data, given the model&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\small P(data|model)\)&lt;/span&gt;. Probability of data in our example is &lt;span class=&#34;math inline&#34;&gt;\(k \leq 4\)&lt;/span&gt; given that &lt;span class=&#34;math inline&#34;&gt;\(n = 20\)&lt;/span&gt;. Here however, &lt;em&gt;p&lt;/em&gt; has various values from 10-90%. We can again use the binomial distribution to calculate the probability of each model when &lt;span class=&#34;math inline&#34;&gt;\(k = 4\)&lt;/span&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;likelihood = dbinom(4, size = 20, prob = models)
+names(likelihood) = models
+likelihood&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##          0.1          0.2          0.3          0.4          0.5 
+## 8.977883e-02 2.181994e-01 1.304210e-01 3.499079e-02 4.620552e-03 
+##          0.6          0.7          0.8          0.9 
+## 2.696862e-04 5.007558e-06 1.300570e-08 3.178804e-13&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(likelihood, main = &amp;quot;Likelihood&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/1index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The number of successes and the number of trials are the same for each of these models, however each model has a different likelihood based on model’s probability of success. Likelihood is the probability of data given the model:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\large Lieklihood = P(data |model)\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;posterior&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Posterior&lt;/h4&gt;
+&lt;p&gt;Now based on our &lt;em&gt;data&lt;/em&gt; we can update our &lt;em&gt;prior probabilities&lt;/em&gt; to calculate the &lt;a href=&#34;https://en.wikipedia.org/wiki/Posterior_probability&#34;&gt;&lt;em&gt;posterior probability&lt;/em&gt;&lt;/a&gt;. In other words, probability of the model beign correct given the &lt;a href=&#34;data:$$\large&#34; class=&#34;uri&#34;&gt;data:$$\large&lt;/a&gt; Posterior = P(model|data) =  = $$&lt;/p&gt;
+&lt;p&gt;Here, we have calculated the Prior and the likelihood; we can also calculate &lt;strong&gt;evidence&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ Evidence = P(data) = P(data|model) \times P(model)\]&lt;/span&gt; Since we have 9 models, &lt;span class=&#34;math inline&#34;&gt;\(P(data)\)&lt;/span&gt; is &lt;em&gt;sum&lt;/em&gt; of the evidence of &lt;strong&gt;every model&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;evidence = likelihood * prior
+evidence = sum(evidence) # P(data) for all the plausible models
+evidence  &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.03082257&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Therefore, the posterior probability of each model is:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;posterior = (prior * likelihood)/evidence
+posterior&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##          0.1          0.2          0.3          0.4          0.5 
+## 1.747658e-01 4.247525e-01 2.538808e-01 6.811397e-02 7.795220e-02 
+##          0.6          0.7          0.8          0.9 
+## 5.249779e-04 9.747841e-06 2.531722e-08 6.187942e-13&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(posterior, main = &amp;quot;Posterior&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/1index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;model-selection&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Model selection&lt;/h4&gt;
+&lt;p&gt;Looking at the posterior probabilities above, the most likely model is &lt;em&gt;model 0.2&lt;/em&gt; where &lt;span class=&#34;math inline&#34;&gt;\(P(model 0.2) = 0.425\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Even though we had assigned a low prior to this model, the incorporation of the data gave this model a high probability. This should be surprising since 4 successes in 20 trials is 20%.&lt;/p&gt;
+&lt;p&gt;Based on this posterior, we can now update our beliefs and evidence - the current posterior becomes the next experiments Prior.&lt;/p&gt;
+&lt;p&gt;The Bayesian paradigm, unlike the frequentist approach, also allows us to make direct probability statements about our models. For example, we can calculate the probability that RU-486, is more effective than the control as the &lt;strong&gt;sum of the posteriors&lt;/strong&gt; of the models where p is less than 0.5 (&lt;em&gt;based on the p&lt;/em&gt;(H&lt;sub&gt;0&lt;/sub&gt;) = 0.5).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sum(posterior[1:4])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.921513&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So there is a 92.15% chance that the treatment is more effective than the control.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
       
@@ -148,6 +503,85 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Structure of Clinical Research</title>
+      <link>/post/research-design/clinical-research-components/research_design_intro/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/research-design/clinical-research-components/research_design_intro/</guid>
+      
+        <description>&lt;p&gt;Clinical research is an essential part of practice of medicine. In short it is a project carried out by to investigate a research question - which should be focused on clinical aspect of medicine (i.e. the practice of medicine).&lt;/p&gt;
+&lt;p&gt;Structure of the research is heavily dependant on the subject of interest. However, almost all studies follow a logical and focused organisation. A study has to have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Research question(s)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which needs to be &lt;em&gt;FINER&lt;/em&gt;: feasible, interesting, novel, ethical and relevant&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Background and significance&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Put the question in context and provides rationale for the study&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Design&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Observation&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Cohort studies: participants are divided into groups and are studied over a specified time frame
+&lt;ul&gt;
+&lt;li&gt;Time frame: prospective or retrospective&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Cross sectional study&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Case control study&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Experimental&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Clinical trials
+&lt;ul&gt;
+&lt;li&gt;Randomised blinded trial&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Subjects&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The population of interest&lt;/li&gt;
+&lt;li&gt;Requires inclusion and exclusion criteria to define the population of interest&lt;/li&gt;
+&lt;li&gt;Sampling: How the population will be sampled and how the participants would be recruited&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Response variable(s): what will be studied - or more commonly - measured?&lt;/li&gt;
+&lt;li&gt;Also known as: outcome variable or dependent variable&lt;/li&gt;
+&lt;li&gt;Plotted on the Y-axis&lt;/li&gt;
+&lt;li&gt;Explanatory variable(s): what will be controled? the treatment&lt;/li&gt;
+&lt;li&gt;Also known as: predictor variable or independent variable&lt;/li&gt;
+&lt;li&gt;Plotted on the X-axis&lt;/li&gt;
+&lt;li&gt;Confounding variable(s): variables that may influence our measured outcomes.&lt;/li&gt;
+&lt;li&gt;This should always be factored in the study design.&lt;/li&gt;
+&lt;li&gt;Randomization is a common method of minimizing the influence of confounding variables.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Statistics&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The most important and crucial part of the study&lt;/li&gt;
+&lt;li&gt;How will we go about answering our question?&lt;/li&gt;
+&lt;li&gt;Involves:&lt;/li&gt;
+&lt;li&gt;Hypothesis&lt;/li&gt;
+&lt;li&gt;Estimate of the required sample size (power of the study)&lt;/li&gt;
+&lt;li&gt;Statistical method that will assess the hypothesis&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Elicitation and Conjugacy</title>
+      <link>/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</guid>
+      
+        <description>&lt;p&gt;Elicitation is the process of turning an expert’s prior beliefs about one or more uncertain quantities into a probability distribution for those quantities. The term expert simply refers to somebody within the field in which the experiment/analysis is to take place. A successful elicitation process will lead to a prior distribution which accurately reflects the expert’s beliefs. An elicitation is accurate even if the expert’s prior judgements turn out to be completely incorrect!&lt;/p&gt;
+&lt;p&gt;posterior ∝ prior × likelihood.&lt;/p&gt;
+&lt;p&gt;In this lecture, we introduce the concept of prior elicitation in base and statistics. Often, one has a belief about the distribution of one’s data. You may think that your data come from a binomial distribution and in that case you typically know the n, the number of trials but you usually do not know p, the probability of success. Or you may think that your data come from a normal distribution. But you do not know the mean or the standard deviation of the normal. Beside to knowing the distribution of one’s data, you may also have beliefs about the unknown p in the binomial or the unknown mean in the normal. Bayesians express their belief in terms of personal probabilities. These personal probabilities encapsulate everything a Bayesian knows or believes about the problem. But these beliefs must obey the laws of probability, and be consistent with everything else the Bayesian knows. For example, you may know nothing at all about the value of P that generated some binomial data. In which case any value between zero and one is equally likely, you may want to make an inference on the proportion of people who would buy a new band of toothpaste. If you have industry experience, you may have a strong belief about the value of P but if you are new to the industry you would do nothing about P. In any value between zero and one seems equally like a deal. This major personal probability is the uniform distribution whose probably density function is flat. Often, windows quite a lot about which values of P or more like even others. For example if you we’re tossing the coin most people believed that the probability of heads is pretty close to half. They know that some coin are loaded and they know that some coins may have two heads or two tails. And they probably also know that coins aren’t perfectly balanced. Nonetheless, before they start to collect data by tossing the coin and counting the number of heads their belief is that values of P near 0.5 are very likely, where’s values of P near 0 or 1 are very unlikely. So a base angle sit to express their belief about the value of P through a probability distribution. And a very flexible family of distributions for this purpose is the beta family. A member of the beta family is specified by two parameters, just as a member of the normal family is specified by the mean and the standard deviation. For the beta, we shall call these two parameters alpha and beta. In this formula, note the gamma functions. The gamma function is just a factorial, specifically gamma of n is n-1 times n-2 times n- 3 all the way down until you multiply by 1. When alpha equal to beta equals one then one gets the member of the beta family that is the flat line. That flat line is also the probability density function of the uniform distribution. So the beta family contains the uniform but the beta family is much richer. If we take off equal to beta then one gets PDF that is symmetrical around one half. For large but equal values of alpha and beta, the area under the beta density near one half is very large. These kinds of priors are probably appropriate If you want to make inference on the probability of getting heads in a coin toss. The beta family also includes skewed densities, which appropriate if one thinks that P the probability of success in binomial trial is like in being nearer to zero n near to one. As you all know Bayes’ rule is a machine for turning once prior beliefs in the posterior beliefs. With binomial data you start with whatever beliefs you may have about P, then you observe data in the form of the member of heads in say 20 tosses of a coin and Bayes’ rule tells you how that data should change your opinion about P. The same principle applies to all other inferences. You start with your prior probability distribution over some parameter, then you use data to update that distribution to become the posterior distribution that expresses your new belief. These rules ensure that the change in distributions from prior to postural is the uniquely rational solution. So long as you begin with the prior distribution that reflects your true opinion, you can hardly go wrong. But, expressing that prior can be difficult. There are proofs and methods whereby a rational and coherent thinker can self illicit their true prior distribution but these are impractical and people are rarely rational and coherent. The good news is that with the few simple conditions no matter what part distribution you choose. If you observe enough data, you will converge to an accurate posterior distribution. So, two bayesians, say the reference Thomas Bayes and the agnostic Ajay Good can start with different priors but, observed the same data. As the amount of data increases they will converge to the same posterior distribution. What have we learned? First, that Bayesians express their uncertainty through probability distributions. Second, one can think about the situation and self-elicit a probability distribution that approximately reflects your personal probability. Third, one’s personal probability should change according Bayes’ rule, as new data are observed. And fourth, the beta family of distribution can describe a wide range of prior beliefs.&lt;/p&gt;
 </description>
       
     </item>
@@ -267,7 +701,8 @@
 
 &lt;p&gt;Covariance between two varaiables &lt;code&gt;\(X\)&lt;/code&gt; and &lt;code&gt;\(Y\)&lt;/code&gt; can be calculated as:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$Cov[XY] = \sigma_XY = E\ [\ (X - \overline{X})\ (Y - \overline{Y})\ ] \\ \ \\ = \frac{1}{N - 1} \sum_{i = 1}^{N}(x_i - \overline{X})(y_i - \overline{Y})$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$$ Cov[XY] = \sigma&lt;em&gt;XY = E\ [\ (X - \overline{X})\ (Y - \overline{Y})\ ] = &amp;hellip; $$
+$$ &amp;hellip; = \frac{1}{N - 1} \sum&lt;/em&gt;{i = 1}^{N}(x_i - \overline{X})(y_i - \overline{Y}) $$&lt;/p&gt;
 
 &lt;p&gt;Covariance is a generalised version of the variance formula. For example, for a single variable we&amp;rsquo;d have &lt;code&gt;\(Cov[XX] = E\ [\ (X - \overline{X})^2\ ] = Var[X]\)&lt;/code&gt;.&lt;/p&gt;
 
@@ -790,17 +1225,17 @@ ggplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;esoph&lt;span class=&#34;p&#34
     &lt;/div&gt;
     &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;#data-type&#34;&gt;Data Type&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#measure-of-center&#34;&gt;Measure of Center&lt;/a&gt;&lt;br /&gt;
-2.1. &lt;a href=&#34;#airthmatic-mean&#34;&gt;Arithmatic Mean&lt;/a&gt;&lt;br /&gt;
-2.2. &lt;a href=&#34;#harmonic-and-geometric-mean&#34;&gt;Harmonic and Geometric Mean&lt;/a&gt;&lt;br /&gt;
-2.3. &lt;a href=&#34;#median-&amp;amp;-mode&#34;&gt;Median and Mode&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#measure-of-spread&#34;&gt;Measure of Spread&lt;/a&gt;&lt;br /&gt;
-3.1. &lt;a href=&#34;#variance&#34;&gt;Variance&lt;/a&gt;&lt;br /&gt;
-3.2. &lt;a href=&#34;#coefficient-of-variance&#34;&gt;Coefficient of Variance&lt;/a&gt;&lt;br /&gt;
-3.3. &lt;a href=&#34;#standard-deviation&#34;&gt;Standard Deviation&lt;/a&gt;&lt;br /&gt;
-3.4. &lt;a href=&#34;#interquartile-range&#34;&gt;Interquartile Range&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#measure-of-skewness-and-kurtosis&#34;&gt;Measure of Skewness and Kurtosis&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-type&#34;&gt;Data Type&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#measure-of-center&#34;&gt;Measure of Center&lt;/a&gt;
+2.1. &lt;a href=&#34;#airthmatic-mean&#34;&gt;Arithmatic Mean&lt;/a&gt;
+2.2. &lt;a href=&#34;#harmonic-and-geometric-mean&#34;&gt;Harmonic and Geometric Mean&lt;/a&gt;
+2.3. &lt;a href=&#34;#median-&amp;amp;-mode&#34;&gt;Median and Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#measure-of-spread&#34;&gt;Measure of Spread&lt;/a&gt;
+3.1. &lt;a href=&#34;#variance&#34;&gt;Variance&lt;/a&gt;
+3.2. &lt;a href=&#34;#coefficient-of-variance&#34;&gt;Coefficient of Variance&lt;/a&gt;
+3.3. &lt;a href=&#34;#standard-deviation&#34;&gt;Standard Deviation&lt;/a&gt;
+3.4. &lt;a href=&#34;#interquartile-range&#34;&gt;Interquartile Range&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#measure-of-skewness-and-kurtosis&#34;&gt;Measure of Skewness and Kurtosis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#graphical-analysis&#34;&gt;Graphical Analysis&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -922,15 +1357,17 @@ str&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;p&#34;&gt
 
 &lt;p&gt;For example, in our sample, the mean of WBC counts is the also the center of the WBC distribution. Expected value is the weighted mean however. In a very large sample, expected value would be the mean.&lt;/p&gt;
 
-&lt;p&gt;We would use the term expected value when the problem is at the theoretical stage and the term mean when we actually have the data to calculate it. For a random variable &lt;code&gt;\(X\)&lt;/code&gt; where &lt;code&gt;\(x_i\)&lt;/code&gt; is a case and &lt;code&gt;\(f_i\)&lt;/code&gt; is its relative frequency, &lt;code&gt;\(mean\)&lt;/code&gt; is calculated as:&lt;/p&gt;
+&lt;p&gt;We would use the term expected value when the problem is at the theoretical stage and the term mean when we actually have the data to calculate it. For a random variable $ X $ where $ x_i $ is a case and $ f_i $ is its relative frequency, $ mean $ is calculated as:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$\large E(X) = \overline{x} = \frac{1}{N}\sum_{i=1}^{N}x_i = E(X) = \sum_{i=1}^{N}f_ix_i$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$$ \large E(X) = \overline{x} = \frac{1}{N}\sum_{i=1}^{N}x_i = &amp;hellip; $$&lt;/p&gt;
+
+&lt;p&gt;$$ \large E(X) = \sum_{i=1}^{N}f_ix_i $$&lt;/p&gt;
 
 &lt;div class=&#34;notices warning&#34; &gt;&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt; represent the summary from the &lt;em&gt;population&lt;/em&gt; whereas &lt;strong&gt;statistics&lt;/strong&gt; are &lt;em&gt;point estimates&lt;/em&gt; of those parameters obtained from the &lt;em&gt;sample&lt;/em&gt;. Parameters are represented by &lt;strong&gt;Greek&lt;/strong&gt; and point estimates by &lt;strong&gt;Roman&lt;/strong&gt; alphabets.&lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;p&gt;&lt;code&gt;\(\large Parameter\ vs.\ statistics\ (point\ estimate)\ for\ population\ i:\)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ \large Parameter\ vs.\ statistics\ (point\ estimate)\ for\ population\ i: $&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -943,21 +1380,21 @@ str&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;p&#34;&gt
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;\(mean\)&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;\(\mu_i\)&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;\(\overline{x}\)&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;$ mean $&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;$ \mu_i $&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;$ \overline{x} $&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;\(standard\ deviation\)&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;\(\sigma_i\)&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;\(s_i\)&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;$ standard\deviation $&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;$ \sigma_i $&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;$ s_i $&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;\(proportion\)&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;\(P_i\)&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;\(\hat{p}_i\)&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;$ proportion $&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;$P_i $&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;$ \hat{p}_i $&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -968,7 +1405,15 @@ str&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;p&#34;&gt
 
 &lt;p&gt;The &lt;strong&gt;harmonic mean&lt;/strong&gt; which is the reciprocal of the arithmetic mean of the reciprocals and the &lt;strong&gt;geometric mean&lt;/strong&gt; which is the arithmetic mean of the transformed variable:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$\large \overline{X}_{H} = \frac{N}{\sum_{i=1}^{N} \frac{1}{x_i}} \\ \large \overline{X}_{G} = (x_i\ x_{i+1} ...x_n)^n = exp[\ ln(X_G)\ ]= exp[\  \frac{1}{N}\sum_{i=1}^{N}\ ln(x_i)\ ]$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ \overline{X}_{H} = $&lt;/p&gt;
+
+&lt;p&gt;$$ \large \frac{N}{\sum_{i=1}^{N} \frac{1}{x_i}} $$&lt;/p&gt;
+
+&lt;p&gt;$\overline{X}_{G} = $&lt;/p&gt;
+
+&lt;p&gt;$$ x&lt;em&gt;{i} x&lt;/em&gt;{i+1} &amp;hellip;x_n^n = &amp;hellip; $$&lt;/p&gt;
+
+&lt;p&gt;$$ exp[\ ln(X&lt;em&gt;G)\ ]= exp[\  \frac{1}{N}\sum&lt;/em&gt;{i=1}^{N}\ ln(x_i)\ ] $$&lt;/p&gt;
 
 &lt;h3 id=&#34;median-mode&#34;&gt;Median &amp;amp; Mode&lt;/h3&gt;
 
@@ -1038,17 +1483,17 @@ str&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;p&#34;&gt
 
 &lt;p&gt;The spread of the distribution is another informative statistic that provides a better picture of the random variable of interest.&lt;/p&gt;
 
-&lt;p&gt;Spread is the distance of individual observations ( &lt;code&gt;\(x_i\)&lt;/code&gt; ) from center of its distribution ( &lt;code&gt;\(\overline{x}\)&lt;/code&gt; ). Calculating the &lt;strong&gt;&lt;em&gt;variance&lt;/em&gt;&lt;/strong&gt; is one of the ways of communicating the dispersion in our distribution.&lt;/p&gt;
+&lt;p&gt;Spread is the distance of individual observations ( $ x_i $ ) from center of its distribution ( $ \overline{x} $ ). Calculating the &lt;strong&gt;&lt;em&gt;variance&lt;/em&gt;&lt;/strong&gt; is one of the ways of communicating the dispersion in our distribution.&lt;/p&gt;
 
 &lt;h3 id=&#34;variance&#34;&gt;Variance&lt;/h3&gt;
 
-&lt;p&gt;Variance for variable &lt;code&gt;\(X\)&lt;/code&gt; is defined as:&lt;/p&gt;
+&lt;p&gt;Variance for variable $ X $ is defined as:&lt;/p&gt;
 
-&lt;p&gt;$$\large Var(X) =  E\ [\ (X-\mu)^2\ ] \ \large  $$&lt;/p&gt;
+&lt;p&gt;$$ \large Var(X) =  E\ [\ (X-\mu)^2\ ] \ \large   $$&lt;/p&gt;
 
 &lt;p&gt;This can be written as:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$\large Var(X) = \frac{1}{N}\sum_{i = 1}^{N}\ [\ x_i - E(X)\ ]^2 = \sum_{i = 1}^{N}f_i[\ x_i - E(X)\ ]^2 = E(X^2) - (\overline{x})^2 = \sigma^2$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$$ \large Var(X) = \frac{1}{N}\sum_{i = 1}^{N}\ [\ x&lt;em&gt;i - E(X)\ ]^2 = \sum&lt;/em&gt;{i = 1}^{N}f_i[\ x_i - E(X)\ ]^2 = E(X^2) - (\overline{x})^2 = \sigma^2 $$&lt;/p&gt;
 
 &lt;p&gt;Variance is the difference between &lt;strong&gt;mean of squares&lt;/strong&gt; and the &lt;strong&gt;squared mean&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1065,15 +1510,15 @@ str&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;p&#34;&gt
         &lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-&lt;p&gt;Let&amp;rsquo;s take a look at an example &lt;code&gt;\(A = (2, 3, 4, 5)\)&lt;/code&gt;. &lt;code&gt;\(E(A) = 3.5\)&lt;/code&gt;, if we would like to measure the overall dispersion in this set we would get &lt;code&gt;\((2 - 3.5) + (3 - 3.5) + (4 - 3.5) + (5 - 3.5)\)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s take a look at an example $ A = (2, 3, 4, 5) $. $ E(A) = 3.5 $, if we would like to measure the overall dispersion in this set we would get $ (2 - 3.5) + (3 - 3.5) + (4 - 3.5) + (5 - 3.5) $.&lt;/p&gt;
 
-&lt;p&gt;Do you see the problem? &lt;code&gt;\(-1.5 - 0.5 +0.5 + 1.5 = 0\)&lt;/code&gt;. To workaround the problem we&amp;rsquo;d square all the terms &lt;code&gt;\(E(A)^2 = 12.25\)&lt;/code&gt;.
-&lt;code&gt;\(\frac{1}{4}[(2 - 3.5)^2 + (3 - 3.5)^2 + (4 - 3.5)^2 + (5 - 3.5)^2] = 1.25\)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Do you see the problem? $ -1.5 - 0.5 +0.5 + 1.5 = 0 $. To workaround the problem we&amp;rsquo;d square all the terms $ E(A)^2 = 12.25 $.
+$ \frac{1}{4}[(2 - 3.5)^2 + (3 - 3.5)^2 + (4 - 3.5)^2 + (5 - 3.5)^2] = 1.25 $&lt;/p&gt;
 
 &lt;p&gt;We will also get the same result if we follow the other formula:
-&lt;code&gt;\(\frac{1}{4}[(4 - 12.25) +  (9 - 12.25) + (16 - 12.25) + (25 - 12.25)] = 1.25\)&lt;/code&gt;
+$ \frac{1}{4}[(4 - 12.25) +  (9 - 12.25) + (16 - 12.25) + (25 - 12.25)] = 1.25 $
 Also:
-&lt;code&gt;\(E(X^2) - (\overline{x})^2 = \frac{1}{4}(4+9+16+25) - 3.5^2 = 1.25\)&lt;/code&gt;&lt;/p&gt;
+$ E(X^2) - (\overline{x})^2 = \frac{1}{4}(4+9+16+25) - 3.5^2 = 1.25 $&lt;/p&gt;
 
     &lt;/div&gt;
 &lt;/div&gt;
@@ -1086,7 +1531,7 @@ Also:
 
 &lt;p&gt;When considering comparing the variability in two nonidentical and heterogeneous population, comparing variances may be misleading. &lt;strong&gt;Coefficient of variance&lt;/strong&gt; allows for a true comparison. For a random variable X, CV is defined as:&lt;/p&gt;
 
-&lt;p&gt;$$\large CV[X] = \frac{\sigma}{\mu}\times 100\% $$&lt;/p&gt;
+&lt;p&gt;$$ \large CV[X] = \frac{\sigma}{\mu}\times 100\%  $$&lt;/p&gt;
 
 &lt;p&gt;CV is a consistent measurement of spread as it measures variability unitlessly.&lt;/p&gt;
 
@@ -1119,26 +1564,26 @@ Suppose the American population has a mean of 14.0 mg/dl with standard deviation
 
 &lt;p&gt;The standard deviation is the square root of the variance. It is also equivalent to the commonly used &lt;strong&gt;root-mean-square error (RMSE)&lt;/strong&gt;. Standard deviation gives a good estimate of how close the data is to the center of the distribution.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$\large \sigma = \sqrt{Var(X)}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$$ \large \sigma = \sqrt{Var(X)} $$&lt;/p&gt;
 
-&lt;p&gt;An important point to make here is to make a note of the symbols! This formula is valid only if we are dealing with &lt;strong&gt;population parameters&lt;/strong&gt; ( &lt;code&gt;\(\large \sigma_x\neq s_x\)&lt;/code&gt; ).&lt;/p&gt;
+&lt;p&gt;An important point to make here is to make a note of the symbols! This formula is valid only if we are dealing with &lt;strong&gt;population parameters&lt;/strong&gt; ( $ \large \sigma_x\neq s_x $ ).&lt;/p&gt;
 
 &lt;p&gt;For a sample of population &lt;code&gt;\(X\)&lt;/code&gt; we calculate sigma with a &lt;em&gt;degree of freedom&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$\large s_x^2 = \frac{1}{N}\sum_{i=1}^{N}(x_i-\overline{x})^2$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$$ \large s&lt;em&gt;x^2 = \frac{1}{N}\sum&lt;/em&gt;{i=1}^{N}(x_i-\overline{x})^2 $$&lt;/p&gt;
 
 &lt;h4 id=&#34;empirical-68-95-and-99-7-rule&#34;&gt;Empirical 68, 95 and 99.7 Rule&lt;/h4&gt;
 
-&lt;p&gt;Depending on the distribution, the spread of the data would follow the &lt;strong&gt;68, 95 and 99.7 rule&lt;/strong&gt;. That is 68% of the data would fall in &lt;code&gt;\(\large \overline{x} \pm s\)&lt;/code&gt;, 95% within &lt;code&gt;\(\large \overline{x} \pm 2s\)&lt;/code&gt; and 99.7% within &lt;code&gt;\(\large \overline{x} \pm 3s\)&lt;/code&gt;. This is a rough estimation however. The actual multiplier of the &lt;code&gt;\(s\)&lt;/code&gt; depends on the critical value of the distribution. For example, in a &lt;code&gt;\(\large z-distribution\)&lt;/code&gt; this would be &lt;code&gt;\(\large \overline{x} \pm z^ \star s\)&lt;/code&gt; and for 95% confidence interval &lt;code&gt;\(\large z^\star = 1.96\)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Depending on the distribution, the spread of the data would follow the &lt;strong&gt;68, 95 and 99.7 rule&lt;/strong&gt;. That is 68% of the data would fall in $ \large \overline{x} \pm s $, 95% within $ \large \overline{x} \pm 2s $ and 99.7% within $ \large \overline{x} \pm 3s $. This is a rough estimation however. The actual multiplier of the $ s $ depends on the critical value of the distribution. For example, in a $ \large z-distribution $ this would be $ \large \overline{x} \pm z^ \star s $ and for 95% confidence interval $ \large z^\star = 1.96 $.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;/img/statistics/68-95-997.jpg&#34; alt=&#34;&#34; width=&#34;500px&#34; height=&#34;400px&#34;/&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;interquartile-range&#34;&gt;Interquartile Range&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Range&lt;/strong&gt; is the most basic measurement of variability in data. A numerical variable ranges from &lt;code&gt;\(min(x)\)&lt;/code&gt; to &lt;code&gt;\(max(x)\)&lt;/code&gt;. Range alone is not very helpful however &lt;strong&gt;interquartile range&lt;/strong&gt; is! IQR tells us the variabilit for the middle 50% of data. The larger the standard deviation the larger the IQR.
-&lt;code&gt;$$range = max(x) - min(x) \\ \ \\ Q_3 = \frac{max_x - median_x}{2} \\ \ \\ Q_1 = \frac{median_x - min_x}{2} \\ \ \\ IQR = Q_3 - Q_1$$&lt;/code&gt;&lt;/p&gt;
+ $$ range = max(x) - min(x) \ \ \ Q_3 = \frac{max_x - median_x}{2} \ \ \ Q_1 = \frac{median_x - min_x}{2} \ \ \ IQR = Q_3 - Q_1 $$&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Outliers&lt;/strong&gt; can be identified using the IQR. Any case that falls out of &lt;code&gt;\(Q_1 - 1.5IQR\ or Q_3 + 3IQR\)&lt;/code&gt; is considered an outlier.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Outliers&lt;/strong&gt; can be identified using the IQR. Any case that falls out of $ Q_1 - 1.5IQR\ or Q_3 + 3IQR $ is considered an outlier.&lt;/p&gt;
 
 &lt;h2 id=&#34;measure-of-skewness-and-kurtosis&#34;&gt;Measure of Skewness and Kurtosis&lt;/h2&gt;
 
@@ -1157,7 +1602,7 @@ Suppose the American population has a mean of 14.0 mg/dl with standard deviation
 
 &lt;p&gt;Let&amp;rsquo;s take a look at why quantitative and graphical analyses should always be carried out together.&lt;/p&gt;
 
-&lt;p&gt;Suppose we have two samples, &lt;code&gt;\(\overline{x}_{1\&amp;amp;2} =  0.6923\ ; s_{1\&amp;amp;2} = 0.1685\)&lt;/code&gt;. Looking at the statistics alone, our samples seem similar if not identical! However, they each belong to a different Beta distribution!&lt;/p&gt;
+&lt;p&gt;Suppose we have two samples, $ \overline{x}&lt;em&gt;{1&amp;amp;2} =  0.6923\ ; s&lt;/em&gt;{1&amp;amp;2} = 0.1685 $. Looking at the statistics alone, our samples seem similar if not identical! However, they each belong to a different Beta distribution!&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1251,14 +1696,14 @@ curve&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;dbeta&lt;span class=&#34;p&#34;
 
 &lt;h3 id=&#34;skewness&#34;&gt;Skewness&lt;/h3&gt;
 
-&lt;p&gt;Mathematically skewness ( &lt;code&gt;\(\large \gamma_1\)&lt;/code&gt; )is defined as:&lt;/p&gt;
+&lt;p&gt;Mathematically skewness ( $ \large \gamma_1 $ )is defined as:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$\large {\gamma_1 = \frac{\mu_3}{\mu_2^\frac{3}{2}}= \frac{\mu_3}{\sigma^3}}$$&lt;/code&gt;
+&lt;p&gt;$$ \large {\gamma_1 = \frac{\mu_3}{\mu_2^\frac{3}{2}}= \frac{\mu_3}{\sigma^3}} $$
 Where:
-$$ {{\mu_1 = 0 \ \mu_2 = E\ [\ (X - \mu)\ ] = \sigma^2 \ \mu_3 = E\ [\ (X - \mu)^2\ ] = \sigma^3\gamma_1}}$$&lt;/p&gt;
+ $$  {{\mu_1 = 0 \ \mu_2 = E\ [\ (X - \mu)\ ] = \sigma^2 \ \mu_3 = E\ [\ (X - \mu)^2\ ] = \sigma^3\gamma_1}} $$&lt;/p&gt;
 
 &lt;p&gt;Distinction between population and sample:
-&lt;code&gt;$$\gamma_{1} = \sqrt{n} \frac{\sum_{i =1}^{n}(X_i-\mu)^3}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{3/2}} \\ \ \\ g_1 = \frac{n \sqrt{n-1}}{n-2} \times \frac{\sum_{i =1}^{n}(X_i-\mu)^3}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{3/2}}$$&lt;/code&gt;&lt;/p&gt;
+ $$ \gamma&lt;em&gt;{1} = \sqrt{n} \frac{\sum&lt;/em&gt;{i =1}^{n}(X&lt;em&gt;i-\mu)^3}{[\ \sum&lt;/em&gt;{i =1}^{n}(X_i-\mu)^2\ ]^{&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;}} \ \ \ g&lt;em&gt;1 = \frac{n \sqrt{n-1}}{n-2} \times \frac{\sum&lt;/em&gt;{i =1}^{n}(X&lt;em&gt;i-\mu)^3}{[\ \sum&lt;/em&gt;{i =1}^{n}(X_i-\mu)^2\ ]^{&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;}} $$&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;\(\mu_3\)&lt;/code&gt; and &lt;code&gt;\(\mu_2\)&lt;/code&gt; are called &lt;strong&gt;third and second moment&lt;/strong&gt; of data.&lt;/p&gt;
 
@@ -1268,13 +1713,13 @@ $$ {{\mu_1 = 0 \ \mu_2 = E\ [\ (X - \mu)\ ] = \sigma^2 \ \mu_3 = E\ [\ (X - \mu)
 
 &lt;p&gt;In other words, datasets with high kurtosis tend to have outliers and vice versa.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$\large \mu_4 = E\ [\ (X - \mu)^3\ ] = \sigma^4\gamma_2 \\ \large \gamma_2 = \frac{\mu_4}{\mu_2^2} = \frac{\mu_4}{(\sigma^2)^2}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$$ \large \mu_4 = E\ [\ (X - \mu)^3\ ] = \sigma^4\gamma_2 \ \large \gamma_2 = \frac{\mu_4}{\mu_2^2} = \frac{\mu_4}{(\sigma^2)^2} $$&lt;/p&gt;
 
 &lt;p&gt;Again the difference in population and sample is:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$\gamma_2 = n \times \frac{\sum_{i =1}^{n}(X_i-\mu)^4}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{2}}
-\\
-k = \frac{n(n+1)(n-1)}{(n-2)(n-3)} \times \frac{\sum_{i =1}^{n}(X_i-\mu)^4}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{2}}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$$ \gamma&lt;em&gt;2 = n \times \frac{\sum&lt;/em&gt;{i =1}^{n}(X&lt;em&gt;i-\mu)^4}{[\ \sum&lt;/em&gt;{i =1}^{n}(X&lt;em&gt;i-\mu)^2\ ]^{2}}
+&lt;br /&gt;
+k = \frac{n(n+1)(n-1)}{(n-2)(n-3)} \times \frac{\sum&lt;/em&gt;{i =1}^{n}(X&lt;em&gt;i-\mu)^4}{[\ \sum&lt;/em&gt;{i =1}^{n}(X_i-\mu)^2\ ]^{2}} $$&lt;/p&gt;
 
 &lt;div class=&#34;panel panel-primary&#34;&gt;
 	
@@ -1483,71 +1928,140 @@ x2 &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#
       <guid>/post/statistics/probability/probability_function/</guid>
       
         <description>&lt;p&gt;Probability function is the function of a random variable distribution, whose value provides the &lt;em&gt;absolute&lt;/em&gt; or &lt;em&gt;relative likelihood&lt;/em&gt; of the value of the random variable in the sample.&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;p&gt;Depending on the &lt;em&gt;type&lt;/em&gt; of our random variable, we can calculate:&lt;/p&gt;
+
+&lt;p&gt;
+Depending on the &lt;em&gt;type&lt;/em&gt; of our random variable, we can calculate:&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Absolute likelihood&lt;/strong&gt; for a &lt;u&gt;discrete variable&lt;/u&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Relative likelihood&lt;/strong&gt; for a &lt;u&gt;continuous variable&lt;/u&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;p&gt;On this page we will discuss:&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#probability-mass-function&#34;&gt;Probability Mass Function&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#probability-density-function&#34;&gt;Probability Density Function&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#pmfs-and-pdfs&#34;&gt;Popular PMFs and PDFs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;probability-mass-function&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Probability Mass Function&lt;/h2&gt;
+
+&lt;h2 id=&#34;probability-mass-function&#34;&gt;Probability Mass Function&lt;/h2&gt;
+
 &lt;p&gt;Discrete random variables have discrete and countable values. That &lt;strong&gt;PMF&lt;/strong&gt; tells us the probability that the random variable takes each of the possible values.&lt;/p&gt;
-&lt;p&gt;Assume a simple random experiment of coin toss where a &lt;strong&gt;fair&lt;/strong&gt; coin is tossed twice. let &lt;span class=&#34;math inline&#34;&gt;\(X =\)&lt;/span&gt; number of tails we get:&lt;/p&gt;
+
+&lt;p&gt;Assume a simple random experiment of coin toss where a &lt;strong&gt;fair&lt;/strong&gt; coin is tossed twice. let &lt;code&gt;\(X =\)&lt;/code&gt; number of tails we get:&lt;/p&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(S = {(HH),(TH),(HT),(TT)}\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\(S = {(HH),(TH),(HT),(TT)}\)&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;P(X = 0) = (HH)&lt;/li&gt;
 &lt;li&gt;P(X = 1) = (HT) or (TH)&lt;/li&gt;
 &lt;li&gt;P(X = 2) = (TT)&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;p&gt;Here we can use a binomial distribution to calcualte the &lt;strong&gt;absolute&lt;/strong&gt; likelihood of (X = 2); using the Probability Mass Function formula for binomial distribution:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\\k \end{array}\right) ~ p^k ~ (1-p)^{n-k}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$$P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\\k \end{array}\right) ~ p^k ~ (1-p)^{n-k}$$&lt;/code&gt;&lt;/p&gt;
+
 &lt;p&gt;Here we can calculate the P(X = k) for each outcome:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dbinom(0, 2, 0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.25&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dbinom(1, 2, 0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.5&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dbinom(2, 2, 0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.25&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can visualise &lt;em&gt;Probability Mass Function&lt;/em&gt; using historframs. Let’s Visualise what will happen if we repeat this experiment 1000 times:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Two_cointosses_1000_times = sample(x=c(&amp;quot;HH&amp;quot;,&amp;quot;HT&amp;quot;,&amp;quot;TT&amp;quot;), size=1000, replace = T, prob=c(.25,.50,.25))
-barplot(table(Two_cointosses_1000_times))&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;dbinom&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;## [1] 0.25&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;dbinom&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;## [1] 0.5&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;dbinom&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;## [1] 0.25&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We can visualise &lt;em&gt;Probability Mass Function&lt;/em&gt; using historframs. Let&amp;rsquo;s Visualise what will happen if we repeat this experiment 1000 times:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;Two_cointosses_1000_times &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;HH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;HT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;TT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; replace &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; prob&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;.25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;.50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;.25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+barplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Two_cointosses_1000_times&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;img src=&#34;/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The area under the histogram is one and the area of each bar is the probability of seeing a binomial random variable, whose value is equal to the x-value at the center of the bars base.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;probability-density-function&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Probability Density Function&lt;/h2&gt;
+
+&lt;p&gt;The area under the histogram is one and the area of each bar is the probability
+of seeing a binomial random variable, whose value is equal to the x-value
+at the center of the bars base.&lt;/p&gt;
+
+&lt;h2 id=&#34;probability-density-function&#34;&gt;Probability Density Function&lt;/h2&gt;
+
 &lt;p&gt;In contrast, the normal distribution also called the &lt;em&gt;Gaussian&lt;/em&gt; distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable.&lt;/p&gt;
-&lt;p&gt;Consider random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.&lt;/p&gt;
-&lt;p&gt;The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a &lt;strong&gt;probability density curve&lt;/strong&gt;. &lt;img src=&#34;/probability/pdf.gif&#34; /&gt; The total area under the density curve equals 1, and the curve represents probabilities by area.&lt;/p&gt;
-&lt;p&gt;When the random variable is continuous, it has &lt;em&gt;probability zero of taking any single value&lt;/em&gt;, &lt;span class=&#34;math inline&#34;&gt;\(P(X =x) =0\)&lt;/span&gt;. Here we can only talk about the &lt;strong&gt;relative likelihood&lt;/strong&gt; of the continuous random variable &lt;em&gt;within some interval&lt;/em&gt;. Continuous random variables have &lt;strong&gt;probability density functions&lt;/strong&gt; or pdfs instead of probability mass functions. &lt;img src=&#34;/probability/pdf2.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The PDF curve of a random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; with &lt;span class=&#34;math inline&#34;&gt;\(M =\mu\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(SD = \sigma\)&lt;/span&gt;: &lt;span class=&#34;math display&#34;&gt;\[\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Here the area under the curve, or the &lt;strong&gt;density&lt;/strong&gt; would be: &lt;span class=&#34;math display&#34;&gt;\[ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;pmfs-and-pdfs&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;PMFs and PDFs&lt;/h2&gt;
+
+&lt;p&gt;Consider  random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.&lt;/p&gt;
+
+&lt;p&gt;The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a &lt;strong&gt;probability density curve&lt;/strong&gt;.
+&lt;img src=&#34;/probability/pdf.gif&#34; alt=&#34;&#34; /&gt;
+The total area under the density curve equals 1, and the curve represents probabilities by area.&lt;/p&gt;
+
+&lt;p&gt;When the random variable is continuous, it has &lt;em&gt;probability zero of taking any single value&lt;/em&gt;, &lt;code&gt;\(P(X =x) =0\)&lt;/code&gt;. Here we can only talk about the &lt;strong&gt;relative likelihood&lt;/strong&gt; of the continuous random variable &lt;em&gt;within some interval&lt;/em&gt;. Continuous random variables have &lt;strong&gt;probability density functions&lt;/strong&gt; or pdfs instead of probability mass functions.
+&lt;img src=&#34;/probability/pdf2.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The PDF curve of a random variable &lt;code&gt;\(X\)&lt;/code&gt; with &lt;code&gt;\(M =\mu\)&lt;/code&gt; and &lt;code&gt;\(SD = \sigma\)&lt;/code&gt;:
+$$\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} $$&lt;/p&gt;
+
+&lt;p&gt;Here the area under the curve, or the &lt;strong&gt;density&lt;/strong&gt; would be:
+$$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx$$&lt;/p&gt;
+
+&lt;h2 id=&#34;pmfs-and-pdfs&#34;&gt;PMFs and PDFs&lt;/h2&gt;
+
 &lt;p&gt;There are many types of PMFs and PDFs, here are a handful of most famous distributions:&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Discrete (&lt;em&gt;PMF&lt;/em&gt;)
+
 &lt;ul&gt;
 &lt;li&gt;Binomial&lt;/li&gt;
 &lt;li&gt;Poisson&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Continuous (&lt;em&gt;PDF&lt;/em&gt;)
+
 &lt;ul&gt;
 &lt;li&gt;Normal distribution&lt;/li&gt;
 &lt;li&gt;Uniform&lt;/li&gt;
 &lt;li&gt;Beta&lt;/li&gt;
 &lt;li&gt;Gamma&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
+&lt;/ul&gt;</description>
       
     </item>
     
@@ -1615,9 +2129,9 @@ graph LR;
 &lt;link href=&#34;/mermaid/mermaid.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&gt;
 &lt;script defer src=&#34;/mermaid/mermaid.js&#34;&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
 &lt;div class=&#34;mermaid&#34; align=&#34;center&#34; &gt;
-graph LR;  
+graph LR;
     H(Conclusion) -.-&gt; |Bayesian|G[Updating priori &lt;br&gt; using the posteriori]
-    
+
 &lt;/div&gt;
 </description>
       
@@ -1633,177 +2147,6 @@ graph LR;
         <description>&lt;p&gt;Lorem Ipsum.
 Notice &lt;code&gt;draft&lt;/code&gt; is set to true.
 asdasd&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Beta Distribution</title>
-      <link>/post/statistics/probability/continuous-probability-distributions/beta-distribution/</link>
-      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/statistics/probability/continuous-probability-distributions/beta-distribution/</guid>
-      
-        <description>&lt;p&gt;We’ll introduce the beta distribution by using an example:&lt;/p&gt;
-&lt;div id=&#34;example&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://ghr.nlm.nih.gov/condition/diamond-blackfan-anemia&#34;&gt;Diamond Blackfan anemia (DBA)&lt;/a&gt; is a rare autosomal dominant bone marrow disease. Children with Diamond Blackfan anemia present with symptoms of extreme anemia during the first year of life.&lt;/p&gt;
-&lt;p&gt;Unfortunately, patients have an increased risk of other serious bone marrow malfunctions. Specifically, they are prone to developing myelodysplastic syndrome (MDS), certain blood cancers such as acute myeloid leukemia (AML) and bone cancer (osteosarcoma).&lt;/p&gt;
-&lt;p&gt;At &lt;a href=&#34;http://diablo.wikia.com/wiki/Harrogath&#34;&gt;Harrogath&lt;/a&gt; the prevalence of DBA is exceptionally high (5 in 1000). Harrogathian scientists have teamed up with Kehjistanian scientists to study the probability of developing cancer in DBA patients based on their initial LDH level.&lt;/p&gt;
-&lt;p&gt;Kehjistanian scientists have a studied the tendency of DBA to develop into cancers before. Therefore, here we have the luxuary of using Bayesian statistics to update what we already know about the LDH and cancer development.&lt;/p&gt;
-&lt;p&gt;** How can we use describe the &lt;em&gt;prior probability&lt;/em&gt; in a meaningful way? **&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;beta-distribution&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Beta distribution&lt;/h2&gt;
-&lt;p&gt;The Beta density function is a versatile way to represent continuous outcomes like proportions or probabilities that lie between 0 and 1.&lt;/p&gt;
-&lt;p&gt;The Beta can be used to describe not only the variety observed across sample, but it can also describe your &lt;strong&gt;subjective degree of belief&lt;/strong&gt; (in a Bayesian sense). If you are not entirely sure that the probability is 0.22, but rather you think that is the most likely value but that there is some chance that the value is higher or lower, then maybe your personal beliefs can be described as a Beta distribution.&lt;/p&gt;
-&lt;p&gt;Let’s say based on previous studies, we know the mean percentage increase in LDH level and standard deviation is &lt;span class=&#34;math inline&#34;&gt;\(\mu = 0.55\)&lt;/span&gt; &amp;amp; &lt;span class=&#34;math inline&#34;&gt;\(\sigma = 0.09\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;A &lt;em&gt;beta&lt;/em&gt; distribution is defined by two parameters &lt;span class=&#34;math inline&#34;&gt;\(\alpha ~&amp;amp;~ \beta\)&lt;/span&gt;, the &lt;strong&gt;probability density function&lt;/strong&gt; of beta distribution is defined as: &lt;span class=&#34;math display&#34;&gt;\[\Large B(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha +\beta)}\]&lt;/span&gt; &lt;span class=&#34;math display&#34;&gt;\[Note:~\Gamma(k)=(k-1)!\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The values of alpha and beta can be derived from the sample: &lt;span class=&#34;math display&#34;&gt;\[\large E(x)=\mu=\frac{\alpha}{\alpha+\beta}\]&lt;/span&gt; &lt;span class=&#34;math display&#34;&gt;\[\large Variance(x)=\sigma^2=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)} \]&lt;/span&gt; Here are some examples of beta distribution:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;curve( dbeta(x,1,1), xlim=c(0,1), ylim=c(0,4) )
-curve( dbeta(x,0.5,0.5), add=T, col=&amp;#39;red&amp;#39; )
-curve( dbeta(x,5,1), add=T, col=&amp;#39;green&amp;#39; )
-curve( dbeta(x,1,3), add=T, col=&amp;#39;blue&amp;#39; )
-title(main=&amp;quot;Beta distribution&amp;quot;)
-legend(par(&amp;#39;usr&amp;#39;)[1], par(&amp;#39;usr&amp;#39;)[4], xjust=-1.9,
-       c(&amp;#39;(1,1)&amp;#39;, &amp;#39;(0.5,0.5)&amp;#39;, &amp;#39;(5,1)&amp;#39;, &amp;#39;(1,3)&amp;#39;), 
-      
-       lwd=1, #c(1,1,1,1, 2,2,2, 3,3,3),
-       lty=c(1,1,1,1, 2,2,2, 3,3,3),
-       col=c(par(&amp;#39;fg&amp;#39;), &amp;#39;red&amp;#39;, &amp;#39;green&amp;#39;, &amp;#39;blue&amp;#39; ))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/statistics/probability/continuous-probability-distributions/beta_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;div id=&#34;example-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;p&gt;Back to our example: &lt;span class=&#34;math display&#34;&gt;\[ E(x) = \mu = 0.55 =\frac{\alpha}{\alpha+\beta}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[Variance(x)=\sigma^2= 0.09^2=0.0081=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[From~the~first~equation~we~have: \beta = \frac{\alpha}{0.55}-\alpha = 0.82\alpha ~~~and~~~\alpha=\frac{0.55\beta}{1-0.55} = 1.22\beta \]&lt;/span&gt; After simple algebra using beta in the second equation we’ll get:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ 0.79\alpha^2 - 0.049\alpha^3 = 0 \]&lt;/span&gt; &lt;span class=&#34;math display&#34;&gt;\[  1.18\beta^2 - 0.089\beta^3 = 0 \]&lt;/span&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(polynom)
-beta = polyroot(z = c(0, 0, 1.18, -0.089)) # z is a vector of polynomial coefficients in increasing order: x^0, X^1 ...
-beta # only the 3rd value is not 0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1]  0.00000+0i  0.00000+0i 13.25843+0i&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;beta = abs(beta[3])
-
-alpha = polyroot(z = c(0, 0, 0.79, -0.049))
-alpha #we choose the 3rd&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1]  0.00000+0i  0.00000+0i 16.12245+0i&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;alpha = abs(alpha[3])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;alpha&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 16.12245&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;beta&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 13.25843&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;curve( dbeta(x,alpha,beta) )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/statistics/probability/continuous-probability-distributions/beta_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Please use &lt;code&gt;Wolfram Alpha math engine&lt;/code&gt; to solve the equations.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Discrete Probability Distribution</title>
-      <link>/post/statistics/probability/probability_discrete_distribution/</link>
-      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
-      
-        <description>&lt;p&gt;Probability distributions demonstrate the probability of an event. When dealing with discrete data, &lt;strong&gt;probability mass function&lt;/strong&gt; of the &lt;em&gt;event&lt;/em&gt; can come from various distributions. The most important discrete probability distributions are the &lt;strong&gt;Bernoulli&lt;/strong&gt;, &lt;strong&gt;Binomial&lt;/strong&gt; and &lt;strong&gt;Poisson&lt;/strong&gt;.&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;bernoulli-distribution&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Bernoulli distribution&lt;/h2&gt;
-&lt;p&gt;The most widely known &lt;em&gt;unknown&lt;/em&gt; discrete probability distribution is the &lt;strong&gt;Bernoulli distribution&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Named after the Swiss mathematician &lt;a href=&#34;https://en.wikipedia.org/wiki/Jacob_Bernoulli&#34;&gt;Jacob Bernoulli&lt;/a&gt;, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes. Each outcome is a Boolean-valued discrete random variable (&lt;em&gt;k=1&lt;/em&gt; or &lt;em&gt;k=0&lt;/em&gt;).&lt;/p&gt;
-&lt;p&gt;Unlike the binomial distribution, the Bernoulli distribution is used in &lt;strong&gt;single trial (n=1)&lt;/strong&gt; experiments. This is a special case of the Binomial distribution where a single experiment/trial is conducted (n=1).&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; is a discrete random variable that belongs to the Bernoulli distribution if: &lt;span class=&#34;math display&#34;&gt;\[ P(X=1) = p = 1 - P(X = 0) = 1 - q \]&lt;/span&gt;&lt;/p&gt;
-&lt;div id=&#34;bernoulli-probability-mass-function&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Bernoulli Probability Mass Function&lt;/h3&gt;
-&lt;p&gt;The probability mass function can be written as: &lt;span class=&#34;math display&#34;&gt;\[f(k;p) = \left\{ \begin{array}{lcl}p &amp;amp;\mbox{if}&amp;amp;k=1 \\ 1-p &amp;amp;\mbox{if}&amp;amp;k=0 \end{array} \right.\]&lt;/span&gt; Can be expressed as: &lt;span class=&#34;math display&#34;&gt;\[f(k;p) = p^k(1-p)^{1-k} ~for~k\in \{0,1\}  \]&lt;/span&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;A &lt;strong&gt;binomial variable&lt;/strong&gt; of parameters (n,p) is the &lt;strong&gt;sum of &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; Bernoulli variables&lt;/strong&gt; of parameter p.&lt;/p&gt;
-&lt;hr /&gt;
-&lt;div id=&#34;example&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Example&lt;/h4&gt;
-&lt;p&gt;While focusing on locating the NPHLM gene, the &lt;a href=&#34;http://diablo.wikia.com/wiki/Kehjistan&#34;&gt;Kehjistanian&lt;/a&gt; scientists also discovered that, for any given birth at any given day, there is a fixed 0.60 chance that the newborn is a female.&lt;/p&gt;
-&lt;p&gt;If on average there is one birth every 2 minutes, what is the projected population of males in Caldeum over 20 years?&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n = (60*24*365*20)/2
-x = sample(c(0,1), n, replace=T, prob=c(.6,.4))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(cumsum(x), type=&amp;#39;l&amp;#39;,
-     main=&amp;quot;Cummulative sums of males (a Bernoulli variable)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;binomial-distribution&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Binomial distribution&lt;/h2&gt;
-&lt;p&gt;The binomial distribution describes the probability of having exactly &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; successes in &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; independent Bernoulli trials, given that the probability of &lt;em&gt;k = 1&lt;/em&gt; is &lt;strong&gt;&lt;em&gt;p&lt;/em&gt;&lt;/strong&gt;. It is important to note that the success rate of the binary event remains constant for all n independent trials.&lt;/p&gt;
-&lt;p&gt;To use a binomial distribution, data must come from a &lt;strong&gt;binomial experiment&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; = fixed number of trials&lt;/li&gt;
-&lt;li&gt;Trials must be &lt;strong&gt;independent&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Each trial has &lt;strong&gt;two possible outcome&lt;/strong&gt; where:
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;P&lt;/em&gt;(sucess) = constant for each trial&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;P&lt;/em&gt;(failure) = 1 - &lt;em&gt;P&lt;/em&gt;(sucess)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Given the requirements are met, the probability distribution of our binary event has a mean of &lt;span class=&#34;math inline&#34;&gt;\(np\)&lt;/span&gt; and variance of &lt;span class=&#34;math inline&#34;&gt;\(np(1-p)\)&lt;/span&gt;&lt;/p&gt;
-&lt;div id=&#34;example-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Example&lt;/h3&gt;
-&lt;p&gt;Kehjistanian scientists have identified the gene NPHLM on the locus 14p.61 which predisposes children to a certain lifestyle.&lt;/p&gt;
-&lt;p&gt;It is estimated that 1 in 40 child under the age of 16 have this mutation. According to the last census at &lt;a href=&#34;http://diablo.wikia.com/wiki/Caldeum&#34;&gt;Caldeum&lt;/a&gt;, number of kids under 16 is roughly 400,000.&lt;/p&gt;
-&lt;p&gt;A sample of 200 has been collected. How many children with NPHLM mutation can we expect to find?&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;N = 400000
-n = 200
-p = 1/40
-x = rep(0,N)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for (i in 1:N){{
-  x[i] = sum(runif(n)&amp;lt;p)
-}}
-hist(x, main = &amp;quot;Distribution of NPHLM mutation in a sample of 200&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Regression Introduction: Example</title>
-      <link>/post/regression/1-introduction/regression-introduction-example/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/regression/1-introduction/regression-introduction-example/</guid>
-      
-        <description>&lt;p&gt;Example 2 - why ? ??&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Regression Introduction: Example</title>
-      <link>/post/regression/1-introduction/regression-introduction-example/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/regression/1-introduction/regression-introduction-example/</guid>
-      
-        <description>&lt;p&gt;regression example 1;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Regression: Introduction</title>
-      <link>/post/regression/1-introduction/regression-1-introduction/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/regression/1-introduction/regression-1-introduction/</guid>
-      
-        <description>&lt;p&gt;This is the page for regression.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;../regression-introduction-example/&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;../regression-introduction-example-2/&#34;&gt;example 2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:4321/regression/1-introduction/example-1/&#34; class=&#34;uri&#34;&gt;http://127.0.0.1:4321/regression/1-introduction/example-1/&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>

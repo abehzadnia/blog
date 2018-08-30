@@ -98,22 +98,24 @@ Mean measures the center of the distribution. Mean is also known as the *expecte
 
 For example, in our sample, the mean of WBC counts is the also the center of the WBC distribution. Expected value is the weighted mean however. In a very large sample, expected value would be the mean.
 
-We would use the term expected value when the problem is at the theoretical stage and the term mean when we actually have the data to calculate it. For a random variable `\(X\)` where `\(x_i\)` is a case and `\(f_i\)` is its relative frequency, `\(mean\)` is calculated as:
+We would use the term expected value when the problem is at the theoretical stage and the term mean when we actually have the data to calculate it. For a random variable $ X $ where $ x_i $ is a case and $ f_i $ is its relative frequency, $ mean $ is calculated as:
 
-`$$\large E(X) = \overline{x} = \frac{1}{N}\sum_{i=1}^{N}x_i = E(X) = \sum_{i=1}^{N}f_ix_i$$`
+$$ \large E(X) = \overline{x} = \frac{1}{N}\sum_{i=1}^{N}x_i = ... $$
+
+$$ \large E(X) = \sum_{i=1}^{N}f_ix_i $$
 
 
 {{% notice warning %}}
 **Parameters** represent the summary from the *population* whereas **statistics** are *point estimates* of those parameters obtained from the *sample*. Parameters are represented by **Greek** and point estimates by **Roman** alphabets.
 {{% /notice %}}
 
-`\(\large Parameter\ vs.\ statistics\ (point\ estimate)\ for\ population\ i:\)`
+$ \large Parameter\ vs.\ statistics\ (point\ estimate)\ for\ population\ i: $
 
 | Description | Parameter | Statistic (point estimate) |
 |:--|:--|:--|
-| `\(mean\)` | `\(\mu_i\)`  | `\(\overline{x}\)`|
-| `\(standard\ deviation\)` | `\(\sigma_i\)`  | `\(s_i\)`|
-| `\(proportion\)` | `\(P_i\)`  | `\(\hat{p}_i\)`|
+| $ mean $ | $ \mu_i $  | $ \overline{x} $|
+| $ standard\deviation $ | $ \sigma_i $  | $ s_i $|
+| $ proportion $ | $P_i $  | $ \hat{p}_i $|
 
 
 ### Harmonic and Geometric Mean
@@ -121,7 +123,16 @@ The arithmetic mean is heavily influenced by the extreme observations. To mitiga
 
 The **harmonic mean** which is the reciprocal of the arithmetic mean of the reciprocals and the **geometric mean** which is the arithmetic mean of the transformed variable:
 
-`$$\large \overline{X}_{H} = \frac{N}{\sum_{i=1}^{N} \frac{1}{x_i}} \\ \large \overline{X}_{G} = (x_i\ x_{i+1} ...x_n)^n = exp[\ ln(X_G)\ ]= exp[\  \frac{1}{N}\sum_{i=1}^{N}\ ln(x_i)\ ]$$`
+
+$ \overline{X}_{H} = $
+
+$$ \large \frac{N}{\sum_{i=1}^{N} \frac{1}{x_i}} $$
+
+$\overline{X}_{G} = $
+
+$$ x_{i} x_{i+1} ...x_n^n = ... $$
+
+ $$ exp[\ ln(X_G)\ ]= exp[\  \frac{1}{N}\sum_{i=1}^{N}\ ln(x_i)\ ] $$
 
 
 ### Median & Mode
@@ -167,38 +178,38 @@ mode(leuk$wbc)
 ## Measure of Spread
 The spread of the distribution is another informative statistic that provides a better picture of the random variable of interest.
 
-Spread is the distance of individual observations ( `\(x_i\)` ) from center of its distribution ( `\(\overline{x}\)` ). Calculating the ***variance*** is one of the ways of communicating the dispersion in our distribution.
+Spread is the distance of individual observations ( $ x_i $ ) from center of its distribution ( $ \overline{x} $ ). Calculating the ***variance*** is one of the ways of communicating the dispersion in our distribution.
 
 
 ### Variance
-Variance for variable `\(X\)` is defined as:
+Variance for variable $ X $ is defined as:
 
-$$\large Var(X) =  E\ [\ (X-\mu)^2\ ] \\ \large  $$
+ $$ \large Var(X) =  E\ [\ (X-\mu)^2\ ] \\ \large   $$
 
 This can be written as:
 
-`$$\large Var(X) = \frac{1}{N}\sum_{i = 1}^{N}\ [\ x_i - E(X)\ ]^2 = \sum_{i = 1}^{N}f_i[\ x_i - E(X)\ ]^2 = E(X^2) - (\overline{x})^2 = \sigma^2$$`
+ $$ \large Var(X) = \frac{1}{N}\sum_{i = 1}^{N}\ [\ x_i - E(X)\ ]^2 = \sum_{i = 1}^{N}f_i[\ x_i - E(X)\ ]^2 = E(X^2) - (\overline{x})^2 = \sigma^2 $$
 
 Variance is the difference between **mean of squares** and the **squared mean**.
 
 {{%panel header = "Why the variability should be squared?" %}}
 {{% expand %}}
-Let's take a look at an example `\(A = (2, 3, 4, 5)\)`. `\(E(A) = 3.5\)`, if we would like to measure the overall dispersion in this set we would get `\((2 - 3.5) + (3 - 3.5) + (4 - 3.5) + (5 - 3.5)\)`.
+Let's take a look at an example $ A = (2, 3, 4, 5) $. $ E(A) = 3.5 $, if we would like to measure the overall dispersion in this set we would get $ (2 - 3.5) + (3 - 3.5) + (4 - 3.5) + (5 - 3.5) $.
 
-Do you see the problem? `\(-1.5 - 0.5 +0.5 + 1.5 = 0\)`. To workaround the problem we'd square all the terms `\(E(A)^2 = 12.25\)`.
-`\(\frac{1}{4}[(2 - 3.5)^2 + (3 - 3.5)^2 + (4 - 3.5)^2 + (5 - 3.5)^2] = 1.25\)`
+Do you see the problem? $ -1.5 - 0.5 +0.5 + 1.5 = 0 $. To workaround the problem we'd square all the terms $ E(A)^2 = 12.25 $.
+$ \frac{1}{4}[(2 - 3.5)^2 + (3 - 3.5)^2 + (4 - 3.5)^2 + (5 - 3.5)^2] = 1.25 $
 
 We will also get the same result if we follow the other formula:
-`\(\frac{1}{4}[(4 - 12.25) +  (9 - 12.25) + (16 - 12.25) + (25 - 12.25)] = 1.25\)`
+$ \frac{1}{4}[(4 - 12.25) +  (9 - 12.25) + (16 - 12.25) + (25 - 12.25)] = 1.25 $
 Also:
-`\(E(X^2) - (\overline{x})^2 = \frac{1}{4}(4+9+16+25) - 3.5^2 = 1.25\)`
+$ E(X^2) - (\overline{x})^2 = \frac{1}{4}(4+9+16+25) - 3.5^2 = 1.25 $
 {{% /expand %}}
 {{% /panel %}}
 
 ### Coefficient of Variance
 When considering comparing the variability in two nonidentical and heterogeneous population, comparing variances may be misleading. **Coefficient of variance** allows for a true comparison. For a random variable X, CV is defined as:
 
-$$\large CV[X] = \frac{\sigma}{\mu}\times 100\% $$
+ $$ \large CV[X] = \frac{\sigma}{\mu}\times 100\%  $$
 
 CV is a consistent measurement of spread as it measures variability unitlessly.
 
@@ -215,24 +226,24 @@ Instead of converting these values we can instead use CV: 50% vs 15.8%. American
 ### Standard Deviation
 The standard deviation is the square root of the variance. It is also equivalent to the commonly used **root-mean-square error (RMSE)**. Standard deviation gives a good estimate of how close the data is to the center of the distribution.
 
-`$$\large \sigma = \sqrt{Var(X)}$$`
+ $$ \large \sigma = \sqrt{Var(X)} $$
 
-An important point to make here is to make a note of the symbols! This formula is valid only if we are dealing with **population parameters** ( `\(\large \sigma_x\neq s_x\)` ).
+An important point to make here is to make a note of the symbols! This formula is valid only if we are dealing with **population parameters** ( $ \large \sigma_x\neq s_x $ ).
 
 For a sample of population `\(X\)` we calculate sigma with a *degree of freedom*.
 
-`$$\large s_x^2 = \frac{1}{N}\sum_{i=1}^{N}(x_i-\overline{x})^2$$`
+ $$ \large s_x^2 = \frac{1}{N}\sum_{i=1}^{N}(x_i-\overline{x})^2 $$
 
 #### Empirical 68, 95 and 99.7 Rule
-Depending on the distribution, the spread of the data would follow the **68, 95 and 99.7 rule**. That is 68% of the data would fall in `\(\large \overline{x} \pm s\)`, 95% within `\(\large \overline{x} \pm 2s\)` and 99.7% within `\(\large \overline{x} \pm 3s\)`. This is a rough estimation however. The actual multiplier of the `\(s\)` depends on the critical value of the distribution. For example, in a `\(\large z-distribution\)` this would be `\(\large \overline{x} \pm z^ \star s\)` and for 95% confidence interval `\(\large z^\star = 1.96\)`.
+Depending on the distribution, the spread of the data would follow the **68, 95 and 99.7 rule**. That is 68% of the data would fall in $ \large \overline{x} \pm s $, 95% within $ \large \overline{x} \pm 2s $ and 99.7% within $ \large \overline{x} \pm 3s $. This is a rough estimation however. The actual multiplier of the $ s $ depends on the critical value of the distribution. For example, in a $ \large z-distribution $ this would be $ \large \overline{x} \pm z^ \star s $ and for 95% confidence interval $ \large z^\star = 1.96 $.
 
 <img src="/img/statistics/68-95-997.jpg" alt="" width="500px" height="400px"/>
 
 ### Interquartile Range
 **Range** is the most basic measurement of variability in data. A numerical variable ranges from `\(min(x)\)` to `\(max(x)\)`. Range alone is not very helpful however **interquartile range** is! IQR tells us the variabilit for the middle 50% of data. The larger the standard deviation the larger the IQR.
-`$$range = max(x) - min(x) \\ \ \\ Q_3 = \frac{max_x - median_x}{2} \\ \ \\ Q_1 = \frac{median_x - min_x}{2} \\ \ \\ IQR = Q_3 - Q_1$$`
+ $$ range = max(x) - min(x) \\ \ \\ Q_3 = \frac{max_x - median_x}{2} \\ \ \\ Q_1 = \frac{median_x - min_x}{2} \\ \ \\ IQR = Q_3 - Q_1 $$
 
-**Outliers** can be identified using the IQR. Any case that falls out of `\(Q_1 - 1.5IQR\ or Q_3 + 3IQR\)` is considered an outlier.
+**Outliers** can be identified using the IQR. Any case that falls out of $ Q_1 - 1.5IQR\ or Q_3 + 3IQR $ is considered an outlier.
 
 ## Measure of Skewness and Kurtosis
 We can't really talk about skewness and kurtosis without looking at the data. **Rule of thumb**: always look at the data! - we'll get into graphical analysis later on.
@@ -248,7 +259,7 @@ hist(leuk$wbc, breaks = 10)
 
 Let's take a look at why quantitative and graphical analyses should always be carried out together.
 
-Suppose we have two samples, `\(\overline{x}_{1\&2} =  0.6923\ ; s_{1\&2} = 0.1685\)`. Looking at the statistics alone, our samples seem similar if not identical! However, they each belong to a different Beta distribution!
+Suppose we have two samples, $ \overline{x}_{1\&2} =  0.6923\ ; s_{1\&2} = 0.1685 $. Looking at the statistics alone, our samples seem similar if not identical! However, they each belong to a different Beta distribution!
 
 ```r
 set.seed(9999)
@@ -299,14 +310,14 @@ sd(dbeta(1.3846 - x, 4.5, 2))
 The parameters don't differ much! However, looking at the Beta distribution plots, they are the opposite of each other.
 
 ### Skewness
-Mathematically skewness ( `\(\large \gamma_1\)` )is defined as:
+Mathematically skewness ( $ \large \gamma_1 $ )is defined as:
 
-`$$\large {\gamma_1 = \frac{\mu_3}{\mu_2^\frac{3}{2}}= \frac{\mu_3}{\sigma^3}}$$`
+ $$ \large {\gamma_1 = \frac{\mu_3}{\mu_2^\frac{3}{2}}= \frac{\mu_3}{\sigma^3}} $$
 Where:
-$$ {{\mu_1 = 0 \\ \mu_2 = E\ [\ (X - \mu)\ ] = \sigma^2 \\ \mu_3 = E\ [\ (X - \mu)^2\ ] = \sigma^3\gamma_1}}$$
+ $$  {{\mu_1 = 0 \\ \mu_2 = E\ [\ (X - \mu)\ ] = \sigma^2 \\ \mu_3 = E\ [\ (X - \mu)^2\ ] = \sigma^3\gamma_1}} $$
 
 Distinction between population and sample:
-`$$\gamma_{1} = \sqrt{n} \frac{\sum_{i =1}^{n}(X_i-\mu)^3}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{3/2}} \\ \ \\ g_1 = \frac{n \sqrt{n-1}}{n-2} \times \frac{\sum_{i =1}^{n}(X_i-\mu)^3}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{3/2}}$$`
+ $$ \gamma_{1} = \sqrt{n} \frac{\sum_{i =1}^{n}(X_i-\mu)^3}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{3/2}} \\ \ \\ g_1 = \frac{n \sqrt{n-1}}{n-2} \times \frac{\sum_{i =1}^{n}(X_i-\mu)^3}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{3/2}} $$
 
 `\(\mu_3\)` and `\(\mu_2\)` are called **third and second moment** of data.
 
@@ -316,13 +327,13 @@ Kurtosis is the **forth moment** of data. Kurtosis is a measure of whether the d
 
 In other words, datasets with high kurtosis tend to have outliers and vice versa.
 
-`$$\large \mu_4 = E\ [\ (X - \mu)^3\ ] = \sigma^4\gamma_2 \\ \large \gamma_2 = \frac{\mu_4}{\mu_2^2} = \frac{\mu_4}{(\sigma^2)^2}$$`
+ $$ \large \mu_4 = E\ [\ (X - \mu)^3\ ] = \sigma^4\gamma_2 \\ \large \gamma_2 = \frac{\mu_4}{\mu_2^2} = \frac{\mu_4}{(\sigma^2)^2} $$
 
 Again the difference in population and sample is:
 
-`$$\gamma_2 = n \times \frac{\sum_{i =1}^{n}(X_i-\mu)^4}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{2}}
+ $$ \gamma_2 = n \times \frac{\sum_{i =1}^{n}(X_i-\mu)^4}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{2}}
 \\
-k = \frac{n(n+1)(n-1)}{(n-2)(n-3)} \times \frac{\sum_{i =1}^{n}(X_i-\mu)^4}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{2}}$$`
+k = \frac{n(n+1)(n-1)}{(n-2)(n-3)} \times \frac{\sum_{i =1}^{n}(X_i-\mu)^4}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{2}} $$
 
 {{% panel %}}
 **Robust statistics** are statistical measures that are not affected by the outliers, skewness and kurtosis of the distribution. Mean and standard deviation are **not** robust statistics. **Median** and **IQR** are robust as they resist the influence of outliers.

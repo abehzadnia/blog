@@ -4,7 +4,8 @@ date: 2018-04-11
 author: Alireza Behzadnia
 slug: eda_introduction
 categories:
-  - "Exploratory Data Analaysis"
+  - Statistics
+  - EDA
 tags:
   - Statistics
   - EDA
@@ -40,8 +41,7 @@ graph LR;
 {{< /mermaid >}}
 
 {{<mermaid align="center">}}
-graph LR;  
+graph LR;
     H(Conclusion) -.-> |Bayesian|G[Updating priori <br> using the posteriori]
-    
+
 {{< /mermaid >}}
-  

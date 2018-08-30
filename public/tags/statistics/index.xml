@@ -6,10 +6,21 @@
     <description>Recent content in Statistics on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Discrete Probability Distribution</title>
+      <link>/post/statistics/probability/probability_discrete_distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
+      <description>&lt;p&gt;Probability distributions demonstrate the probability of an event. When dealing with discrete data, &lt;strong&gt;probability mass function&lt;/strong&gt; of the &lt;em&gt;event&lt;/em&gt; can come from various distributions. The most important discrete probability distributions are the &lt;strong&gt;Bernoulli&lt;/strong&gt;, &lt;strong&gt;Binomial&lt;/strong&gt; and &lt;strong&gt;Poisson&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Bivariate Analysis</title>
@@ -29,14 +40,7 @@
       
       <guid>/post/statistics/eda/eda_univariate_analysis/</guid>
       <description>Univariate analysis focuses on a unfolding the intrinsic statistics of a single variable at hand. This is done as the first step, before jumping into assessing the relationship between variables in our data set.
-   Content    Data Type
- Measure of Center
-2.1. Arithmatic Mean
-2.2. Harmonic and Geometric Mean
-2.3. Median and Mode
- Measure of Spread
-3.1. Variance
-3.2. Coefficient of Variance</description>
+   Content    Data Type Measure of Center 2.1. Arithmatic Mean 2.2. Harmonic and Geometric Mean 2.3. Median and Mode Measure of Spread 3.1. Variance 3.2. Coefficient of Variance 3.3. Standard Deviation 3.</description>
     </item>
     
     <item>
@@ -45,10 +49,7 @@
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/statistics/probability/probability_function/</guid>
-      <description>Probability function is the function of a random variable distribution, whose value provides the absolute or relative likelihood of the value of the random variable in the sample.
-Depending on the type of our random variable, we can calculate:
-Absolute likelihood for a discrete variableRelative likelihood for a continuous variableOn this page we will discuss:
-Probability Mass FunctionProbability Density FunctionPopular PMFs and PDFsProbability Mass FunctionDiscrete random variables have discrete and countable values.</description>
+      <description>&lt;p&gt;Probability function is the function of a random variable distribution, whose value provides the &lt;em&gt;absolute&lt;/em&gt; or &lt;em&gt;relative likelihood&lt;/em&gt; of the value of the random variable in the sample.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,14 +63,13 @@ EDA is a philosophy rather than being statistical technique, in which the statis
     </item>
     
     <item>
-      <title>Discrete Probability Distribution</title>
-      <link>/post/statistics/probability/probability_discrete_distribution/</link>
+      <title>Continuous Probability Distribution</title>
+      <link>/post/statistics/probability/probability_continuous_distribution/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
-      <description>Probability distributions demonstrate the probability of an event. When dealing with discrete data, probability mass function of the event can come from various distributions. The most important discrete probability distributions are the Bernoulli, Binomial and Poisson.
-Bernoulli distributionThe most widely known unknown discrete probability distribution is the Bernoulli distribution.
-Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes.</description>
+      <guid>/post/statistics/probability/probability_continuous_distribution/</guid>
+      <description>If a random variable is continuous, its probability distribution is called a continuous probability distribution.
+Recap  P(X = x) is zero if our X is continuous Continuous probability distributions cannot be tabulated  It&amp;rsquo;s conceptually impossible: we would need to have an infinite number of rows and columns to account for every single P between 0-1, which is infinite. This is well demonstrated in the * Zeno&amp;rsquo;s Paradox *.</description>
     </item>
     
   </channel>

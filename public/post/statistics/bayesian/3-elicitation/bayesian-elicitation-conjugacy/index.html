@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Elicitation and Conjugacy - A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Alireza Behzadnia" />
+  <meta name="description" content="Elicitation is the process of turning an expert’s prior beliefs about one or more uncertain quantities into a probability distribution for those quantities. The term expert simply refers to somebody within the field in which the experiment/analysis is to take place. A successful elicitation process will lead to a prior distribution which accurately reflects the expert’s beliefs. An elicitation is accurate even if the expert’s prior judgements turn out to be completely incorrect!" />
+
+  <meta name="keywords" content="Hugo, theme, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.47.1" />
+
+
+<link rel="canonical" href="/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Elicitation and Conjugacy" />
+<meta property="og:description" content="Elicitation is the process of turning an expert’s prior beliefs about one or more uncertain quantities into a probability distribution for those quantities. The term expert simply refers to somebody within the field in which the experiment/analysis is to take place. A successful elicitation process will lead to a prior distribution which accurately reflects the expert’s beliefs. An elicitation is accurate even if the expert’s prior judgements turn out to be completely incorrect!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/" /><meta property="article:published_time" content="2018-03-08T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-03-08T00:00:00&#43;00:00"/>
+<meta itemprop="name" content="Elicitation and Conjugacy">
+<meta itemprop="description" content="Elicitation is the process of turning an expert’s prior beliefs about one or more uncertain quantities into a probability distribution for those quantities. The term expert simply refers to somebody within the field in which the experiment/analysis is to take place. A successful elicitation process will lead to a prior distribution which accurately reflects the expert’s beliefs. An elicitation is accurate even if the expert’s prior judgements turn out to be completely incorrect!">
+
+
+<meta itemprop="datePublished" content="2018-03-08T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-03-08T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="989">
+
+
+
+<meta itemprop="keywords" content="Bayesian," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Elicitation and Conjugacy"/>
+<meta name="twitter:description" content="Elicitation is the process of turning an expert’s prior beliefs about one or more uncertain quantities into a probability distribution for those quantities. The term expert simply refers to somebody within the field in which the experiment/analysis is to take place. A successful elicitation process will lead to a prior distribution which accurately reflects the expert’s beliefs. An elicitation is accurate even if the expert’s prior judgements turn out to be completely incorrect!"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">A Behzadnia</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="/categories/statistics/">
+              Statistics
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/blog/">Blog</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/about/">About</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      A Behzadnia
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/">Home</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="/categories/statistics/">Statistics</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/blog/">Blog</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Elicitation and Conjugacy</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-03-08 </span>
+        <div class="post-category">
+            <a href="/categories/bayesian/"> Bayesian </a>
+            
+          </div>
+        <span class="more-meta"> 989 words </span>
+          <span class="more-meta"> 5 min read </span>
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>Elicitation is the process of turning an expert’s prior beliefs about one or more uncertain quantities into a probability distribution for those quantities. The term expert simply refers to somebody within the field in which the experiment/analysis is to take place. A successful elicitation process will lead to a prior distribution which accurately reflects the expert’s beliefs. An elicitation is accurate even if the expert’s prior judgements turn out to be completely incorrect!</p>
+<p>posterior ∝ prior × likelihood.</p>
+<p>In this lecture, we introduce the concept of prior elicitation in base and statistics. Often, one has a belief about the distribution of one’s data. You may think that your data come from a binomial distribution and in that case you typically know the n, the number of trials but you usually do not know p, the probability of success. Or you may think that your data come from a normal distribution. But you do not know the mean or the standard deviation of the normal. Beside to knowing the distribution of one’s data, you may also have beliefs about the unknown p in the binomial or the unknown mean in the normal. Bayesians express their belief in terms of personal probabilities. These personal probabilities encapsulate everything a Bayesian knows or believes about the problem. But these beliefs must obey the laws of probability, and be consistent with everything else the Bayesian knows. For example, you may know nothing at all about the value of P that generated some binomial data. In which case any value between zero and one is equally likely, you may want to make an inference on the proportion of people who would buy a new band of toothpaste. If you have industry experience, you may have a strong belief about the value of P but if you are new to the industry you would do nothing about P. In any value between zero and one seems equally like a deal. This major personal probability is the uniform distribution whose probably density function is flat. Often, windows quite a lot about which values of P or more like even others. For example if you we’re tossing the coin most people believed that the probability of heads is pretty close to half. They know that some coin are loaded and they know that some coins may have two heads or two tails. And they probably also know that coins aren’t perfectly balanced. Nonetheless, before they start to collect data by tossing the coin and counting the number of heads their belief is that values of P near 0.5 are very likely, where’s values of P near 0 or 1 are very unlikely. So a base angle sit to express their belief about the value of P through a probability distribution. And a very flexible family of distributions for this purpose is the beta family. A member of the beta family is specified by two parameters, just as a member of the normal family is specified by the mean and the standard deviation. For the beta, we shall call these two parameters alpha and beta. In this formula, note the gamma functions. The gamma function is just a factorial, specifically gamma of n is n-1 times n-2 times n- 3 all the way down until you multiply by 1. When alpha equal to beta equals one then one gets the member of the beta family that is the flat line. That flat line is also the probability density function of the uniform distribution. So the beta family contains the uniform but the beta family is much richer. If we take off equal to beta then one gets PDF that is symmetrical around one half. For large but equal values of alpha and beta, the area under the beta density near one half is very large. These kinds of priors are probably appropriate If you want to make inference on the probability of getting heads in a coin toss. The beta family also includes skewed densities, which appropriate if one thinks that P the probability of success in binomial trial is like in being nearer to zero n near to one. As you all know Bayes’ rule is a machine for turning once prior beliefs in the posterior beliefs. With binomial data you start with whatever beliefs you may have about P, then you observe data in the form of the member of heads in say 20 tosses of a coin and Bayes’ rule tells you how that data should change your opinion about P. The same principle applies to all other inferences. You start with your prior probability distribution over some parameter, then you use data to update that distribution to become the posterior distribution that expresses your new belief. These rules ensure that the change in distributions from prior to postural is the uniquely rational solution. So long as you begin with the prior distribution that reflects your true opinion, you can hardly go wrong. But, expressing that prior can be difficult. There are proofs and methods whereby a rational and coherent thinker can self illicit their true prior distribution but these are impractical and people are rarely rational and coherent. The good news is that with the few simple conditions no matter what part distribution you choose. If you observe enough data, you will converge to an accurate posterior distribution. So, two bayesians, say the reference Thomas Bayes and the agnostic Ajay Good can start with different priors but, observed the same data. As the amount of data increases they will converge to the same posterior distribution. What have we learned? First, that Bayesians express their uncertainty through probability distributions. Second, one can think about the situation and self-elicit a probability distribution that approximately reflects your personal probability. Third, one’s personal probability should change according Bayes’ rule, as new data are observed. And fourth, the beta family of distribution can describe a wide range of prior beliefs.</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Alireza Behzadnia</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-03-08</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/bayesian/">Bayesian</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/statistics/bayesian/2-inference/bayesian-inference/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Inference</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/statistics/eda/eda_bivariate_analysis/">
+            <span class="next-text nav-default">Bivariate Analysis</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" rel="me noopener" class="iconfont icon-email"
+        title="email" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-stack-overflow"
+        title="stack-overflow" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-twitter"
+        title="twitter" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-facebook"
+        title="facebook" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-linkedin"
+        title="linkedin" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-google"
+        title="google" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-weibo"
+        title="weibo" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-zhihu"
+        title="zhihu" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-douban"
+        title="douban" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-pocket"
+        title="pocket" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-tumblr"
+        title="tumblr" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-instagram"
+        title="instagram" target="_blank">
+      </a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me noopener" class="iconfont icon-gitlab"
+        title="gitlab" target="_blank">
+      </a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me noopener" class="iconfont icon-goodreads"
+        title="goodreads" target="_blank">
+      </a>
+  <a href="/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+  </div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">
+        Alireza Behzadnia
+        
+      </span></span>
+
+  
+  
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

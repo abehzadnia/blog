@@ -14,6 +14,8 @@ tags:
   - PDF
 
 weight: 100
+
+toc: true
 ---
 
 Probability function is the function of a random variable distribution, whose value provides the *absolute* or *relative likelihood* of the value of the random variable in the sample.

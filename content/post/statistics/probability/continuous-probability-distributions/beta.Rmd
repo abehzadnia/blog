@@ -10,7 +10,6 @@ tags:
   - Beta
   - Probability Distribution
   - Continuous distribution
-tags: []
 ---
 
 We'll introduce the beta distribution by using an example:

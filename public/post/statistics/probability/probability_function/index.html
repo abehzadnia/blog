@@ -26,9 +26,7 @@
 
 <meta name="author" content="Alireza Behzadnia" />
   <meta name="description" content="Probability function is the function of a random variable distribution, whose value provides the absolute or relative likelihood of the value of the random variable in the sample.
-Depending on the type of our random variable, we can calculate:
-Absolute likelihood for a discrete variableRelative likelihood for a continuous variableOn this page we will discuss:
-Probability Mass FunctionProbability Density FunctionPopular PMFs and PDFsProbability Mass FunctionDiscrete random variables have discrete and countable values." />
+" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -61,33 +59,24 @@
 
 
 <meta property="og:title" content="Probability Function" />
-<meta property="og:description" content="Probability function is the function of a random variable distribution, whose value provides the absolute or relative likelihood of the value of the random variable in the sample.
-Depending on the type of our random variable, we can calculate:
-Absolute likelihood for a discrete variableRelative likelihood for a continuous variableOn this page we will discuss:
-Probability Mass FunctionProbability Density FunctionPopular PMFs and PDFsProbability Mass FunctionDiscrete random variables have discrete and countable values." />
+<meta property="og:description" content="Probability function is the function of a random variable distribution, whose value provides the absolute or relative likelihood of the value of the random variable in the sample." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/statistics/probability/probability_function/" /><meta property="article:published_time" content="2018-03-11T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-03-11T00:00:00&#43;00:00"/>
 <meta itemprop="name" content="Probability Function">
-<meta itemprop="description" content="Probability function is the function of a random variable distribution, whose value provides the absolute or relative likelihood of the value of the random variable in the sample.
-Depending on the type of our random variable, we can calculate:
-Absolute likelihood for a discrete variableRelative likelihood for a continuous variableOn this page we will discuss:
-Probability Mass FunctionProbability Density FunctionPopular PMFs and PDFsProbability Mass FunctionDiscrete random variables have discrete and countable values.">
+<meta itemprop="description" content="Probability function is the function of a random variable distribution, whose value provides the absolute or relative likelihood of the value of the random variable in the sample.">
 
 
 <meta itemprop="datePublished" content="2018-03-11T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-03-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="520">
+<meta itemprop="wordCount" content="528">
 
 
 
 <meta itemprop="keywords" content="Statistics,Probability,PMF,PDF," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Probability Function"/>
-<meta name="twitter:description" content="Probability function is the function of a random variable distribution, whose value provides the absolute or relative likelihood of the value of the random variable in the sample.
-Depending on the type of our random variable, we can calculate:
-Absolute likelihood for a discrete variableRelative likelihood for a continuous variableOn this page we will discuss:
-Probability Mass FunctionProbability Density FunctionPopular PMFs and PDFsProbability Mass FunctionDiscrete random variables have discrete and countable values."/>
+<meta name="twitter:description" content="Probability function is the function of a random variable distribution, whose value provides the absolute or relative likelihood of the value of the random variable in the sample."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -134,7 +123,11 @@
           <ul class="mobile-submenu-list">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -272,7 +265,11 @@
           <ul class="submenu">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -340,6 +337,7 @@
   </ul>
 </nav>
 
+
   </header>
 
   <div id="mobile-panel">
@@ -358,7 +356,7 @@
             <a href="/categories/probability/"> Probability </a>
             
           </div>
-        <span class="more-meta"> 520 words </span>
+        <span class="more-meta"> 528 words </span>
           <span class="more-meta"> 3 min read </span>
 
         
@@ -374,69 +372,149 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#probability-mass-function">Probability Mass Function</a></li>
+<li><a href="#probability-density-function">Probability Density Function</a></li>
+<li><a href="#pmfs-and-pdfs">PMFs and PDFs</a></li>
+</ul></li>
+</ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
       <p>Probability function is the function of a random variable distribution, whose value provides the <em>absolute</em> or <em>relative likelihood</em> of the value of the random variable in the sample.</p>
-<!--more-->
-<p>Depending on the <em>type</em> of our random variable, we can calculate:</p>
+
+<p>
+Depending on the <em>type</em> of our random variable, we can calculate:</p>
+
 <ul>
 <li><strong>Absolute likelihood</strong> for a <u>discrete variable</u></li>
 <li><strong>Relative likelihood</strong> for a <u>continuous variable</u></li>
 </ul>
+
 <p>On this page we will discuss:</p>
+
 <ul>
 <li><a href="#probability-mass-function">Probability Mass Function</a></li>
 <li><a href="#probability-density-function">Probability Density Function</a></li>
 <li><a href="#pmfs-and-pdfs">Popular PMFs and PDFs</a></li>
 </ul>
-<div id="probability-mass-function" class="section level2">
-<h2>Probability Mass Function</h2>
+
+<h2 id="probability-mass-function">Probability Mass Function</h2>
+
 <p>Discrete random variables have discrete and countable values. That <strong>PMF</strong> tells us the probability that the random variable takes each of the possible values.</p>
-<p>Assume a simple random experiment of coin toss where a <strong>fair</strong> coin is tossed twice. let <span class="math inline">\(X =\)</span> number of tails we get:</p>
+
+<p>Assume a simple random experiment of coin toss where a <strong>fair</strong> coin is tossed twice. let <code>\(X =\)</code> number of tails we get:</p>
+
 <ul>
-<li><span class="math inline">\(S = {(HH),(TH),(HT),(TT)}\)</span></li>
+<li><code>\(S = {(HH),(TH),(HT),(TT)}\)</code></li>
 <li>P(X = 0) = (HH)</li>
 <li>P(X = 1) = (HT) or (TH)</li>
 <li>P(X = 2) = (TT)</li>
 </ul>
+
 <p>Here we can use a binomial distribution to calcualte the <strong>absolute</strong> likelihood of (X = 2); using the Probability Mass Function formula for binomial distribution:</p>
-<p><span class="math display">\[P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\\k \end{array}\right) ~ p^k ~ (1-p)^{n-k}\]</span></p>
+
+<p><code>$$P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\\k \end{array}\right) ~ p^k ~ (1-p)^{n-k}$$</code></p>
+
 <p>Here we can calculate the P(X = k) for each outcome:</p>
-<pre class="r"><code>dbinom(0, 2, 0.5)</code></pre>
-<pre><code>## [1] 0.25</code></pre>
-<pre class="r"><code>dbinom(1, 2, 0.5)</code></pre>
-<pre><code>## [1] 0.5</code></pre>
-<pre class="r"><code>dbinom(2, 2, 0.5)</code></pre>
-<pre><code>## [1] 0.25</code></pre>
-<p>We can visualise <em>Probability Mass Function</em> using historframs. Let’s Visualise what will happen if we repeat this experiment 1000 times:</p>
-<pre class="r"><code>Two_cointosses_1000_times = sample(x=c(&quot;HH&quot;,&quot;HT&quot;,&quot;TT&quot;), size=1000, replace = T, prob=c(.25,.50,.25))
-barplot(table(Two_cointosses_1000_times))</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">dbinom<span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">0.5</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 0.25</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">dbinom<span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">0.5</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 0.5</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">dbinom<span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">0.5</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 0.25</pre></td></tr></table>
+</div>
+</div>
+<p>We can visualise <em>Probability Mass Function</em> using historframs. Let&rsquo;s Visualise what will happen if we repeat this experiment 1000 times:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">Two_cointosses_1000_times <span class="o">=</span> <span class="kp">sample</span><span class="p">(</span>x<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&#34;HH&#34;</span><span class="p">,</span><span class="s">&#34;HT&#34;</span><span class="p">,</span><span class="s">&#34;TT&#34;</span><span class="p">),</span> size<span class="o">=</span><span class="m">1000</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> prob<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">.25</span><span class="p">,</span><span class="m">.50</span><span class="p">,</span><span class="m">.25</span><span class="p">))</span>
+barplot<span class="p">(</span><span class="kp">table</span><span class="p">(</span>Two_cointosses_1000_times<span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
 <p><img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>The area under the histogram is one and the area of each bar is the probability of seeing a binomial random variable, whose value is equal to the x-value at the center of the bars base.</p>
-</div>
-<div id="probability-density-function" class="section level2">
-<h2>Probability Density Function</h2>
+
+<p>The area under the histogram is one and the area of each bar is the probability
+of seeing a binomial random variable, whose value is equal to the x-value
+at the center of the bars base.</p>
+
+<h2 id="probability-density-function">Probability Density Function</h2>
+
 <p>In contrast, the normal distribution also called the <em>Gaussian</em> distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable.</p>
-<p>Consider random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.</p>
-<p>The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a <strong>probability density curve</strong>. <img src="/probability/pdf.gif" /> The total area under the density curve equals 1, and the curve represents probabilities by area.</p>
-<p>When the random variable is continuous, it has <em>probability zero of taking any single value</em>, <span class="math inline">\(P(X =x) =0\)</span>. Here we can only talk about the <strong>relative likelihood</strong> of the continuous random variable <em>within some interval</em>. Continuous random variables have <strong>probability density functions</strong> or pdfs instead of probability mass functions. <img src="/probability/pdf2.gif" /></p>
-<p>The PDF curve of a random variable <span class="math inline">\(X\)</span> with <span class="math inline">\(M =\mu\)</span> and <span class="math inline">\(SD = \sigma\)</span>: <span class="math display">\[\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} \]</span></p>
-<p>Here the area under the curve, or the <strong>density</strong> would be: <span class="math display">\[ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx\]</span></p>
-</div>
-<div id="pmfs-and-pdfs" class="section level2">
-<h2>PMFs and PDFs</h2>
+
+<p>Consider  random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.</p>
+
+<p>The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a <strong>probability density curve</strong>.
+<img src="/probability/pdf.gif" alt="" />
+The total area under the density curve equals 1, and the curve represents probabilities by area.</p>
+
+<p>When the random variable is continuous, it has <em>probability zero of taking any single value</em>, <code>\(P(X =x) =0\)</code>. Here we can only talk about the <strong>relative likelihood</strong> of the continuous random variable <em>within some interval</em>. Continuous random variables have <strong>probability density functions</strong> or pdfs instead of probability mass functions.
+<img src="/probability/pdf2.gif" alt="" /></p>
+
+<p>The PDF curve of a random variable <code>\(X\)</code> with <code>\(M =\mu\)</code> and <code>\(SD = \sigma\)</code>:
+$$\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} $$</p>
+
+<p>Here the area under the curve, or the <strong>density</strong> would be:
+$$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx$$</p>
+
+<h2 id="pmfs-and-pdfs">PMFs and PDFs</h2>
+
 <p>There are many types of PMFs and PDFs, here are a handful of most famous distributions:</p>
+
 <ul>
 <li>Discrete (<em>PMF</em>)
+
 <ul>
 <li>Binomial</li>
 <li>Poisson</li>
 </ul></li>
 <li>Continuous (<em>PDF</em>)
+
 <ul>
 <li>Normal distribution</li>
 <li>Uniform</li>
@@ -444,8 +522,6 @@ barplot(table(Two_cointosses_1000_times))</code></pre>
 <li>Gamma</li>
 </ul></li>
 </ul>
-</div>
-
     </div>
 
     
@@ -481,9 +557,14 @@ barplot(table(Two_cointosses_1000_times))</code></pre>
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/statistics/eda/eda_univariate_analysis/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Univariate Analysis</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         
-          <a class="next" href="/post/statistics/probability/probability_discrete_distribution/">
-            <span class="next-text nav-default">Discrete Probability Distribution</span>
+          <a class="next" href="/post/statistics/eda/eda_introduction/">
+            <span class="next-text nav-default">Exploratory Data Analysis (introduction)</span>
             <span class="prev-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -582,12 +663,26 @@ barplot(table(Two_cointosses_1000_times))</code></pre>
 
   
   
-</div>
-
-<script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+</div>
 
     </footer>
 
@@ -599,13 +694,6 @@ src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
 <script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 

@@ -4,10 +4,11 @@ date: 2018-04-11
 author: Alireza Behzadnia
 slug: eda_bivariate_analysis
 categories:
-  - "Exploratory Data Analaysis"
+  - Statistics
+  - EDA
 tags:
   - EDA
-  - Descriptive 
+  - Descriptive
   - Statistics
   - Bivariate Analysis
 
@@ -24,7 +25,8 @@ Covariance examines the joint varaince of two variables. In univariate analysis 
 
 Covariance between two varaiables $X$ and $Y$ can be calculated as:
 
-$$Cov[XY] = \sigma_XY = E\ [\ (X - \overline{X})\ (Y - \overline{Y})\ ] \\ \ \\ = \frac{1}{N - 1} \sum_{i = 1}^{N}(x_i - \overline{X})(y_i - \overline{Y})$$
+$$ Cov[XY] = \sigma_XY = E\ [\ (X - \overline{X})\ (Y - \overline{Y})\ ] = ... $$
+$$ ... = \frac{1}{N - 1} \sum_{i = 1}^{N}(x_i - \overline{X})(y_i - \overline{Y}) $$
 
 Covariance is a generalised version of the variance formula. For example, for a single variable we'd have $Cov[XX] = E\ [\ (X - \overline{X})^2\ ] = Var[X]$.
 
@@ -43,7 +45,7 @@ cov(leuk$rbc, leuk$wbc) #lower Var in RBc has pulled down the joint variability
 
 
 ## Correlation coefficient
-Correlation coefficient measures the strength of the relationship. 
+Correlation coefficient measures the strength of the relationship.
 $$CC_xy = \rho_xy = \frac{\sigma_xy}{\sigma_x \sigma_y} = \frac{1}{N-1} \sum_{i = 1}^{N} \frac{(x_i - \overline{X})}{\sigma_x} \frac{(y_i - \overline{Y})}{\sigma_y}$$
 
 The formula is the same for $r_xy$ - as in the sample statistics rather than the population ( $\rho_xy$ ). CC value ranges from -1 to 1, determining the relative **strength** and **direction** of the relationship.
@@ -67,7 +69,7 @@ The prefix *R* denotes rank transformed values.
 cor(leuk$wbc, leuk$time, method = "spearman")
 ```
 
-{{% notice tip %}} **Spearman r** and **Pearson r** should usually be carried out together to assess the robustness of the CC. 
+{{% notice tip %}} **Spearman r** and **Pearson r** should usually be carried out together to assess the robustness of the CC.
 Spearman coefficient is more resistant to outliers (*robust measure of correlation*). As we are not dealing with values rather the rank transformed data, outliers would not influence our correlation.
 {{% /notice %}}
 
@@ -111,7 +113,7 @@ pairs(leuk)
 So far our focus has been on numerical variables. But what if we are working with categorical variables? When working with categorical variables we can either have two categorical variables or one categorical variable.
 
 ### Categorical and Quantitative
-Let's assume we have a categorical explanatory variable and a quantitative response variable. 
+Let's assume we have a categorical explanatory variable and a quantitative response variable.
 
 We will use the data from Cushny, A. R. and Peebles, A. R. (1905) The action of optical isomers: II hyoscines in `sleep` data set.
 

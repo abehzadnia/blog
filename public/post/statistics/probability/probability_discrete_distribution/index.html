@@ -26,8 +26,8 @@
 
 <meta name="author" content="Alireza Behzadnia" />
   <meta name="description" content="Probability distributions demonstrate the probability of an event. When dealing with discrete data, probability mass function of the event can come from various distributions. The most important discrete probability distributions are the Bernoulli, Binomial and Poisson.
-Bernoulli distributionThe most widely known unknown discrete probability distribution is the Bernoulli distribution.
-Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes." />
+
+" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -61,20 +61,20 @@ Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution 
 
 <meta property="og:title" content="Discrete Probability Distribution" />
 <meta property="og:description" content="Probability distributions demonstrate the probability of an event. When dealing with discrete data, probability mass function of the event can come from various distributions. The most important discrete probability distributions are the Bernoulli, Binomial and Poisson.
-Bernoulli distributionThe most widely known unknown discrete probability distribution is the Bernoulli distribution.
-Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes." />
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/statistics/probability/probability_discrete_distribution/" /><meta property="article:published_time" content="2018-03-12T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-03-12T00:00:00&#43;00:00"/>
 <meta itemprop="name" content="Discrete Probability Distribution">
 <meta itemprop="description" content="Probability distributions demonstrate the probability of an event. When dealing with discrete data, probability mass function of the event can come from various distributions. The most important discrete probability distributions are the Bernoulli, Binomial and Poisson.
-Bernoulli distributionThe most widely known unknown discrete probability distribution is the Bernoulli distribution.
-Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes.">
+
+">
 
 
 <meta itemprop="datePublished" content="2018-03-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-03-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="475">
+<meta itemprop="wordCount" content="500">
 
 
 
@@ -82,8 +82,8 @@ Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Discrete Probability Distribution"/>
 <meta name="twitter:description" content="Probability distributions demonstrate the probability of an event. When dealing with discrete data, probability mass function of the event can come from various distributions. The most important discrete probability distributions are the Bernoulli, Binomial and Poisson.
-Bernoulli distributionThe most widely known unknown discrete probability distribution is the Bernoulli distribution.
-Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes."/>
+
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,7 +130,11 @@ Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution 
           <ul class="mobile-submenu-list">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -268,7 +272,11 @@ Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution 
           <ul class="submenu">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -336,6 +344,7 @@ Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution 
   </ul>
 </nav>
 
+
   </header>
 
   <div id="mobile-panel">
@@ -354,7 +363,7 @@ Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution 
             <a href="/categories/probability/"> Probability </a>
             
           </div>
-        <span class="more-meta"> 475 words </span>
+        <span class="more-meta"> 500 words </span>
           <span class="more-meta"> 3 min read </span>
 
         
@@ -370,70 +379,142 @@ Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution 
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#bernoulli-distribution">Bernoulli distribution</a>
+<ul>
+<li><a href="#bernoulli-probability-mass-function">Bernoulli Probability Mass Function</a>
+<ul>
+<li><a href="#example">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#binomial-distribution">Binomial distribution</a>
+<ul>
+<li><a href="#example-1">Example</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
       <p>Probability distributions demonstrate the probability of an event. When dealing with discrete data, <strong>probability mass function</strong> of the <em>event</em> can come from various distributions. The most important discrete probability distributions are the <strong>Bernoulli</strong>, <strong>Binomial</strong> and <strong>Poisson</strong>.</p>
-<!--more-->
+
+<p></p>
+
 <hr />
-<div id="bernoulli-distribution" class="section level2">
-<h2>Bernoulli distribution</h2>
+
+<h2 id="bernoulli-distribution">Bernoulli distribution</h2>
+
 <p>The most widely known <em>unknown</em> discrete probability distribution is the <strong>Bernoulli distribution</strong>.</p>
+
 <p>Named after the Swiss mathematician <a href="https://en.wikipedia.org/wiki/Jacob_Bernoulli">Jacob Bernoulli</a>, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes. Each outcome is a Boolean-valued discrete random variable (<em>k=1</em> or <em>k=0</em>).</p>
+
 <p>Unlike the binomial distribution, the Bernoulli distribution is used in <strong>single trial (n=1)</strong> experiments. This is a special case of the Binomial distribution where a single experiment/trial is conducted (n=1).</p>
-<p><span class="math inline">\(X\)</span> is a discrete random variable that belongs to the Bernoulli distribution if: <span class="math display">\[ P(X=1) = p = 1 - P(X = 0) = 1 - q \]</span></p>
-<div id="bernoulli-probability-mass-function" class="section level3">
-<h3>Bernoulli Probability Mass Function</h3>
-<p>The probability mass function can be written as: <span class="math display">\[f(k;p) = \left\{ \begin{array}{lcl}p &amp;\mbox{if}&amp;k=1 \\ 1-p &amp;\mbox{if}&amp;k=0 \end{array} \right.\]</span> Can be expressed as: <span class="math display">\[f(k;p) = p^k(1-p)^{1-k} ~for~k\in \{0,1\}  \]</span></p>
+
+<p>$ X $ is a discrete random variable that belongs to the Bernoulli distribution if:
+$$ P(X=1) = p = 1 - P(X = 0) = 1 - q $$</p>
+
+<h3 id="bernoulli-probability-mass-function">Bernoulli Probability Mass Function</h3>
+
+<p>The probability mass function can be written as:</p>
+
+<div>$$ f(k;p) = \left\{ \begin{array}{lcl}p &\mbox{if}&k=1 \\ 1-p &\mbox{if}&k=0 \end{array} \right. $$</div>
+
+<p>Can be expressed as:</p>
+
+<p>$$ f(k;p) = p^k(1-p)^{1-k} ~for~k\in {0,1}  $$</p>
+
 <hr />
-<p>A <strong>binomial variable</strong> of parameters (n,p) is the <strong>sum of <span class="math inline">\(n\)</span> Bernoulli variables</strong> of parameter p.</p>
+
+<p>A <strong>binomial variable</strong> of parameters (n,p) is the <strong>sum of $ n $ Bernoulli variables</strong> of parameter p.</p>
+
 <hr />
-<div id="example" class="section level4">
-<h4>Example</h4>
+
+<h4 id="example">Example</h4>
+
 <p>While focusing on locating the NPHLM gene, the <a href="http://diablo.wikia.com/wiki/Kehjistan">Kehjistanian</a> scientists also discovered that, for any given birth at any given day, there is a fixed 0.60 chance that the newborn is a female.</p>
+
 <p>If on average there is one birth every 2 minutes, what is the projected population of males in Caldeum over 20 years?</p>
-<pre class="r"><code>n = (60*24*365*20)/2
-x = sample(c(0,1), n, replace=T, prob=c(.6,.4))</code></pre>
-<pre class="r"><code>plot(cumsum(x), type=&#39;l&#39;,
-     main=&quot;Cummulative sums of males (a Bernoulli variable)&quot;)</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">n <span class="o">=</span> <span class="p">(</span><span class="m">60</span><span class="o">*</span><span class="m">24</span><span class="o">*</span><span class="m">365</span><span class="o">*</span><span class="m">20</span><span class="p">)</span><span class="o">/</span><span class="m">2</span>
+x <span class="o">=</span> <span class="kp">sample</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> n<span class="p">,</span> replace<span class="o">=</span><span class="bp">T</span><span class="p">,</span> prob<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">.6</span><span class="p">,</span><span class="m">.4</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">plot<span class="p">(</span><span class="kp">cumsum</span><span class="p">(</span>x<span class="p">),</span> type<span class="o">=</span><span class="s">&#39;l&#39;</span><span class="p">,</span>
+     main<span class="o">=</span><span class="s">&#34;Cummulative sums of males (a Bernoulli variable)&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
 <p><img src="/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-</div>
-</div>
-</div>
-<div id="binomial-distribution" class="section level2">
-<h2>Binomial distribution</h2>
+
+<h2 id="binomial-distribution">Binomial distribution</h2>
+
 <p>The binomial distribution describes the probability of having exactly <strong><em>k</em></strong> successes in <strong><em>n</em></strong> independent Bernoulli trials, given that the probability of <em>k = 1</em> is <strong><em>p</em></strong>. It is important to note that the success rate of the binary event remains constant for all n independent trials.</p>
+
 <p>To use a binomial distribution, data must come from a <strong>binomial experiment</strong>:</p>
+
 <ul>
-<li><span class="math inline">\(n\)</span> = fixed number of trials</li>
+<li>$ n $ = fixed number of trials</li>
 <li>Trials must be <strong>independent</strong></li>
 <li>Each trial has <strong>two possible outcome</strong> where:
+
 <ul>
 <li><em>P</em>(sucess) = constant for each trial</li>
 <li><em>P</em>(failure) = 1 - <em>P</em>(sucess)</li>
 </ul></li>
 </ul>
-<p>Given the requirements are met, the probability distribution of our binary event has a mean of <span class="math inline">\(np\)</span> and variance of <span class="math inline">\(np(1-p)\)</span></p>
-<div id="example-1" class="section level3">
-<h3>Example</h3>
-<p>Kehjistanian scientists have identified the gene NPHLM on the locus 14p.61 which predisposes children to a certain lifestyle.</p>
-<p>It is estimated that 1 in 40 child under the age of 16 have this mutation. According to the last census at <a href="http://diablo.wikia.com/wiki/Caldeum">Caldeum</a>, number of kids under 16 is roughly 400,000.</p>
-<p>A sample of 200 has been collected. How many children with NPHLM mutation can we expect to find?</p>
-<pre class="r"><code>N = 400000
-n = 200
-p = 1/40
-x = rep(0,N)</code></pre>
-<pre class="r"><code>for (i in 1:N){{
-  x[i] = sum(runif(n)&lt;p)
-}}
-hist(x, main = &quot;Distribution of NPHLM mutation in a sample of 200&quot;)</code></pre>
-<p><img src="/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-</div>
-</div>
 
+<p>Given the requirements are met, the probability distribution of our binary event has a mean of $ np $ and variance of $ np(1-p) $</p>
+
+<h3 id="example-1">Example</h3>
+
+<p>Kehjistanian scientists have identified the gene NPHLM on the locus 14p.61 which predisposes children to a certain lifestyle.</p>
+
+<p>It is estimated that 1 in 40 child under the age of 16 have this mutation. According to the last census at <a href="http://diablo.wikia.com/wiki/Caldeum">Caldeum</a>, number of kids under 16 is roughly 400,000.</p>
+
+<p>A sample of 200 has been collected. How many children with NPHLM mutation can we expect to find?</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">N <span class="o">=</span> <span class="m">400000</span>
+n <span class="o">=</span> <span class="m">200</span>
+p <span class="o">=</span> <span class="m">1</span><span class="o">/</span><span class="m">40</span>
+x <span class="o">=</span> <span class="kp">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span>N<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>N<span class="p">){{</span>
+  x<span class="p">[</span>i<span class="p">]</span> <span class="o">=</span> <span class="kp">sum</span><span class="p">(</span>runif<span class="p">(</span>n<span class="p">)</span><span class="o">&lt;</span>p<span class="p">)</span>
+<span class="p">}}</span>
+hist<span class="p">(</span>x<span class="p">,</span> main <span class="o">=</span> <span class="s">&#34;Distribution of NPHLM mutation in a sample of 200&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
     </div>
 
     
@@ -472,12 +553,17 @@ hist(x, main = &quot;Distribution of NPHLM mutation in a sample of 200&quot;)</c
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/statistics/probability/probability_function/">
+          <a class="prev" href="/post/statistics/bayesian/1-introduction/bayesian-introduction/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Probability Function</span>
+            <span class="prev-text nav-default">Introduction</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
+          <a class="next" href="/post/statistics/bayesian/2-inference/bayesian-inference/">
+            <span class="next-text nav-default">Inference</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
       </nav>
     </footer>
   </article>
@@ -573,12 +659,26 @@ hist(x, main = &quot;Distribution of NPHLM mutation in a sample of 200&quot;)</c
 
   
   
-</div>
-
-<script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+</div>
 
     </footer>
 
@@ -590,13 +690,6 @@ src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
 <script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 

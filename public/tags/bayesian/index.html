@@ -114,7 +114,11 @@
           <ul class="mobile-submenu-list">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -252,7 +256,11 @@
           <ul class="submenu">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -320,6 +328,7 @@
   </ul>
 </nav>
 
+
   </header>
 
   <div id="mobile-panel">
@@ -343,7 +352,7 @@
         2018-03-08
       </span>
       <span class="archive-post-title">
-        <a href="/post/statistics/bayesian/2-inference/" class="archive-post-link">
+        <a href="/post/statistics/bayesian/2-inference/bayesian-inference/" class="archive-post-link">
           Inference
         </a>
       </span>
@@ -354,7 +363,7 @@
         2018-03-08
       </span>
       <span class="archive-post-title">
-        <a href="/post/statistics/bayesian/3-elicitation/" class="archive-post-link">
+        <a href="/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/" class="archive-post-link">
           Elicitation and Conjugacy
         </a>
       </span>
@@ -466,12 +475,26 @@
 
   
   
-</div>
-
-<script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+</div>
 
     </footer>
 

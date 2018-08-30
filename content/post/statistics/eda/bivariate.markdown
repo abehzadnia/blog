@@ -25,7 +25,8 @@ Covariance examines the joint varaince of two variables. In univariate analysis 
 
 Covariance between two varaiables `\(X\)` and `\(Y\)` can be calculated as:
 
-`$$Cov[XY] = \sigma_XY = E\ [\ (X - \overline{X})\ (Y - \overline{Y})\ ] \\ \ \\ = \frac{1}{N - 1} \sum_{i = 1}^{N}(x_i - \overline{X})(y_i - \overline{Y})$$`
+$$ Cov[XY] = \sigma_XY = E\ [\ (X - \overline{X})\ (Y - \overline{Y})\ ] = ... $$
+$$ ... = \frac{1}{N - 1} \sum_{i = 1}^{N}(x_i - \overline{X})(y_i - \overline{Y}) $$
 
 Covariance is a generalised version of the variance formula. For example, for a single variable we'd have `\(Cov[XX] = E\ [\ (X - \overline{X})^2\ ] = Var[X]\)`.
 
@@ -215,11 +216,11 @@ tapply(sleep$extra, sleep$group, summary)
 
 ```
 ## $`1`
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-##  -1.600  -0.175   0.350   0.750   1.700   3.700
-##
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  -1.600  -0.175   0.350   0.750   1.700   3.700 
+## 
 ## $`2`
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##  -0.100   0.875   1.750   2.330   4.150   5.500
 ```
 

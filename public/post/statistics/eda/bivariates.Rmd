@@ -1,0 +1,18 @@
+---
+title: Bivariate Analyses
+---
+
+```{r}
+library(MASS)
+data("leuk")
+leuk$rbc <- (leuk$wbc * 4)/10 + 2 # making up a new
+var(leuk$wbc)
+var(leuk$rbc)
+cov(leuk$rbc, leuk$wbc) #lower Var in RBc has pulled down the joint variability
+
+```
+
+
+$$ m+c = A $$
+
+$$Cov[XY] = \sigma_XY = E\ [\ (X - \overline{X})\ (Y - \overline{Y})\ ] \\ \ \\ = \frac{1}{N - 1} \sum_{i = 1}^{N}(x_i - \overline{X})(y_i - \overline{Y})$$

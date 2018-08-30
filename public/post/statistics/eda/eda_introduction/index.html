@@ -126,7 +126,11 @@ EDA is a philosophy rather than being statistical technique, in which the statis
           <ul class="mobile-submenu-list">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -264,7 +268,11 @@ EDA is a philosophy rather than being statistical technique, in which the statis
           <ul class="submenu">
             
               <li>
-                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+                <a href="/categories/probability/">Probability</a>
+              </li>
+            
+              <li>
+                <a href="/categories/eda/">Exploratory Data Analysis</a>
               </li>
             
           </ul>
@@ -332,6 +340,7 @@ EDA is a philosophy rather than being statistical technique, in which the statis
   </ul>
 </nav>
 
+
   </header>
 
   <div id="mobile-panel">
@@ -346,7 +355,8 @@ EDA is a philosophy rather than being statistical technique, in which the statis
       <div class="post-meta">
         <span class="post-time"> 2018-04-11 </span>
         <div class="post-category">
-            <a href="/categories/exploratory-data-analaysis/"> Exploratory Data Analaysis </a>
+            <a href="/categories/statistics/"> Statistics </a>
+            <a href="/categories/eda/"> EDA </a>
             
           </div>
         <span class="more-meta"> 156 words </span>
@@ -405,9 +415,9 @@ graph LR;
 <link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
 <script defer src="/mermaid/mermaid.js">mermaid.initialize({startOnLoad:true});</script>
 <div class="mermaid" align="center" >
-graph LR;  
+graph LR;
     H(Conclusion) -.-> |Bayesian|G[Updating priori <br> using the posteriori]
-    
+
 </div>
 
     </div>
@@ -443,12 +453,17 @@ graph LR;
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/statistics/eda/eda_univariate_analysis/">
+          <a class="prev" href="/post/statistics/probability/probability_function/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Univariate Analysis</span>
+            <span class="prev-text nav-default">Probability Function</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
+          <a class="next" href="/post/blog/2018-04-11-wer/">
+            <span class="next-text nav-default">2018 04 11 Wer</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
       </nav>
     </footer>
   </article>
@@ -544,12 +559,26 @@ graph LR;
 
   
   
-</div>
-
-<script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+</div>
 
     </footer>
 
@@ -561,13 +590,6 @@ src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
 <script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 

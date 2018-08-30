@@ -59,3 +59,4 @@
     {{ end }}
   </ul>
 </nav>
+{{ if .Params.mathjax}}{{ partial "mathjax_support.html" . }}{{ end }}

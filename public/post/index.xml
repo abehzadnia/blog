@@ -6,10 +6,103 @@
     <description>Recent content in Posts on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Apr 2018 11:55:32 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bayesian vs. Frequentist</title>
+      <link>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</guid>
+      <description>Here we will look at how a Bayesian and frequentist may go about answering a simple inference question:
+Background As part of our commitment to good medical practice, we decide to conduct a quality assurance audit.
+ Good Medical Practice
+1.13: “You must take steps to mintor and improve the quality of your work”
+2.22: “You must take part in systems of quality assurance and quality improvement to promote patient safety”</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>/post/statistics/bayesian/1-introduction/bayesian-introduction/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/bayesian/1-introduction/bayesian-introduction/</guid>
+      <description>Bayes Rule in the discrete form, which allows us to calculate the probability of an event A given event B. This is what is called a conditional probability, and we will be working with conditional probabilities a whole lot in this module and also in the remainder of this course. One example of a conditional probability is the false positive or false negative rate of a medical test.
+\[P(A|B)= \frac{P(A\bigcap B)}{P(B)}\]</description>
+    </item>
+    
+    <item>
+      <title>Discrete Probability Distribution</title>
+      <link>/post/statistics/probability/probability_discrete_distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
+      <description>&lt;p&gt;Probability distributions demonstrate the probability of an event. When dealing with discrete data, &lt;strong&gt;probability mass function&lt;/strong&gt; of the &lt;em&gt;event&lt;/em&gt; can come from various distributions. The most important discrete probability distributions are the &lt;strong&gt;Bernoulli&lt;/strong&gt;, &lt;strong&gt;Binomial&lt;/strong&gt; and &lt;strong&gt;Poisson&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Inference</title>
+      <link>/post/statistics/bayesian/2-inference/bayesian-inference/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/bayesian/2-inference/bayesian-inference/</guid>
+      <description>In order to have a better understanding of the difference between the frequentist approach and the Bayesian approach to interference let’s use the following example:
+Efficacy of RU-486 as an emergency pill A randomized control trial was carried out to ask the question of whether Mifepristone (RU486) can be an effective morning after contraceptive. The study participants were 40 women who came to a health clinic asking for emergency contraception. Method: 20 women were randomly assigned to receive RU-486, and another 20 to receive standard therapy, consisting of high doses of estrogen and synthetic progesterone.</description>
+    </item>
+    
+    <item>
+      <title>Elicitation and Conjugacy</title>
+      <link>/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</guid>
+      <description>Elicitation is the process of turning an expert’s prior beliefs about one or more uncertain quantities into a probability distribution for those quantities. The term expert simply refers to somebody within the field in which the experiment/analysis is to take place. A successful elicitation process will lead to a prior distribution which accurately reflects the expert’s beliefs. An elicitation is accurate even if the expert’s prior judgements turn out to be completely incorrect!</description>
+    </item>
+    
+    <item>
+      <title>Bivariate Analysis</title>
+      <link>/post/statistics/eda/eda_bivariate_analysis/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/eda/eda_bivariate_analysis/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Bivariate analysis&lt;/strong&gt; explore the possible relationship between two variables&amp;rsquo; variability. In view of &amp;ldquo;&lt;strong&gt;exploratory&lt;/strong&gt;&amp;rdquo; focus of EDA, we should refrain from infering based on bivariate analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Univariate Analysis</title>
+      <link>/post/statistics/eda/eda_univariate_analysis/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/eda/eda_univariate_analysis/</guid>
+      <description>Univariate analysis focuses on a unfolding the intrinsic statistics of a single variable at hand. This is done as the first step, before jumping into assessing the relationship between variables in our data set.
+   Content    Data Type Measure of Center 2.1. Arithmatic Mean 2.2. Harmonic and Geometric Mean 2.3. Median and Mode Measure of Spread 3.1. Variance 3.2. Coefficient of Variance 3.3. Standard Deviation 3.</description>
+    </item>
+    
+    <item>
+      <title>Probability Function</title>
+      <link>/post/statistics/probability/probability_function/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/probability_function/</guid>
+      <description>&lt;p&gt;Probability function is the function of a random variable distribution, whose value provides the &lt;em&gt;absolute&lt;/em&gt; or &lt;em&gt;relative likelihood&lt;/em&gt; of the value of the random variable in the sample.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Exploratory Data Analysis (introduction)</title>
+      <link>/post/statistics/eda/eda_introduction/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/eda/eda_introduction/</guid>
+      <description>Exploratory data analysis (EDA) is an approach to data analysis that employs tools of descriptive statistics in order to dissect the data. the term exploratory data analysis was coind by John W. Tukey in the 70s.
+EDA is a philosophy rather than being statistical technique, in which the statistician takes the role of a detective whose main goal is to unveil the underlying patterns. This is contrary to the classical statistician who acts as a judge instaed.</description>
+    </item>
     
     <item>
       <title>2018 04 11 Wer</title>
@@ -18,6 +111,27 @@
       
       <guid>/post/blog/2018-04-11-wer/</guid>
       <description>Lorem Ipsum. Notice draft is set to true. asdasd</description>
+    </item>
+    
+    <item>
+      <title>Beta Distribution</title>
+      <link>/post/statistics/probability/continuous-probability-distributions/probability_pdf_beta_distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/continuous-probability-distributions/probability_pdf_beta_distribution/</guid>
+      <description>We’ll introduce the beta distribution by using an example:
+ExampleDiamond Blackfan anemia (DBA) is a rare autosomal dominant bone marrow disease. Children with Diamond Blackfan anemia present with symptoms of extreme anemia during the first year of life.
+Unfortunately, patients have an increased risk of other serious bone marrow malfunctions. Specifically, they are prone to developing myelodysplastic syndrome (MDS), certain blood cancers such as acute myeloid leukemia (AML) and bone cancer (osteosarcoma).</description>
+    </item>
+    
+    <item>
+      <title>Continuous Probability Distribution</title>
+      <link>/post/statistics/probability/probability_continuous_distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistics/probability/probability_continuous_distribution/</guid>
+      <description>If a random variable is continuous, its probability distribution is called a continuous probability distribution.
+Recap  P(X = x) is zero if our X is continuous Continuous probability distributions cannot be tabulated  It&amp;rsquo;s conceptually impossible: we would need to have an infinite number of rows and columns to account for every single P between 0-1, which is infinite. This is well demonstrated in the * Zeno&amp;rsquo;s Paradox *.</description>
     </item>
     
     <item>
@@ -66,9 +180,9 @@ http://127.0.0.1:4321/regression/1-introduction/example-1/</description>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/post/blog/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
     </item>
     
     <item>

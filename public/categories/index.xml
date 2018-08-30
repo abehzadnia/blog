@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>Beta</title>
-      <link>/categories/beta/</link>
-      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/beta/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Clinical Research</title>
       <link>/categories/clinical-research/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
@@ -48,11 +39,11 @@
     </item>
     
     <item>
-      <title>Exploratory Data Analaysis</title>
-      <link>/categories/exploratory-data-analaysis/</link>
+      <title>Eda</title>
+      <link>/categories/eda/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/exploratory-data-analaysis/</guid>
+      <guid>/categories/eda/</guid>
       <description></description>
     </item>
     
@@ -77,18 +68,9 @@
     <item>
       <title>Probability</title>
       <link>/categories/probability/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/probability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Probability Distribution</title>
-      <link>/categories/probability-distribution/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/probability-distribution/</guid>
+      <guid>/categories/probability/</guid>
       <description></description>
     </item>
     
@@ -113,7 +95,7 @@
     <item>
       <title>Statistics</title>
       <link>/categories/statistics/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/statistics/</guid>
       <description></description>

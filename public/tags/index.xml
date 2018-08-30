@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Beta</title>
+      <link>/tags/beta/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/beta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Binomial</title>
       <link>/tags/binomial/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
@@ -44,6 +53,15 @@
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/bivariate-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Continuous Distribution</title>
+      <link>/tags/continuous-distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/continuous-distribution/</guid>
       <description></description>
     </item>
     
@@ -95,7 +113,7 @@
     <item>
       <title>Pmf</title>
       <link>/tags/pmf/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/pmf/</guid>
       <description></description>
@@ -113,9 +131,18 @@
     <item>
       <title>Probability</title>
       <link>/tags/probability/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/probability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Probability Distribution</title>
+      <link>/tags/probability-distribution/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/probability-distribution/</guid>
       <description></description>
     </item>
     
@@ -140,7 +167,7 @@
     <item>
       <title>Statistics</title>
       <link>/tags/statistics/</link>
-      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/statistics/</guid>
       <description></description>

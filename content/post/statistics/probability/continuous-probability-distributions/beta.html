@@ -1,0 +1,69 @@
+---
+title: Beta Distribution
+author: Alireza Behzadnia
+date: '2018-03-12'
+slug: probability_pdf_beta_distribution
+categories:
+  - Statistics
+  - Probability
+tags:
+  - Beta
+  - Probability Distribution
+  - Continuous distribution
+---
+
+
+
+<p>We’ll introduce the beta distribution by using an example:</p>
+<div id="example" class="section level3">
+<h3>Example</h3>
+<p><a href="https://ghr.nlm.nih.gov/condition/diamond-blackfan-anemia">Diamond Blackfan anemia (DBA)</a> is a rare autosomal dominant bone marrow disease. Children with Diamond Blackfan anemia present with symptoms of extreme anemia during the first year of life.</p>
+<p>Unfortunately, patients have an increased risk of other serious bone marrow malfunctions. Specifically, they are prone to developing myelodysplastic syndrome (MDS), certain blood cancers such as acute myeloid leukemia (AML) and bone cancer (osteosarcoma).</p>
+<p>At <a href="http://diablo.wikia.com/wiki/Harrogath">Harrogath</a> the prevalence of DBA is exceptionally high (5 in 1000). Harrogathian scientists have teamed up with Kehjistanian scientists to study the probability of developing cancer in DBA patients based on their initial LDH level.</p>
+<p>Kehjistanian scientists have a studied the tendency of DBA to develop into cancers before. Therefore, here we have the luxuary of using Bayesian statistics to update what we already know about the LDH and cancer development.</p>
+<p>** How can we use describe the <em>prior probability</em> in a meaningful way? **</p>
+</div>
+<div id="beta-distribution" class="section level2">
+<h2>Beta distribution</h2>
+<p>The Beta density function is a versatile way to represent continuous outcomes like proportions or probabilities that lie between 0 and 1.</p>
+<p>The Beta can be used to describe not only the variety observed across sample, but it can also describe your <strong>subjective degree of belief</strong> (in a Bayesian sense). If you are not entirely sure that the probability is 0.22, but rather you think that is the most likely value but that there is some chance that the value is higher or lower, then maybe your personal beliefs can be described as a Beta distribution.</p>
+<p>Let’s say based on previous studies, we know the mean percentage increase in LDH level and standard deviation is <span class="math inline">\(\mu = 0.55\)</span> &amp; <span class="math inline">\(\sigma = 0.09\)</span>.</p>
+<p>A <em>beta</em> distribution is defined by two parameters <span class="math inline">\(\alpha ~&amp;~ \beta\)</span>, the <strong>probability density function</strong> of beta distribution is defined as: <span class="math display">\[\Large B(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha +\beta)}\]</span> <span class="math display">\[Note:~\Gamma(k)=(k-1)!\]</span></p>
+<p>The values of alpha and beta can be derived from the sample: <span class="math display">\[\large E(x)=\mu=\frac{\alpha}{\alpha+\beta}\]</span> <span class="math display">\[\large Variance(x)=\sigma^2=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)} \]</span> Here are some examples of beta distribution:</p>
+<pre class="r"><code>curve( dbeta(x,1,1), xlim=c(0,1), ylim=c(0,4) )
+curve( dbeta(x,0.5,0.5), add=T, col=&#39;red&#39; )
+curve( dbeta(x,5,1), add=T, col=&#39;green&#39; )
+curve( dbeta(x,1,3), add=T, col=&#39;blue&#39; )
+title(main=&quot;Beta distribution&quot;)
+legend(par(&#39;usr&#39;)[1], par(&#39;usr&#39;)[4], xjust=-1.9,
+       c(&#39;(1,1)&#39;, &#39;(0.5,0.5)&#39;, &#39;(5,1)&#39;, &#39;(1,3)&#39;),
+
+       lwd=1, #c(1,1,1,1, 2,2,2, 3,3,3),
+       lty=c(1,1,1,1, 2,2,2, 3,3,3),
+       col=c(par(&#39;fg&#39;), &#39;red&#39;, &#39;green&#39;, &#39;blue&#39; ))</code></pre>
+<p><img src="/post/statistics/probability/continuous-probability-distributions/beta_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div id="example-1" class="section level3">
+<h3>Example</h3>
+<p>Back to our example: <span class="math display">\[ E(x) = \mu = 0.55 =\frac{\alpha}{\alpha+\beta}\]</span></p>
+<p><span class="math display">\[Variance(x)=\sigma^2= 0.09^2=0.0081=\frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)} \]</span></p>
+<p><span class="math display">\[From~the~first~equation~we~have: \beta = \frac{\alpha}{0.55}-\alpha = 0.82\alpha ~~~and~~~\alpha=\frac{0.55\beta}{1-0.55} = 1.22\beta \]</span> After simple algebra using beta in the second equation we’ll get:</p>
+<p><span class="math display">\[ 0.79\alpha^2 - 0.049\alpha^3 = 0 \]</span> <span class="math display">\[  1.18\beta^2 - 0.089\beta^3 = 0 \]</span></p>
+<pre class="r"><code>library(polynom)
+beta = polyroot(z = c(0, 0, 1.18, -0.089)) # z is a vector of polynomial coefficients in increasing order: x^0, X^1 ...
+beta # only the 3rd value is not 0</code></pre>
+<pre><code>## [1]  0.00000+0i  0.00000+0i 13.25843+0i</code></pre>
+<pre class="r"><code>beta = abs(beta[3])
+
+alpha = polyroot(z = c(0, 0, 0.79, -0.049))
+alpha #we choose the 3rd</code></pre>
+<pre><code>## [1]  0.00000+0i  0.00000+0i 16.12245+0i</code></pre>
+<pre class="r"><code>alpha = abs(alpha[3])</code></pre>
+<pre class="r"><code>alpha</code></pre>
+<pre><code>## [1] 16.12245</code></pre>
+<pre class="r"><code>beta</code></pre>
+<pre><code>## [1] 13.25843</code></pre>
+<pre class="r"><code>curve( dbeta(x,alpha,beta) )</code></pre>
+<p><img src="/post/statistics/probability/continuous-probability-distributions/beta_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Please use <code>Wolfram Alpha math engine</code> to solve the equations.</p>
+</div>
+</div>

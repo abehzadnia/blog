@@ -6,30 +6,34 @@ slug: probability_function
 
 categories:
   - Statistics
+  - Probability
 tags:
   - Statistics
   - Probability
   - PMF
   - PDF
 
----
+weight: 100
 
+toc: true
+---
 
 Probability function is the function of a random variable distribution, whose value provides the *absolute* or *relative likelihood* of the value of the random variable in the sample.
 
+<!--more-->
 Depending on the *type* of our random variable, we can calculate:
 
-  - **Absolute likelihood** for a discrete variable
-  - **Relative likelihood** for a continuous variable
-  
+  - **Absolute likelihood** for a <u>discrete variable</u>
+  - **Relative likelihood** for a <u>continuous variable</u>
+
 On this page we will discuss:
 
   - [Probability Mass Function](#probability-mass-function)
   - [Probability Density Function](#probability-density-function)
-  - [Famous PMFs and PDFs that you should know](#pmfs-and-pdfs)
+  - [Popular PMFs and PDFs](#pmfs-and-pdfs)
 
 ## Probability Mass Function
-Discrete random variables have discrete and countable values. That **PMF** tells us the probability that the random variable takes each of the possible values. 
+Discrete random variables have discrete and countable values. That **PMF** tells us the probability that the random variable takes each of the possible values.
 
 Assume a simple random experiment of coin toss where a **fair** coin is tossed twice. let $X =$ number of tails we get:
 
@@ -62,9 +66,9 @@ at the center of the bars base.
 
 ## Probability Density Function
 
-In contrast, the normal distribution also called the *Gaussian* distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable. 
+In contrast, the normal distribution also called the *Gaussian* distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable.
 
-Consider  random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table. 
+Consider  random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.
 
 The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a **probability density curve**.
 ![](/probability/pdf.gif)
@@ -75,7 +79,7 @@ When the random variable is continuous, it has *probability zero of taking any s
 ![](/probability/pdf2.gif)
 
 The PDF curve of a random variable $X$ with $M =\mu$ and $SD = \sigma$:
-$$\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} $$ 
+$$\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} $$
 
 Here the area under the curve, or the **density** would be:
 $$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx$$
@@ -85,10 +89,9 @@ There are many types of PMFs and PDFs, here are a handful of most famous distrib
 
   - Discrete (*PMF*)
     - Binomial
-    - Poisson ~(*read: **pwa-sawn** *)~
+    - Poisson
   - Continuous (*PDF*)
     - Normal distribution
     - Uniform
     - Beta
     - Gamma
-  
