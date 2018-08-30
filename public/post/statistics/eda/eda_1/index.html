@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Univariate Analysis - A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Alireza Behzadnia" />
+  <meta name="description" content="Univariate analysis focuses on a unfolding the intrinsic statistics of a single variable at hand. This is done as the first step, before jumping into assessing the relationship between variables in our data set.
+   Content    Data Type
+ Measure of Center
+2.1. Arithmatic Mean
+2.2. Harmonic and Geometric Mean
+2.3. Median and Mode
+ Measure of Spread
+3.1. Variance
+3.2. Coefficient of Variance" />
+
+  <meta name="keywords" content="Hugo, theme, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.47.1" />
+
+
+<link rel="canonical" href="/post/statistics/eda/eda_1/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Univariate Analysis" />
+<meta property="og:description" content="Univariate analysis focuses on a unfolding the intrinsic statistics of a single variable at hand. This is done as the first step, before jumping into assessing the relationship between variables in our data set.
+   Content    Data Type
+ Measure of Center
+2.1. Arithmatic Mean
+2.2. Harmonic and Geometric Mean
+2.3. Median and Mode
+ Measure of Spread
+3.1. Variance
+3.2. Coefficient of Variance" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/statistics/eda/eda_1/" /><meta property="article:published_time" content="2018-04-11T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-04-11T00:00:00&#43;00:00"/>
+<meta itemprop="name" content="Univariate Analysis">
+<meta itemprop="description" content="Univariate analysis focuses on a unfolding the intrinsic statistics of a single variable at hand. This is done as the first step, before jumping into assessing the relationship between variables in our data set.
+   Content    Data Type
+ Measure of Center
+2.1. Arithmatic Mean
+2.2. Harmonic and Geometric Mean
+2.3. Median and Mode
+ Measure of Spread
+3.1. Variance
+3.2. Coefficient of Variance">
+
+
+<meta itemprop="datePublished" content="2018-04-11T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-04-11T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2175">
+
+
+
+<meta itemprop="keywords" content="Statistics,EDA,Univariate analysis," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Univariate Analysis"/>
+<meta name="twitter:description" content="Univariate analysis focuses on a unfolding the intrinsic statistics of a single variable at hand. This is done as the first step, before jumping into assessing the relationship between variables in our data set.
+   Content    Data Type
+ Measure of Center
+2.1. Arithmatic Mean
+2.2. Harmonic and Geometric Mean
+2.3. Median and Mode
+ Measure of Spread
+3.1. Variance
+3.2. Coefficient of Variance"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">A Behzadnia</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="/categories/stats/">
+              Statistics
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/blog/">Blog</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/about/">About</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      A Behzadnia
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/">Home</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="/categories/stats/">Statistics</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="/post/statistics/eda/">Exploratory Data Analysis</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/blog/">Blog</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Univariate Analysis</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-04-11 </span>
+        <div class="post-category">
+            <a href="/categories/exploratory-data-analaysis/"> Exploratory Data Analaysis </a>
+            
+          </div>
+        <span class="more-meta"> 2175 words </span>
+          <span class="more-meta"> 11 min read </span>
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#data-type">Data Type</a></li>
+<li><a href="#measure-of-center">Measure of Center</a>
+<ul>
+<li><a href="#airthmatic-mean">Airthmatic Mean</a></li>
+<li><a href="#harmonic-and-geometric-mean">Harmonic and Geometric Mean</a></li>
+<li><a href="#median-mode">Median &amp; Mode</a></li>
+</ul></li>
+<li><a href="#measure-of-spread">Measure of Spread</a>
+<ul>
+<li><a href="#variance">Variance</a></li>
+<li><a href="#coefficient-of-variance">Coefficient of Variance</a></li>
+<li><a href="#standard-deviation">Standard Deviation</a>
+<ul>
+<li><a href="#empirical-68-95-and-99-7-rule">Empirical 68, 95 and 99.7 Rule</a></li>
+</ul></li>
+<li><a href="#interquartile-range">Interquartile Range</a></li>
+</ul></li>
+<li><a href="#measure-of-skewness-and-kurtosis">Measure of Skewness and Kurtosis</a>
+<ul>
+<li><a href="#skewness">Skewness</a></li>
+<li><a href="#kurtosis">Kurtosis</a></li>
+</ul></li>
+<li><a href="#graphical-analysis">Graphical Analysis</a>
+<ul>
+<li><a href="#dot-plot">Dot plot</a></li>
+<li><a href="#box-plot">Box plot</a></li>
+<li><a href="#histogram">Histogram</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<p><strong>Univariate analysis</strong> focuses on a unfolding the intrinsic statistics of a single variable at hand. This is done as the first step, before jumping into assessing the relationship between variables in our data set.</p>
+
+<blockquote>
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        Content
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<ol>
+<li><a href="#data-type">Data Type</a><br /></li>
+<li><a href="#measure-of-center">Measure of Center</a><br />
+2.1. <a href="#airthmatic-mean">Arithmatic Mean</a><br />
+2.2. <a href="#harmonic-and-geometric-mean">Harmonic and Geometric Mean</a><br />
+2.3. <a href="#median-&amp;-mode">Median and Mode</a><br /></li>
+<li><a href="#measure-of-spread">Measure of Spread</a><br />
+3.1. <a href="#variance">Variance</a><br />
+3.2. <a href="#coefficient-of-variance">Coefficient of Variance</a><br />
+3.3. <a href="#standard-deviation">Standard Deviation</a><br />
+3.4. <a href="#interquartile-range">Interquartile Range</a><br /></li>
+<li><a href="#measure-of-skewness-and-kurtosis">Measure of Skewness and Kurtosis</a><br /></li>
+<li><a href="#graphical-analysis">Graphical Analysis</a></li>
+</ol>
+
+    </div>
+</div>
+</blockquote>
+
+<p>Univariate analyses can be divided into <em>graphical</em> and <em>quantitative</em> statistics. At the start of the analysis these two statistical procedures are best friends, by the end through they become inseparable lovers.</p>
+
+<p>Looking at the histogram without knowing the variability is pointless. So is calculating the variance without knowing how the sample distribution looks like.</p>
+
+<p>We will use R as our main statistical programming language and the <code>Leuk</code> data set as an example.</p>
+
+<h2 id="data-type">Data Type</h2>
+
+<p>If we are given this data set and asked to perform a set of statistical tests, the first thing that should be identifying what type of data are we working with.</p>
+
+<p>Broadly speaking, we can expect the data set to be <strong>univariate</strong> or a <strong>multivariate</strong> which can be either <strong>numerical</strong> or <strong>categorical</strong>:</p>
+
+<ul>
+<li>Numerical
+
+<ul>
+<li>Discrete
+
+<ul>
+<li>e.g. shoe size</li>
+</ul></li>
+<li>Continuous
+
+<ul>
+<li>e.g. shoe length in cm</li>
+</ul></li>
+</ul></li>
+<li>Categorical
+
+<ul>
+<li>Nominal
+
+<ul>
+<li>e.g. group A, B, C</li>
+</ul></li>
+<li>Ordinal
+
+<ul>
+<li>e.g. group A, B, C <strong>where</strong> A &gt; B &gt; C</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="kn">library</span><span class="p">(</span>MASS<span class="p">)</span>
+data<span class="p">(</span><span class="s">&#34;leuk&#34;</span><span class="p">)</span> <span class="c1"># loading data set</span>
+str<span class="p">(</span>leuk<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## &#39;data.frame&#39;:    33 obs. of  3 variables:
+##  $ wbc : int  2300 750 4300 2600 6000 10500 10000 17000 5400 7000 ...
+##  $ ag  : Factor w/ 2 levels &#34;absent&#34;,&#34;present&#34;: 2 2 2 2 2 2 2 2 2 2 ...
+##  $ time: int  65 156 100 134 16 108 121 4 39 143 ...</pre></td></tr></table>
+</div>
+</div>
+<p>We have 3 variables and 33 observation. White blood cell count and the survival time in weeks <code>time</code> are numerical while <code>ag</code> test result is categorical with two levels.</p>
+
+<p>Each row is a <strong>case</strong> (or observation) and each column is a <strong>variable</strong>, together they&rsquo;re represented in a <strong>data matrix</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">head</span><span class="p">(</span>leuk<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">##     wbc      ag time
+## 1  2300 present   65
+## 2   750 present  156
+## 3  4300 present  100
+## 4  2600 present  134
+## 5  6000 present   16
+## 6 10500 present  108</pre></td></tr></table>
+</div>
+</div>
+<div class="panel panel-primary">
+	
+	<div class="panel-body">A <strong>data frame</strong> in <strong>R</strong> is a fundamental data structure that holds multiple variables of <strong>different type</strong> together. In R a matrices can only hold data of the same family</div>
+	
+</div>
+
+
+<h2 id="measure-of-center">Measure of Center</h2>
+
+<p>The three quantitative musketeers that point to the center are <strong>mean</strong>, <strong>median</strong> and <strong>Mode</strong>.</p>
+
+<h3 id="airthmatic-mean">Airthmatic Mean</h3>
+
+<p>Mean measures the center of the distribution. Mean is also known as the <em>expected value</em> or the <em>central tendency</em>, these terms are interchangeable however they&rsquo;re  contextually used.</p>
+
+<p>For example, in our sample, the mean of WBC counts is the also the center of the WBC distribution. Expected value is the weighted mean however. In a very large sample, expected value would be the mean.</p>
+
+<p>We would use the term expected value when the problem is at the theoretical stage and the term mean when we actually have the data to calculate it. For a random variable <code>\(X\)</code> where <code>\(x_i\)</code> is a case and <code>\(f_i\)</code> is its relative frequency, <code>\(mean\)</code> is calculated as:</p>
+
+<p><code>$$\large E(X) = \overline{x} = \frac{1}{N}\sum_{i=1}^{N}x_i = E(X) = \sum_{i=1}^{N}f_ix_i$$</code></p>
+
+<div class="notices warning" ><p><strong>Parameters</strong> represent the summary from the <em>population</em> whereas <strong>statistics</strong> are <em>point estimates</em> of those parameters obtained from the <em>sample</em>. Parameters are represented by <strong>Greek</strong> and point estimates by <strong>Roman</strong> alphabets.</p>
+</div>
+
+
+<p><code>\(\large Parameter\ vs.\ statistics\ (point\ estimate)\ for\ population\ i:\)</code></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Description</th>
+<th align="left">Parameter</th>
+<th align="left">Statistic (point estimate)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>\(mean\)</code></td>
+<td align="left"><code>\(\mu_i\)</code></td>
+<td align="left"><code>\(\overline{x}\)</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>\(standard\ deviation\)</code></td>
+<td align="left"><code>\(\sigma_i\)</code></td>
+<td align="left"><code>\(s_i\)</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>\(proportion\)</code></td>
+<td align="left"><code>\(P_i\)</code></td>
+<td align="left"><code>\(\hat{p}_i\)</code></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="harmonic-and-geometric-mean">Harmonic and Geometric Mean</h3>
+
+<p>The arithmetic mean is heavily influenced by the extreme observations. To mitigate this problem, there are two famously known mathematical corrections that can be used:</p>
+
+<p>The <strong>harmonic mean</strong> which is the reciprocal of the arithmetic mean of the reciprocals and the <strong>geometric mean</strong> which is the arithmetic mean of the transformed variable:</p>
+
+<p><code>$$\large \overline{X}_{H} = \frac{N}{\sum_{i=1}^{N} \frac{1}{x_i}} \\ \large \overline{X}_{G} = (x_i\ x_{i+1} ...x_n)^n = exp[\ ln(X_G)\ ]= exp[\  \frac{1}{N}\sum_{i=1}^{N}\ ln(x_i)\ ]$$</code></p>
+
+<h3 id="median-mode">Median &amp; Mode</h3>
+
+<p>Median is the value of the which is the the midpoint of the distribution while mode is the most likely (frequently occurring) value in the distribution.</p>
+
+<p>Let&rsquo;s take a look at our Leukemia data set, focusing on WBC count:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">mean</span><span class="p">(</span>leuk<span class="o">$</span>wbc<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 29165.15</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">median<span class="p">(</span>leuk<span class="o">$</span>wbc<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 10500</pre></td></tr></table>
+</div>
+</div>
+<p>R does not have a built in function for mode, but that won&rsquo;t stop us :D:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">mode <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span>
+  a <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>x<span class="p">)</span>
+  a<span class="p">[</span><span class="kp">which.max</span><span class="p">(</span>a<span class="p">)]</span>
+<span class="p">}</span>
+
+<span class="kp">mode</span><span class="p">(</span>leuk<span class="o">$</span>wbc<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## 100000 
+##      5</pre></td></tr></table>
+</div>
+</div>
+<hr />
+
+<h2 id="measure-of-spread">Measure of Spread</h2>
+
+<p>The spread of the distribution is another informative statistic that provides a better picture of the random variable of interest.</p>
+
+<p>Spread is the distance of individual observations ( <code>\(x_i\)</code> ) from center of its distribution ( <code>\(\overline{x}\)</code> ). Calculating the <strong><em>variance</em></strong> is one of the ways of communicating the dispersion in our distribution.</p>
+
+<h3 id="variance">Variance</h3>
+
+<p>Variance for variable <code>\(X\)</code> is defined as:</p>
+
+<p>$$\large Var(X) =  E\ [\ (X-\mu)^2\ ] \ \large  $$</p>
+
+<p>This can be written as:</p>
+
+<p><code>$$\large Var(X) = \frac{1}{N}\sum_{i = 1}^{N}\ [\ x_i - E(X)\ ]^2 = \sum_{i = 1}^{N}f_i[\ x_i - E(X)\ ]^2 = E(X^2) - (\overline{x})^2 = \sigma^2$$</code></p>
+
+<p>Variance is the difference between <strong>mean of squares</strong> and the <strong>squared mean</strong>.</p>
+
+<div class="panel panel-primary">
+	<div class="panel-heading">Why the variability should be squared?</div>
+	<div class="panel-body"><div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>Let&rsquo;s take a look at an example <code>\(A = (2, 3, 4, 5)\)</code>. <code>\(E(A) = 3.5\)</code>, if we would like to measure the overall dispersion in this set we would get <code>\((2 - 3.5) + (3 - 3.5) + (4 - 3.5) + (5 - 3.5)\)</code>.</p>
+
+<p>Do you see the problem? <code>\(-1.5 - 0.5 +0.5 + 1.5 = 0\)</code>. To workaround the problem we&rsquo;d square all the terms <code>\(E(A)^2 = 12.25\)</code>.
+<code>\(\frac{1}{4}[(2 - 3.5)^2 + (3 - 3.5)^2 + (4 - 3.5)^2 + (5 - 3.5)^2] = 1.25\)</code></p>
+
+<p>We will also get the same result if we follow the other formula:
+<code>\(\frac{1}{4}[(4 - 12.25) +  (9 - 12.25) + (16 - 12.25) + (25 - 12.25)] = 1.25\)</code>
+Also:
+<code>\(E(X^2) - (\overline{x})^2 = \frac{1}{4}(4+9+16+25) - 3.5^2 = 1.25\)</code></p>
+
+    </div>
+</div>
+</div>
+	
+</div>
+
+
+<h3 id="coefficient-of-variance">Coefficient of Variance</h3>
+
+<p>When considering comparing the variability in two nonidentical and heterogeneous population, comparing variances may be misleading. <strong>Coefficient of variance</strong> allows for a true comparison. For a random variable X, CV is defined as:</p>
+
+<p>$$\large CV[X] = \frac{\sigma}{\mu}\times 100\% $$</p>
+
+<p>CV is a consistent measurement of spread as it measures variability unitlessly.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        Example: Application of CV in Applied Science
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<div class="panel panel-primary">
+    
+    <div class="panel-body"><p>Suppose we would like to compare the average cholesterol levels in Americans with Australians.
+Suppose the American population has a mean of 14.0 mg/dl with standard deviation of 7.0 mg/dl; and the average cholesterol level in Australian is 3.8  with standard deviation of 0.6mmol/l.</p>
+
+<p>Instead of converting these values we can instead use CV: 50% vs 15.8%. American population seems far more heterogeneous.</p>
+</div>
+    
+
+<p></div></p>
+
+    </div>
+</div>
+
+<h3 id="standard-deviation">Standard Deviation</h3>
+
+<p>The standard deviation is the square root of the variance. It is also equivalent to the commonly used <strong>root-mean-square error (RMSE)</strong>. Standard deviation gives a good estimate of how close the data is to the center of the distribution.</p>
+
+<p><code>$$\large \sigma = \sqrt{Var(X)}$$</code></p>
+
+<p>An important point to make here is to make a note of the symbols! This formula is valid only if we are dealing with <strong>population parameters</strong> ( <code>\(\large \sigma_x\neq s_x\)</code> ).</p>
+
+<p>For a sample of population <code>\(X\)</code> we calculate sigma with a <em>degree of freedom</em>.</p>
+
+<p><code>$$\large s_x^2 = \frac{1}{N}\sum_{i=1}^{N}(x_i-\overline{x})^2$$</code></p>
+
+<h4 id="empirical-68-95-and-99-7-rule">Empirical 68, 95 and 99.7 Rule</h4>
+
+<p>Depending on the distribution, the spread of the data would follow the <strong>68, 95 and 99.7 rule</strong>. That is 68% of the data would fall in <code>\(\large \overline{x} \pm s\)</code>, 95% within <code>\(\large \overline{x} \pm 2s\)</code> and 99.7% within <code>\(\large \overline{x} \pm 3s\)</code>. This is a rough estimation however. The actual multiplier of the <code>\(s\)</code> depends on the critical value of the distribution. For example, in a <code>\(\large z-distribution\)</code> this would be <code>\(\large \overline{x} \pm z^ \star s\)</code> and for 95% confidence interval <code>\(\large z^\star = 1.96\)</code>.</p>
+
+<p><img src="/img/statistics/68-95-997.jpg" alt="" width="500px" height="400px"/></p>
+
+<h3 id="interquartile-range">Interquartile Range</h3>
+
+<p><strong>Range</strong> is the most basic measurement of variability in data. A numerical variable ranges from <code>\(min(x)\)</code> to <code>\(max(x)\)</code>. Range alone is not very helpful however <strong>interquartile range</strong> is! IQR tells us the variabilit for the middle 50% of data. The larger the standard deviation the larger the IQR.
+<code>$$range = max(x) - min(x) \\ \ \\ Q_3 = \frac{max_x - median_x}{2} \\ \ \\ Q_1 = \frac{median_x - min_x}{2} \\ \ \\ IQR = Q_3 - Q_1$$</code></p>
+
+<p><strong>Outliers</strong> can be identified using the IQR. Any case that falls out of <code>\(Q_1 - 1.5IQR\ or Q_3 + 3IQR\)</code> is considered an outlier.</p>
+
+<h2 id="measure-of-skewness-and-kurtosis">Measure of Skewness and Kurtosis</h2>
+
+<p>We can&rsquo;t really talk about skewness and kurtosis without looking at the data. <strong>Rule of thumb</strong>: always look at the data! - we&rsquo;ll get into graphical analysis later on.</p>
+
+<p>Skewness is a measure of asymmetry and kurtosis measures the degree of peakedness. Looking at the WBC count in our <code>leuk</code> data set, the distribution of WBC counts seems to be <strong>bimodal</strong> (kurtosis) with a long <strong>right tail</strong> (kurtosis).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">hist<span class="p">(</span>leuk<span class="o">$</span>wbc<span class="p">,</span> breaks <span class="o">=</span> <span class="m">10</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+
+<p>Let&rsquo;s take a look at why quantitative and graphical analyses should always be carried out together.</p>
+
+<p>Suppose we have two samples, <code>\(\overline{x}_{1\&amp;2} =  0.6923\ ; s_{1\&amp;2} = 0.1685\)</code>. Looking at the statistics alone, our samples seem similar if not identical! However, they each belong to a different Beta distribution!</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">set.seed</span><span class="p">(</span><span class="m">9999</span><span class="p">)</span>
+x<span class="o">&lt;-</span>rnorm<span class="p">(</span><span class="m">100</span><span class="p">);</span>x<span class="o">&lt;-</span><span class="m">0.1685</span><span class="o">*</span><span class="p">(</span>x<span class="o">-</span><span class="kp">mean</span><span class="p">(</span>x<span class="p">))</span><span class="o">/</span>sd<span class="p">(</span>x<span class="p">)</span><span class="m">+0.6923</span>
+
+curve<span class="p">(</span>dbeta<span class="p">(</span>x<span class="p">,</span> <span class="m">4.5</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> xlim <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">1.5</span><span class="p">))</span> <span class="c1"># sample 1</span>
+curve<span class="p">(</span>dbeta<span class="p">(</span><span class="m">1.3846</span> <span class="o">-</span> x<span class="p">,</span> <span class="m">4.5</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> add <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> col <span class="o">=</span> <span class="s">&#34;red&#34;</span><span class="p">)</span> <span class="c1">#sample 2 = red</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        Code
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">mean</span><span class="p">(</span>dbeta<span class="p">(</span>x<span class="p">,</span> <span class="m">4.5</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 1.637482</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">mean</span><span class="p">(</span>dbeta<span class="p">(</span><span class="m">1.3846</span> <span class="o">-</span> x<span class="p">,</span> <span class="m">4.5</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 1.680538</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">sd<span class="p">(</span>dbeta<span class="p">(</span>x<span class="p">,</span> <span class="m">4.5</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 0.6498106</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">sd<span class="p">(</span>dbeta<span class="p">(</span><span class="m">1.3846</span> <span class="o">-</span> x<span class="p">,</span> <span class="m">4.5</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 0.6410224</pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div>
+
+<p>The parameters don&rsquo;t differ much! However, looking at the Beta distribution plots, they are the opposite of each other.</p>
+
+<h3 id="skewness">Skewness</h3>
+
+<p>Mathematically skewness ( <code>\(\large \gamma_1\)</code> )is defined as:</p>
+
+<p><code>$$\large {\gamma_1 = \frac{\mu_3}{\mu_2^\frac{3}{2}}= \frac{\mu_3}{\sigma^3}}$$</code>
+Where:
+$$ {{\mu_1 = 0 \ \mu_2 = E\ [\ (X - \mu)\ ] = \sigma^2 \ \mu_3 = E\ [\ (X - \mu)^2\ ] = \sigma^3\gamma_1}}$$</p>
+
+<p>Distinction between population and sample:
+<code>$$\gamma_{1} = \sqrt{n} \frac{\sum_{i =1}^{n}(X_i-\mu)^3}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{3/2}} \\ \ \\ g_1 = \frac{n \sqrt{n-1}}{n-2} \times \frac{\sum_{i =1}^{n}(X_i-\mu)^3}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{3/2}}$$</code></p>
+
+<p><code>\(\mu_3\)</code> and <code>\(\mu_2\)</code> are called <strong>third and second moment</strong> of data.</p>
+
+<h3 id="kurtosis">Kurtosis</h3>
+
+<p>Kurtosis is the <strong>forth moment</strong> of data. Kurtosis is a measure of whether the data are heavy-tailed or light-tailed relative to a normal distribution. therefore, the outliers in a sample heavily influence the kurtosis. In a symmetric distribution with long tails on both sides, the tails offset each other while they both increase the kurtosis.</p>
+
+<p>In other words, datasets with high kurtosis tend to have outliers and vice versa.</p>
+
+<p><code>$$\large \mu_4 = E\ [\ (X - \mu)^3\ ] = \sigma^4\gamma_2 \\ \large \gamma_2 = \frac{\mu_4}{\mu_2^2} = \frac{\mu_4}{(\sigma^2)^2}$$</code></p>
+
+<p>Again the difference in population and sample is:</p>
+
+<p><code>$$\gamma_2 = n \times \frac{\sum_{i =1}^{n}(X_i-\mu)^4}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{2}}
+\\
+k = \frac{n(n+1)(n-1)}{(n-2)(n-3)} \times \frac{\sum_{i =1}^{n}(X_i-\mu)^4}{[\ \sum_{i =1}^{n}(X_i-\mu)^2\ ]^{2}}$$</code></p>
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body"><p><strong>Robust statistics</strong> are statistical measures that are not affected by the outliers, skewness and kurtosis of the distribution. Mean and standard deviation are <strong>not</strong> robust statistics. <strong>Median</strong> and <strong>IQR</strong> are robust as they resist the influence of outliers.</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        Example:
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>Let&rsquo;s look at this set:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">x <span class="o">&lt;-</span> rnorm<span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+x2 <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span>x<span class="p">,</span> <span class="m">100</span><span class="p">)</span> <span class="c1"># with an outlier, i.e. value 100</span>
+
+<span class="kp">mean</span><span class="p">(</span>x<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 5.065149</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="kp">mean</span><span class="p">(</span>x2<span class="p">)</span> <span class="c1"># notice the large increase</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 6.005098</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">sd<span class="p">(</span>x<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 1.861745</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">sd<span class="p">(</span>x2<span class="p">)</span> <span class="c1"># HUGE increase!</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 9.626285</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">median<span class="p">(</span>x<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 4.762738</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">median<span class="p">(</span>x2<span class="p">)</span> <span class="c1"># robust measure of the centre</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 4.822391</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">IQR<span class="p">(</span>x<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 2.179584</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">IQR<span class="p">(</span>x2<span class="p">)</span> <span class="c1"># robust measure of variability</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## [1] 2.238293</pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div>
+</div>
+	
+</div>
+
+
+<h2 id="graphical-analysis">Graphical Analysis</h2>
+
+<p>In terms of graphical representation of a single variable, we can only hope to see the variability and the center of our distribution. There are only few graphical techniques that can help us:</p>
+
+<h3 id="dot-plot">Dot plot</h3>
+
+<p>A dot plot presents numerical data point as a single dot along a single aix . We have the option of stacking each point or have it scattered.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">stripchart<span class="p">(</span>leuk<span class="o">$</span>wbc<span class="p">,</span> method <span class="o">=</span> <span class="s">&#34;stack&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">stripchart<span class="p">(</span>leuk<span class="o">$</span>wbc<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+
+<h3 id="box-plot">Box plot</h3>
+
+<p>A box plot utilizes the range to represent the median, Q1, Q2, Q3 and Q4 as well as the upper and lower limit (1.5IQR) with whiskers. Any observation that falls beyond the whiskers is therefore an outlier.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">boxplot<span class="p">(</span>leuk<span class="o">$</span>wbc<span class="p">,</span> horizontal <span class="o">=</span> <span class="bp">T</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+
+<p>We can see two cases to be potential outliers.</p>
+
+<h3 id="histogram">Histogram</h3>
+
+<p>For small samples, dot plots are useful as they show the exact value of each point. However if we have a relatively large sample size dot plots are impractical. Histograms display <strong>data density</strong> of <strong>binned</strong> data poins. Bins collect all points that fall within a specified width.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">hist<span class="p">(</span>leuk<span class="o">$</span>wbc<span class="p">,</span> breaks <span class="o">=</span> <span class="m">10</span><span class="p">)</span> <span class="c1">#breaks defines how many bins should be shown.</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Alireza Behzadnia</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-04-11</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/statistics/">Statistics</a>
+          <a href="/tags/eda/">EDA</a>
+          <a href="/tags/univariate-analysis/">Univariate analysis</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/statistics/eda/eda_bivariate_analysis/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Bivariate Analysis</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/statistics/eda/eda/">
+            <span class="next-text nav-default">Exploratory Data Analysis (introduction)</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" rel="me noopener" class="iconfont icon-email"
+        title="email" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-stack-overflow"
+        title="stack-overflow" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-twitter"
+        title="twitter" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-facebook"
+        title="facebook" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-linkedin"
+        title="linkedin" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-google"
+        title="google" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-weibo"
+        title="weibo" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-zhihu"
+        title="zhihu" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-douban"
+        title="douban" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-pocket"
+        title="pocket" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-tumblr"
+        title="tumblr" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me noopener" class="iconfont icon-instagram"
+        title="instagram" target="_blank">
+      </a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me noopener" class="iconfont icon-gitlab"
+        title="gitlab" target="_blank">
+      </a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me noopener" class="iconfont icon-goodreads"
+        title="goodreads" target="_blank">
+      </a>
+  <a href="/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+  </div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">
+        Alireza Behzadnia
+        
+      </span></span>
+
+  
+  
+</div>
+
+<script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

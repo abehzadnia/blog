@@ -1,0 +1,13 @@
+---
+title: Principles of Sampling
+author: Alireza Behzadnia
+date: '2018-03-26'
+slug: research_design_intro
+categories:
+  - Clinical Research
+  - Design
+  - Sampling
+weight: 5
+---
+
+

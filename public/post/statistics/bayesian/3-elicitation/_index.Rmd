@@ -1,0 +1,104 @@
+---
+title: Elicitation and Conjugacy
+author: Alireza Behzadnia
+date: '2018-03-08'
+slug: bayesian-elicitation-conjugacy
+categories:
+  - Bayesian
+tags:
+  - Bayesian
+weight: 3
+---
+
+Elicitation is the process of turning an expert’s prior beliefs
+about one or more uncertain quantities into a probability
+distribution for those quantities.
+The term expert simply refers to somebody within the field in
+which the experiment/analysis is to take place.
+A successful elicitation process will lead to a prior distribution
+which accurately reflects the expert’s beliefs.
+An elicitation is accurate even if the expert’s prior judgements
+turn out to be completely incorrect!
+
+posterior ∝ prior × likelihood.
+
+
+In this lecture, we introduce the concept
+of prior elicitation in base and statistics. Often, one has a belief about
+the distribution of one's data. You may think that your data come
+from a binomial distribution and in that case you typically know the n,
+the number of trials but you usually do not know p,
+the probability of success. Or you may think that your data
+come from a normal distribution. But you do not know the mean or
+the standard deviation of the normal. Beside to knowing the distribution of
+one's data, you may also have beliefs about the unknown p in the binomial or
+the unknown mean in the normal. Bayesians express their belief in
+terms of personal probabilities. These personal probabilities encapsulate
+everything a Bayesian knows or believes about the problem. But these beliefs must obey
+the laws of probability, and be consistent with everything
+else the Bayesian knows. For example, you may know nothing
+at all about the value of P that generated some binomial data. In which case any value between zero and one is equally likely, you may want to
+make an inference on the proportion of people who would buy
+a new band of toothpaste. If you have industry experience, you may
+have a strong belief about the value of P but if you are new to the industry
+you would do nothing about P. In any value between zero and
+one seems equally like a deal. This major personal probability
+is the uniform distribution whose probably density function is flat. Often, windows quite a lot about which
+values of P or more like even others. For example if you we’re tossing the coin most people believed that the probability
+of heads is pretty close to half. They know that some coin are loaded and they know that some coins may
+have two heads or two tails. And they probably also know that
+coins aren't perfectly balanced. Nonetheless, before they start to
+collect data by tossing the coin and counting the number of heads their
+belief is that values of P near 0.5 are very likely, where's values of
+P near 0 or 1 are very unlikely. So a base angle sit to express
+their belief about the value of P through a probability distribution. And a very flexible family
+of distributions for this purpose is the beta family. A member of the beta family is specified
+by two parameters, just as a member of the normal family is specified by
+the mean and the standard deviation. For the beta, we shall call these
+two parameters alpha and beta. In this formula, note the gamma functions. The gamma function is just a factorial,
+specifically gamma of n is n-1 times n-2 times n- 3 all the way down
+until you multiply by 1. When alpha equal to beta equals one then one gets the member of the beta
+family that is the flat line. That flat line is also
+the probability density function of the uniform distribution. So the beta family contains the uniform
+but the beta family is much richer. If we take off equal to beta then one gets
+PDF that is symmetrical around one half. For large but equal values of alpha and beta, the area under the beta
+density near one half is very large. These kinds of priors are probably
+appropriate If you want to make inference on the probability of
+getting heads in a coin toss. The beta family also
+includes skewed densities, which appropriate if one thinks
+that P the probability of success in binomial trial is like in being
+nearer to zero n near to one. As you all know Bayes'
+rule is a machine for turning once prior beliefs
+in the posterior beliefs. With binomial data you start with whatever
+beliefs you may have about P, then you observe data in the form of the member
+of heads in say 20 tosses of a coin and Bayes' rule tells you how that data
+should change your opinion about P. The same principle applies
+to all other inferences. You start with your prior probability
+distribution over some parameter, then you use data to
+update that distribution to become the posterior distribution
+that expresses your new belief. These rules ensure that the change in
+distributions from prior to postural is the uniquely rational solution. So long as you begin with
+the prior distribution that reflects your true opinion,
+you can hardly go wrong. But, expressing that
+prior can be difficult. There are proofs and
+methods whereby a rational and coherent thinker can self illicit
+their true prior distribution but these are impractical and
+people are rarely rational and coherent. The good news is that with
+the few simple conditions no matter what part
+distribution you choose. If you observe enough data, you will converge to an accurate
+posterior distribution. So, two bayesians, say the reference
+Thomas Bayes and the agnostic Ajay Good can start with different priors but,
+observed the same data. As the amount of data increases they
+will converge to the same posterior distribution. What have we learned? First, that Bayesians express their
+uncertainty through probability distributions. Second, one can think about the situation
+and self-elicit a probability distribution that approximately reflects
+your personal probability. Third, one's personal probability
+should change according Bayes' rule, as new data are observed. And fourth, the beta family of distribution can
+describe a wide range of prior beliefs.
+
+
+```{r}
+
+```
+
+
