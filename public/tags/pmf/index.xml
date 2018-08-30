@@ -1,38 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Pmf on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
-    <link>/tags/pmf/</link>
-    <description>Recent content in Pmf on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/pmf/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Probability Function</title>
-      <link>/post/statistics/probability/probability_function/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/statistics/probability/probability_function/</guid>
-      <description>Probability function is the function of a random variable distribution, whose value provides the absolute or relative likelihood of the value of the random variable in the sample.
-Depending on the type of our random variable, we can calculate:
-Absolute likelihood for a discrete variableRelative likelihood for a continuous variableOn this page we will discuss:
-Probability Mass FunctionProbability Density FunctionPopular PMFs and PDFsProbability Mass FunctionDiscrete random variables have discrete and countable values.</description>
-    </item>
-    
-    <item>
-      <title>Discrete Probability Distribution</title>
-      <link>/post/statistics/probability/probability_discrete_distribution/</link>
-      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
-      <description>Probability distributions demonstrate the probability of an event. When dealing with discrete data, probability mass function of the event can come from various distributions. The most important discrete probability distributions are the Bernoulli, Binomial and Poisson.
-Bernoulli distributionThe most widely known unknown discrete probability distribution is the Bernoulli distribution.
-Named after the Swiss mathematician Jacob Bernoulli, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes.</description>
-    </item>
-    
-  </channel>
-</rss>
