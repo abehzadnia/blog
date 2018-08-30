@@ -2,102 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
-    <link>/categories/</link>
+    <link>/abehzadnia.netlify.com/categories/</link>
     <description>Recent content in Categories on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/abehzadnia.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bayesian</title>
-      <link>/categories/bayesian/</link>
+      <link>/abehzadnia.netlify.com/categories/bayesian/</link>
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/bayesian/</guid>
+      <guid>/abehzadnia.netlify.com/categories/bayesian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Clinical Research</title>
-      <link>/categories/clinical-research/</link>
+      <link>/abehzadnia.netlify.com/categories/clinical-research/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/clinical-research/</guid>
+      <guid>/abehzadnia.netlify.com/categories/clinical-research/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design</title>
-      <link>/categories/design/</link>
+      <link>/abehzadnia.netlify.com/categories/design/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/design/</guid>
+      <guid>/abehzadnia.netlify.com/categories/design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Eda</title>
-      <link>/categories/eda/</link>
+      <link>/abehzadnia.netlify.com/categories/eda/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/eda/</guid>
+      <guid>/abehzadnia.netlify.com/categories/eda/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Frequentist</title>
-      <link>/categories/frequentist/</link>
+      <link>/abehzadnia.netlify.com/categories/frequentist/</link>
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/frequentist/</guid>
+      <guid>/abehzadnia.netlify.com/categories/frequentist/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inference</title>
-      <link>/categories/inference/</link>
+      <link>/abehzadnia.netlify.com/categories/inference/</link>
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/inference/</guid>
+      <guid>/abehzadnia.netlify.com/categories/inference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probability</title>
-      <link>/categories/probability/</link>
+      <link>/abehzadnia.netlify.com/categories/probability/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/probability/</guid>
+      <guid>/abehzadnia.netlify.com/categories/probability/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/categories/r/</link>
+      <link>/abehzadnia.netlify.com/categories/r/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/r/</guid>
+      <guid>/abehzadnia.netlify.com/categories/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sampling</title>
-      <link>/categories/sampling/</link>
+      <link>/abehzadnia.netlify.com/categories/sampling/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/sampling/</guid>
+      <guid>/abehzadnia.netlify.com/categories/sampling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>/categories/statistics/</link>
+      <link>/abehzadnia.netlify.com/categories/statistics/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/statistics/</guid>
+      <guid>/abehzadnia.netlify.com/categories/statistics/</guid>
       <description></description>
     </item>
     

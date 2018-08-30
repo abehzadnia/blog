@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Inference on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
-    <link>/categories/inference/</link>
+    <link>/abehzadnia.netlify.com/categories/inference/</link>
     <description>Recent content in Inference on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/inference/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/abehzadnia.netlify.com/categories/inference/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bayesian vs. Frequentist</title>
-      <link>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</link>
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</guid>
       <description>Here we will look at how a Bayesian and frequentist may go about answering a simple inference question:
 Background As part of our commitment to good medical practice, we decide to conduct a quality assurance audit.
  Good Medical Practice

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
-    <link>/</link>
+    <link>/abehzadnia.netlify.com/</link>
     <description>Recent content on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/abehzadnia.netlify.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bayesian vs. Frequentist</title>
-      <link>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</link>
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</guid>
       
         <description>&lt;p&gt;Here we will look at how a Bayesian and frequentist may go about answering a simple inference question:&lt;/p&gt;
 &lt;div id=&#34;background&#34; class=&#34;section level3&#34;&gt;
@@ -90,7 +90,7 @@ likelihood&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##     0.9     0.8     0.7 
 ## 0.32805 0.40960 0.36015&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(likelihood, main = &amp;quot;Likelihood&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt; So far, our 2nd model looks promising.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt; So far, our 2nd model looks promising.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;posteriori&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Posteriori&lt;/h4&gt;
@@ -101,7 +101,7 @@ posterior&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##       0.9       0.8       0.7 
 ## 0.2988249 0.3731099 0.3280652&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(posterior, main = &amp;quot;Posterior&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;conclusion&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;conclusion&lt;/h4&gt;
@@ -131,7 +131,7 @@ posterior&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##        0.9        0.8        0.7 
 ## 0.07841767 0.72212604 0.19945628&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(posterior, main = &amp;quot;Posterior&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The second model is clearly the best.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -141,10 +141,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Introduction</title>
-      <link>/post/statistics/bayesian/1-introduction/bayesian-introduction/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/bayesian/1-introduction/bayesian-introduction/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/bayesian/1-introduction/bayesian-introduction/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/bayesian/1-introduction/bayesian-introduction/</guid>
       
         <description>&lt;p&gt;Bayes Rule in the discrete form, which allows us to calculate the probability of an event A given event B. This is what is called a conditional probability, and we will be working with conditional probabilities a whole lot in this module and also in the remainder of this course. One example of a conditional probability is the false positive or false negative rate of a medical test.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[P(A|B)= \frac{P(A\bigcap B)}{P(B)}\]&lt;/span&gt;&lt;/p&gt;
@@ -208,10 +208,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Discrete Probability Distribution</title>
-      <link>/post/statistics/probability/probability_discrete_distribution/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/probability/probability_discrete_distribution/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/probability/probability_discrete_distribution/</guid>
       
         <description>&lt;p&gt;Probability distributions demonstrate the probability of an event. When dealing with discrete data, &lt;strong&gt;probability mass function&lt;/strong&gt; of the &lt;em&gt;event&lt;/em&gt; can come from various distributions. The most important discrete probability distributions are the &lt;strong&gt;Bernoulli&lt;/strong&gt;, &lt;strong&gt;Binomial&lt;/strong&gt; and &lt;strong&gt;Poisson&lt;/strong&gt;.&lt;/p&gt;
 
@@ -270,7 +270,7 @@ x &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;sa
      main&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Cummulative sums of males (a Bernoulli variable)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;binomial-distribution&#34;&gt;Binomial distribution&lt;/h2&gt;
 
@@ -325,16 +325,16 @@ x &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;re
 hist&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; main &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Distribution of NPHLM mutation in a sample of 200&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Inference</title>
-      <link>/post/statistics/bayesian/2-inference/bayesian-inference/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/bayesian-inference/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/bayesian/2-inference/bayesian-inference/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/bayesian-inference/</guid>
       
         <description>&lt;p&gt;In order to have a better understanding of the difference between the frequentist approach and the Bayesian approach to interference let’s use the following example:&lt;/p&gt;
 &lt;div id=&#34;efficacy-of-ru-486-as-an-emergency-pill&#34; class=&#34;section level2&#34;&gt;
@@ -380,7 +380,7 @@ hist&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;,
 prior = c(rep(0.06, 4), 0.52, rep(0.06, 4))
 names(prior) = models
 barplot(prior, main = &amp;quot;Prior probabilities&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/1index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/1index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;likelihood&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Likelihood&lt;/h4&gt;
@@ -394,7 +394,7 @@ likelihood&lt;/code&gt;&lt;/pre&gt;
 ##          0.6          0.7          0.8          0.9 
 ## 2.696862e-04 5.007558e-06 1.300570e-08 3.178804e-13&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(likelihood, main = &amp;quot;Likelihood&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/1index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/1index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The number of successes and the number of trials are the same for each of these models, however each model has a different likelihood based on model’s probability of success. Likelihood is the probability of data given the model:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\large Lieklihood = P(data |model)\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -415,7 +415,7 @@ posterior&lt;/code&gt;&lt;/pre&gt;
 ##          0.6          0.7          0.8          0.9 
 ## 5.249779e-04 9.747841e-06 2.531722e-08 6.187942e-13&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;barplot(posterior, main = &amp;quot;Posterior&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/bayesian/2-inference/1index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/bayesian/2-inference/1index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;model-selection&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Model selection&lt;/h4&gt;
@@ -435,10 +435,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Structure of Clinical Research</title>
-      <link>/post/clinical_research/design/components/research_design_intro/</link>
+      <link>/abehzadnia.netlify.com/post/clinical_research/design/components/research_design_intro/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/clinical_research/design/components/research_design_intro/</guid>
+      <guid>/abehzadnia.netlify.com/post/clinical_research/design/components/research_design_intro/</guid>
       
         <description>&lt;p&gt;Clinical research is an essential part of practice of medicine. In short it is a project carried out by to investigate a research question - which should be focused on clinical aspect of medicine (i.e. the practice of medicine).&lt;/p&gt;
 &lt;p&gt;Structure of the research is heavily dependant on the subject of interest. However, almost all studies follow a logical and focused organisation. A study has to have:&lt;/p&gt;
@@ -509,10 +509,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Structure of Clinical Research</title>
-      <link>/post/research-design/clinical-research-components/research_design_intro/</link>
+      <link>/abehzadnia.netlify.com/post/research-design/clinical-research-components/research_design_intro/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/research-design/clinical-research-components/research_design_intro/</guid>
+      <guid>/abehzadnia.netlify.com/post/research-design/clinical-research-components/research_design_intro/</guid>
       
         <description>&lt;p&gt;Clinical research is an essential part of practice of medicine. In short it is a project carried out by to investigate a research question - which should be focused on clinical aspect of medicine (i.e. the practice of medicine).&lt;/p&gt;
 &lt;p&gt;Structure of the research is heavily dependant on the subject of interest. However, almost all studies follow a logical and focused organisation. A study has to have:&lt;/p&gt;
@@ -574,10 +574,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Elicitation and Conjugacy</title>
-      <link>/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</guid>
       
         <description>&lt;p&gt;Elicitation is the process of turning an expert’s prior beliefs about one or more uncertain quantities into a probability distribution for those quantities. The term expert simply refers to somebody within the field in which the experiment/analysis is to take place. A successful elicitation process will lead to a prior distribution which accurately reflects the expert’s beliefs. An elicitation is accurate even if the expert’s prior judgements turn out to be completely incorrect!&lt;/p&gt;
 &lt;p&gt;posterior ∝ prior × likelihood.&lt;/p&gt;
@@ -588,10 +588,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Principles of Sampling</title>
-      <link>/post/clinical_research/design/components/research_design_intro/</link>
+      <link>/abehzadnia.netlify.com/post/clinical_research/design/components/research_design_intro/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/clinical_research/design/components/research_design_intro/</guid>
+      <guid>/abehzadnia.netlify.com/post/clinical_research/design/components/research_design_intro/</guid>
       
         <description></description>
       
@@ -599,10 +599,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Principles of Sampling</title>
-      <link>/post/clinical_research/design/components/research_design_intro/</link>
+      <link>/abehzadnia.netlify.com/post/clinical_research/design/components/research_design_intro/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/clinical_research/design/components/research_design_intro/</guid>
+      <guid>/abehzadnia.netlify.com/post/clinical_research/design/components/research_design_intro/</guid>
       
         <description>&lt;!--chapter:end:CopyOfsampling.Rmd--&gt;
 &lt;p&gt;A a good research question is targeted at a specific population. For example, “What is the risk of developing lung cancer among smokers?” specifies the population of interest - those who smoke.&lt;/p&gt;
@@ -616,10 +616,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Principles of Sampling</title>
-      <link>/post/clinical_research/design/components/research_design_intro/</link>
+      <link>/abehzadnia.netlify.com/post/clinical_research/design/components/research_design_intro/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/clinical_research/design/components/research_design_intro/</guid>
+      <guid>/abehzadnia.netlify.com/post/clinical_research/design/components/research_design_intro/</guid>
       
         <description>&lt;p&gt;A a good research question is targeted at a specific population. For example, “What is the risk of developing lung cancer among smokers?” specifies the population of interest - those who smoke.&lt;/p&gt;
 &lt;p&gt;Logistically, prospects of studying the population of interest is dim. Instead, a sample is taken as a reprasentative subset of the population.&lt;/p&gt;
@@ -631,10 +631,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Principles of Sampling</title>
-      <link>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
+      <link>/abehzadnia.netlify.com/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
+      <guid>/abehzadnia.netlify.com/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
       
         <description></description>
       
@@ -642,10 +642,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Principles of Sampling</title>
-      <link>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
+      <link>/abehzadnia.netlify.com/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
+      <guid>/abehzadnia.netlify.com/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
       
         <description></description>
       
@@ -653,10 +653,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Principles of Sampling</title>
-      <link>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
+      <link>/abehzadnia.netlify.com/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
+      <guid>/abehzadnia.netlify.com/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
       
         <description>&lt;p&gt;A a good research question is targeted at a specific population. For example, “What is the risk of developing lung cancer among smokers?” specifies the population of interest - those who smoke.&lt;/p&gt;
 &lt;p&gt;Logistically, prospects of studying the population of interest is dim. Instead, a sample is taken as a reprasentative subset of the population.&lt;/p&gt;
@@ -668,10 +668,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Principles of Sampling</title>
-      <link>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
+      <link>/abehzadnia.netlify.com/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
+      <guid>/abehzadnia.netlify.com/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
       
         <description>&lt;p&gt;A a good research question is targeted at a specific population. For example, &amp;ldquo;What is the risk of developing lung cancer among smokers?&amp;rdquo; specifies the population of interest - those who smoke.&lt;/p&gt;
 
@@ -686,10 +686,10 @@ posterior&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Bivariate Analysis</title>
-      <link>/post/statistics/eda/eda_bivariate_analysis/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/eda/eda_bivariate_analysis/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/eda/eda_bivariate_analysis/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/eda/eda_bivariate_analysis/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;Bivariate analysis&lt;/strong&gt; explore the possible relationship between two variables&amp;rsquo; variability. In view of &amp;ldquo;&lt;strong&gt;exploratory&lt;/strong&gt;&amp;rdquo; focus of EDA, we should refrain from infering based on bivariate analysis.&lt;/p&gt;
 
@@ -894,7 +894,7 @@ cor&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;o&#34;&gt
 plot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;rbc&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; wbc&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s look at the utility of rank transformation:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -907,7 +907,7 @@ plot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;rbc&lt;span class=&#34;p&#34;&gt
 plot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Time&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; conc&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# doesn&amp;#39;t look good, look at the cluster of outliers&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -916,7 +916,7 @@ plot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Time&lt;span class=&#34;p&#34;&g
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;plot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;rank&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Time&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;rank&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;conc&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# much better looking, we can see the Theophylline concentration increases and then decreases (due to its half life)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-6-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-6-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;multivariate-analysis&#34;&gt;Multivariate analysis&lt;/h2&gt;
 
@@ -949,7 +949,7 @@ plot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Time&lt;span class=&#34;p&#34;&g
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;pairs&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;categorical-variables&#34;&gt;Categorical variables&lt;/h2&gt;
 
@@ -1054,7 +1054,7 @@ sleep &lt;span class=&#34;o&#34;&gt;%&amp;gt;%&lt;/span&gt;
 boxplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;extra&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; group&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can&amp;rsquo;t use scatterplot to visualise this however!&lt;/p&gt;
 
@@ -1197,16 +1197,16 @@ ggplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;esoph&lt;span class=&#34;p&#34
   geom_bar&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/bivariate_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Univariate Analysis</title>
-      <link>/post/statistics/eda/eda_univariate_analysis/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/eda/eda_univariate_analysis/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/eda/eda_univariate_analysis/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/eda/eda_univariate_analysis/</guid>
       
         <description>
 
@@ -1576,7 +1576,7 @@ Suppose the American population has a mean of 14.0 mg/dl with standard deviation
 
 &lt;p&gt;Depending on the distribution, the spread of the data would follow the &lt;strong&gt;68, 95 and 99.7 rule&lt;/strong&gt;. That is 68% of the data would fall in $ \large \overline{x} \pm s $, 95% within $ \large \overline{x} \pm 2s $ and 99.7% within $ \large \overline{x} \pm 3s $. This is a rough estimation however. The actual multiplier of the $ s $ depends on the critical value of the distribution. For example, in a $ \large z-distribution $ this would be $ \large \overline{x} \pm z^ \star s $ and for 95% confidence interval $ \large z^\star = 1.96 $.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/statistics/68-95-997.jpg&#34; alt=&#34;&#34; width=&#34;500px&#34; height=&#34;400px&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/img/statistics/68-95-997.jpg&#34; alt=&#34;&#34; width=&#34;500px&#34; height=&#34;400px&#34;/&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;interquartile-range&#34;&gt;Interquartile Range&lt;/h3&gt;
 
@@ -1598,7 +1598,7 @@ Suppose the American population has a mean of 14.0 mg/dl with standard deviation
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;hist&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;wbc&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; breaks &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Let&amp;rsquo;s take a look at why quantitative and graphical analyses should always be carried out together.&lt;/p&gt;
 
@@ -1619,7 +1619,7 @@ curve&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;dbeta&lt;span class=&#34;p&#34;
 curve&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;dbeta&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1.3846&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; x&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; add &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; col &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#sample 2 = red&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;div class=&#34;expand&#34;&gt;
     &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fa fa-chevron-down&#39; : &#39;fa fa-chevron-right&#39;;});});&#34;&gt;
@@ -1878,7 +1878,7 @@ x2 &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;stripchart&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;wbc&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; method &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;stack&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1887,7 +1887,7 @@ x2 &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;stripchart&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;wbc&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-9-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-9-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;box-plot&#34;&gt;Box plot&lt;/h3&gt;
 
@@ -1900,7 +1900,7 @@ x2 &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;boxplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;wbc&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; horizontal &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see two cases to be potential outliers.&lt;/p&gt;
 
@@ -1915,17 +1915,17 @@ x2 &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;hist&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;leuk&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;wbc&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; breaks &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#breaks defines how many bins should be shown.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/eda/univariate_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
       
     </item>
     
     <item>
       <title>Probability Function</title>
-      <link>/post/statistics/probability/probability_function/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/probability/probability_function/</link>
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/probability/probability_function/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/probability/probability_function/</guid>
       
         <description>&lt;p&gt;Probability function is the function of a random variable distribution, whose value provides the &lt;em&gt;absolute&lt;/em&gt; or &lt;em&gt;relative likelihood&lt;/em&gt; of the value of the random variable in the sample.&lt;/p&gt;
 
@@ -2017,7 +2017,7 @@ Depending on the &lt;em&gt;type&lt;/em&gt; of our random variable, we can calcul
 barplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Two_cointosses_1000_times&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/abehzadnia.netlify.com/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The area under the histogram is one and the area of each bar is the probability
 of seeing a binomial random variable, whose value is equal to the x-value
@@ -2030,11 +2030,11 @@ at the center of the bars base.&lt;/p&gt;
 &lt;p&gt;Consider  random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.&lt;/p&gt;
 
 &lt;p&gt;The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a &lt;strong&gt;probability density curve&lt;/strong&gt;.
-&lt;img src=&#34;/probability/pdf.gif&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;/abehzadnia.netlify.com/probability/pdf.gif&#34; alt=&#34;&#34; /&gt;
 The total area under the density curve equals 1, and the curve represents probabilities by area.&lt;/p&gt;
 
 &lt;p&gt;When the random variable is continuous, it has &lt;em&gt;probability zero of taking any single value&lt;/em&gt;, &lt;code&gt;\(P(X =x) =0\)&lt;/code&gt;. Here we can only talk about the &lt;strong&gt;relative likelihood&lt;/strong&gt; of the continuous random variable &lt;em&gt;within some interval&lt;/em&gt;. Continuous random variables have &lt;strong&gt;probability density functions&lt;/strong&gt; or pdfs instead of probability mass functions.
-&lt;img src=&#34;/probability/pdf2.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/abehzadnia.netlify.com/probability/pdf2.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The PDF curve of a random variable &lt;code&gt;\(X\)&lt;/code&gt; with &lt;code&gt;\(M =\mu\)&lt;/code&gt; and &lt;code&gt;\(SD = \sigma\)&lt;/code&gt;:
 $$\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} $$&lt;/p&gt;
@@ -2067,10 +2067,10 @@ $$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx$$&lt;/p&gt;
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>/abehzadnia.netlify.com/about/</link>
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
-      <guid>/about/</guid>
+      <guid>/abehzadnia.netlify.com/about/</guid>
       
         <description>&lt;p&gt;Hugo is a static site engine written in Go.&lt;/p&gt;
 
@@ -2090,10 +2090,10 @@ $$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx$$&lt;/p&gt;
     
     <item>
       <title>Exploratory Data Analysis (introduction)</title>
-      <link>/post/statistics/eda/eda_introduction/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/eda/eda_introduction/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/eda/eda_introduction/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/eda/eda_introduction/</guid>
       
         <description>&lt;p&gt;Exploratory data analysis (EDA) is an approach to data analysis that employs tools of descriptive statistics in order to dissect the data. the term &lt;em&gt;exploratory data analysis&lt;/em&gt; was coind by John W. Tukey in the 70s.&lt;/p&gt;
 
@@ -2103,16 +2103,16 @@ $$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx$$&lt;/p&gt;
 
 &lt;p&gt;The sequence of events hence can be summarised as:&lt;/p&gt;
 
-&lt;link href=&#34;/mermaid/mermaid.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&gt;
-&lt;script defer src=&#34;/mermaid/mermaid.js&#34;&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
+&lt;link href=&#34;/abehzadnia.netlify.com/abehzadnia.netlify.com/mermaid/mermaid.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&gt;
+&lt;script defer src=&#34;/abehzadnia.netlify.com/abehzadnia.netlify.com/mermaid/mermaid.js&#34;&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
 &lt;div class=&#34;mermaid&#34; align=&#34;center&#34; &gt;
 graph LR;
     A[Population of interest] --&gt; B[Sampling]
     B --&gt;C(Data)
 &lt;/div&gt;
 
-&lt;link href=&#34;/mermaid/mermaid.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&gt;
-&lt;script defer src=&#34;/mermaid/mermaid.js&#34;&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
+&lt;link href=&#34;/abehzadnia.netlify.com/abehzadnia.netlify.com/mermaid/mermaid.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&gt;
+&lt;script defer src=&#34;/abehzadnia.netlify.com/abehzadnia.netlify.com/mermaid/mermaid.js&#34;&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
 &lt;div class=&#34;mermaid&#34; align=&#34;center&#34; &gt;
 graph LR;
     A(Data) --&gt; |EDA| B{Analysis}
@@ -2126,8 +2126,8 @@ graph LR;
 
 &lt;/div&gt;
 
-&lt;link href=&#34;/mermaid/mermaid.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&gt;
-&lt;script defer src=&#34;/mermaid/mermaid.js&#34;&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
+&lt;link href=&#34;/abehzadnia.netlify.com/abehzadnia.netlify.com/mermaid/mermaid.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&gt;
+&lt;script defer src=&#34;/abehzadnia.netlify.com/abehzadnia.netlify.com/mermaid/mermaid.js&#34;&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
 &lt;div class=&#34;mermaid&#34; align=&#34;center&#34; &gt;
 graph LR;
     H(Conclusion) -.-&gt; |Bayesian|G[Updating priori &lt;br&gt; using the posteriori]
@@ -2139,10 +2139,10 @@ graph LR;
     
     <item>
       <title>2018 04 11 Wer</title>
-      <link>/post/blog/2018-04-11-wer/</link>
+      <link>/abehzadnia.netlify.com/post/blog/2018-04-11-wer/</link>
       <pubDate>Wed, 11 Apr 2018 11:55:32 +1000</pubDate>
       
-      <guid>/post/blog/2018-04-11-wer/</guid>
+      <guid>/abehzadnia.netlify.com/post/blog/2018-04-11-wer/</guid>
       
         <description>&lt;p&gt;Lorem Ipsum.
 Notice &lt;code&gt;draft&lt;/code&gt; is set to true.

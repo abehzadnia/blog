@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bivariate Analysis on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
-    <link>/tags/bivariate-analysis/</link>
+    <link>/abehzadnia.netlify.com/tags/bivariate-analysis/</link>
     <description>Recent content in Bivariate Analysis on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/bivariate-analysis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/abehzadnia.netlify.com/tags/bivariate-analysis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bivariate Analysis</title>
-      <link>/post/statistics/eda/eda_bivariate_analysis/</link>
+      <link>/abehzadnia.netlify.com/post/statistics/eda/eda_bivariate_analysis/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistics/eda/eda_bivariate_analysis/</guid>
+      <guid>/abehzadnia.netlify.com/post/statistics/eda/eda_bivariate_analysis/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Bivariate analysis&lt;/strong&gt; explore the possible relationship between two variables&amp;rsquo; variability. In view of &amp;ldquo;&lt;strong&gt;exploratory&lt;/strong&gt;&amp;rdquo; focus of EDA, we should refrain from infering based on bivariate analysis.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
