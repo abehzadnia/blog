@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Discrete Distribution on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
-    <link>/abehzadnia.netlify.com/tags/discrete-distribution/</link>
+    <link>/tags/discrete-distribution/</link>
     <description>Recent content in Discrete Distribution on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 12 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/abehzadnia.netlify.com/tags/discrete-distribution/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/discrete-distribution/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Discrete Probability Distribution</title>
-      <link>/abehzadnia.netlify.com/post/statistics/probability/probability_discrete_distribution/</link>
+      <link>/post/statistics/probability/probability_discrete_distribution/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/post/statistics/probability/probability_discrete_distribution/</guid>
+      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
       <description>&lt;p&gt;Probability distributions demonstrate the probability of an event. When dealing with discrete data, &lt;strong&gt;probability mass function&lt;/strong&gt; of the &lt;em&gt;event&lt;/em&gt; can come from various distributions. The most important discrete probability distributions are the &lt;strong&gt;Bernoulli&lt;/strong&gt;, &lt;strong&gt;Binomial&lt;/strong&gt; and &lt;strong&gt;Poisson&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

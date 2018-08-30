@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Poisson on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
-    <link>/abehzadnia.netlify.com/tags/poisson/</link>
+    <link>/tags/poisson/</link>
     <description>Recent content in Poisson on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 12 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/abehzadnia.netlify.com/tags/poisson/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/poisson/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Continuous Probability Distribution</title>
-      <link>/abehzadnia.netlify.com/post/statistics/probability/probability_continuous_distribution/</link>
+      <link>/post/statistics/probability/probability_continuous_distribution/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/post/statistics/probability/probability_continuous_distribution/</guid>
+      <guid>/post/statistics/probability/probability_continuous_distribution/</guid>
       <description>If a random variable is continuous, its probability distribution is called a continuous probability distribution.
 Recap  P(X = x) is zero if our X is continuous Continuous probability distributions cannot be tabulated  It&amp;rsquo;s conceptually impossible: we would need to have an infinite number of rows and columns to account for every single P between 0-1, which is infinite. This is well demonstrated in the * Zeno&amp;rsquo;s Paradox *.</description>
     </item>
     
     <item>
       <title>Discrete Probability Distribution</title>
-      <link>/abehzadnia.netlify.com/post/statistics/probability/probability_discrete_distribution/</link>
+      <link>/post/statistics/probability/probability_discrete_distribution/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/post/statistics/probability/probability_discrete_distribution/</guid>
+      <guid>/post/statistics/probability/probability_discrete_distribution/</guid>
       <description>&lt;p&gt;Probability distributions demonstrate the probability of an event. When dealing with discrete data, &lt;strong&gt;probability mass function&lt;/strong&gt; of the &lt;em&gt;event&lt;/em&gt; can come from various distributions. The most important discrete probability distributions are the &lt;strong&gt;Bernoulli&lt;/strong&gt;, &lt;strong&gt;Binomial&lt;/strong&gt; and &lt;strong&gt;Poisson&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

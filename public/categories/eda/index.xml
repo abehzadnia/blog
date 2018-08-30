@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eda on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
-    <link>/abehzadnia.netlify.com/categories/eda/</link>
+    <link>/categories/eda/</link>
     <description>Recent content in Eda on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/abehzadnia.netlify.com/categories/eda/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/eda/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bivariate Analysis</title>
-      <link>/abehzadnia.netlify.com/post/statistics/eda/eda_bivariate_analysis/</link>
+      <link>/post/statistics/eda/eda_bivariate_analysis/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/post/statistics/eda/eda_bivariate_analysis/</guid>
+      <guid>/post/statistics/eda/eda_bivariate_analysis/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Bivariate analysis&lt;/strong&gt; explore the possible relationship between two variables&amp;rsquo; variability. In view of &amp;ldquo;&lt;strong&gt;exploratory&lt;/strong&gt;&amp;rdquo; focus of EDA, we should refrain from infering based on bivariate analysis.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,20 +24,20 @@
     
     <item>
       <title>Exploratory Data Analysis (introduction)</title>
-      <link>/abehzadnia.netlify.com/post/statistics/eda/eda_introduction/</link>
+      <link>/post/statistics/eda/eda_introduction/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/post/statistics/eda/eda_introduction/</guid>
+      <guid>/post/statistics/eda/eda_introduction/</guid>
       <description>Exploratory data analysis (EDA) is an approach to data analysis that employs tools of descriptive statistics in order to dissect the data. the term exploratory data analysis was coind by John W. Tukey in the 70s.
 EDA is a philosophy rather than being statistical technique, in which the statistician takes the role of a detective whose main goal is to unveil the underlying patterns. This is contrary to the classical statistician who acts as a judge instaed.</description>
     </item>
     
     <item>
       <title>Univariate Analysis</title>
-      <link>/abehzadnia.netlify.com/post/statistics/eda/eda_univariate_analysis/</link>
+      <link>/post/statistics/eda/eda_univariate_analysis/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/post/statistics/eda/eda_univariate_analysis/</guid>
+      <guid>/post/statistics/eda/eda_univariate_analysis/</guid>
       <description>Univariate analysis focuses on a unfolding the intrinsic statistics of a single variable at hand. This is done as the first step, before jumping into assessing the relationship between variables in our data set.
    Content    Data Type Measure of Center 2.1. Arithmatic Mean 2.2. Harmonic and Geometric Mean 2.3. Median and Mode Measure of Spread 3.1. Variance 3.2. Coefficient of Variance 3.3. Standard Deviation 3.</description>
     </item>

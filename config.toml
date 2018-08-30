@@ -1,4 +1,4 @@
-baseURL = "abehzadnia.netlify.com"
+baseURL = "/"
 title = "A data enthusiast blog - another wannabe 'statistician'"
 enableRobotsTXT = true
 enableEmoji = true

@@ -2,183 +2,183 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on A data enthusiast blog - another wannabe &#39;statistician&#39;</title>
-    <link>/abehzadnia.netlify.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/abehzadnia.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bayesian</title>
-      <link>/abehzadnia.netlify.com/tags/bayesian/</link>
+      <link>/tags/bayesian/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/bayesian/</guid>
+      <guid>/tags/bayesian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bernoulli</title>
-      <link>/abehzadnia.netlify.com/tags/bernoulli/</link>
+      <link>/tags/bernoulli/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/bernoulli/</guid>
+      <guid>/tags/bernoulli/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Beta</title>
-      <link>/abehzadnia.netlify.com/tags/beta/</link>
+      <link>/tags/beta/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/beta/</guid>
+      <guid>/tags/beta/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Binomial</title>
-      <link>/abehzadnia.netlify.com/tags/binomial/</link>
+      <link>/tags/binomial/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/binomial/</guid>
+      <guid>/tags/binomial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bivariate Analysis</title>
-      <link>/abehzadnia.netlify.com/tags/bivariate-analysis/</link>
+      <link>/tags/bivariate-analysis/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/bivariate-analysis/</guid>
+      <guid>/tags/bivariate-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Continuous Distribution</title>
-      <link>/abehzadnia.netlify.com/tags/continuous-distribution/</link>
+      <link>/tags/continuous-distribution/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/continuous-distribution/</guid>
+      <guid>/tags/continuous-distribution/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Descriptive</title>
-      <link>/abehzadnia.netlify.com/tags/descriptive/</link>
+      <link>/tags/descriptive/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/descriptive/</guid>
+      <guid>/tags/descriptive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Discrete Distribution</title>
-      <link>/abehzadnia.netlify.com/tags/discrete-distribution/</link>
+      <link>/tags/discrete-distribution/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/discrete-distribution/</guid>
+      <guid>/tags/discrete-distribution/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Eda</title>
-      <link>/abehzadnia.netlify.com/tags/eda/</link>
+      <link>/tags/eda/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/eda/</guid>
+      <guid>/tags/eda/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pdf</title>
-      <link>/abehzadnia.netlify.com/tags/pdf/</link>
+      <link>/tags/pdf/</link>
       <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/pdf/</guid>
+      <guid>/tags/pdf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Plot</title>
-      <link>/abehzadnia.netlify.com/tags/plot/</link>
+      <link>/tags/plot/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/plot/</guid>
+      <guid>/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pmf</title>
-      <link>/abehzadnia.netlify.com/tags/pmf/</link>
+      <link>/tags/pmf/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/pmf/</guid>
+      <guid>/tags/pmf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Poisson</title>
-      <link>/abehzadnia.netlify.com/tags/poisson/</link>
+      <link>/tags/poisson/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/poisson/</guid>
+      <guid>/tags/poisson/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probability</title>
-      <link>/abehzadnia.netlify.com/tags/probability/</link>
+      <link>/tags/probability/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/probability/</guid>
+      <guid>/tags/probability/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probability Distribution</title>
-      <link>/abehzadnia.netlify.com/tags/probability-distribution/</link>
+      <link>/tags/probability-distribution/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/probability-distribution/</guid>
+      <guid>/tags/probability-distribution/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>/abehzadnia.netlify.com/tags/r-markdown/</link>
+      <link>/tags/r-markdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/r-markdown/</guid>
+      <guid>/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Regression</title>
-      <link>/abehzadnia.netlify.com/tags/regression/</link>
+      <link>/tags/regression/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/regression/</guid>
+      <guid>/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>/abehzadnia.netlify.com/tags/statistics/</link>
+      <link>/tags/statistics/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/statistics/</guid>
+      <guid>/tags/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Univariate Analysis</title>
-      <link>/abehzadnia.netlify.com/tags/univariate-analysis/</link>
+      <link>/tags/univariate-analysis/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/abehzadnia.netlify.com/tags/univariate-analysis/</guid>
+      <guid>/tags/univariate-analysis/</guid>
       <description></description>
     </item>
     
