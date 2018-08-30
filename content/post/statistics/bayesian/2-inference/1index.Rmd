@@ -1,0 +1,124 @@
+---
+title: Inference
+author: Alireza Behzadnia
+date: '2018-03-08'
+slug: bayesian-inference
+categories:
+  - Bayesian
+tags:
+  - Bayesian
+weight: 2
+---
+
+In order to have a better understanding of the difference between the frequentist approach and the Bayesian approach to interference let's use the following example:
+
+## Efficacy of RU-486 as an emergency pill
+
+A randomized control trial was carried out to ask the question of whether Mifepristone (RU486) can be an effective morning after contraceptive. The study participants were 40 women
+who came to a health clinic asking for emergency contraception. **Method:** 20 women were randomly assigned to receive RU-486, and another 20 to receive standard
+therapy, consisting of high doses of estrogen and synthetic progesterone. **Results:** In the treatment group (RU-486), 4 became pregnant. In the control group, 16 became pregnant.
+
+How can we infere from our data? Let's look at both aproaches:
+
+***
+
+### Frequentist approach
+
+In the frequentist approach, we first need to set our hypotheses:
+
+- *P* = *P*(pregnancy comes from the treatment group)
+- Null hypothesis (H~0~) = P is equal to 0.5.
+    - *~P* = 1 - *P* = 0.5.
+    - The pregnancy is equally likely to come from either the treatment or the control group.
+- Alternative hypothesis (H~a~) = P < 0.5
+    - *~P* > *P*
+    - The pregnancy is more likely to come from the control group and less likely from the treatment group.
+
+Within the frequentist paradigm, we need a p-value. **P-value** can be defined as the probability of an observed outcome given that the null hypothesis is true. Here we have 20 trials ($n = 20$) where the outcome of each trial is **independent** of the others and we have based on our H~0~, each trial has a probability of $p = 0.5$. The outcome of each trial can be either: 1. success (pregnancy prevented) or 2. failure (pregnancy occured).
+
+Based on the study set up we can use binomial distribution to calculate the probability of observing 4 pregnancies ($k = 4$), in 20 trials ($n= 20$, given the probability of pregnancy occuring in each trial is $p = 0.5$ - assuming H~0~ is true.
+
+- $p - value = P(k \leq 4)$
+```{r}
+sum(dbinom(0:4, size = 20, p = 0.5))
+
+```
+
+
+This means,that the chances of observing 4 or fewer pregnancies in the treatment group is approximately 0.0059 - which is a small probability. Therefore, we can reject the null hypothesis and conclude that the data provides convincing evidence for the treatment being effective.
+
+### Bayesian approach
+
+Within the Bayesian framework too we first need to define our hypotheses. In Bayesian framework hypotheses can be seen as **models** that the data come from
+
+We begin by delineating each of the plasible models. It is plausible for *P*(pregnancy comes from the treatment group) to take any value from 0 to 1. However, we'll simplify the number of models we need to consider in this study by only considering a continuous parameter space for p that ranges from 10% to 90%. This means, we will look at 9 different models where each model the probability of pregnancy occuring given that they receieved treatment. For example, *model 1* (10%) states that if one of the participants becomes pregnant, the probability of them having received RU-486 is only 10%. Therefore,the likelihood of them being in the control group is 90%.
+
+#### Prior
+
+Next, we need to specify the prior probabilities assigned to these models (or hypotheses). The prior probabilities encapsulates what we know about possibility of the models (from previous research perhaps) before conducting the experiment. We will discuss further on how these prior probabilities are assigned. For now, we place $P(model = 0.5) = 0.52$ and the rest will be devided accross other models equally $\frac{0.48}{8} =0.06$.
+
+Therefore, if **participant A** becomes pregnant, it's 50% likely that she received treatment ($\small P(model=0.5)=0.52$, i.e. highest probability). This is based on the prior probability of the model 0.5:
+
+$$\large Prior= P(model)$$
+```{r}
+models = seq(from = 0.10, to = 0.90, by = 0.10)
+prior = c(rep(0.06, 4), 0.52, rep(0.06, 4))
+names(prior) = models
+barplot(prior, main = "Prior probabilities")
+```
+
+#### Likelihood
+
+Now we're ready to calculate the probability of observed data, given each of the models that we're considering. This probability is called the **likelihood**.
+
+In this example, this is the *probability of the data, given the model* $\small P(data|model)$. Probability of data in our example is $k \leq 4$ given that $n = 20$. Here however, *p* has various values from 10-90%. We can again use the binomial distribution to calculate the probability of each model when $k = 4$:
+
+```{r}
+likelihood = dbinom(4, size = 20, prob = models)
+names(likelihood) = models
+likelihood
+barplot(likelihood, main = "Likelihood")
+
+```
+
+The number of successes and the number of trials are the same for each of these models, however each model has a different likelihood based on model's probability of success. Likelihood is the probability of data given the model:
+
+$$\large Lieklihood = P(data |model)$$
+
+#### Posterior
+
+Now based on our *data* we can update our *prior probabilities* to calculate the [*posterior probability*](https://en.wikipedia.org/wiki/Posterior_probability). In other words, probability of the model beign correct given the data:$$\large Posterior = P(model|data) = \frac{P(model \cap data)}{P(data)} = \frac{P(data|model) \times P(model)}{P(data)}$$
+
+Here, we have calculated the Prior and the likelihood; we can also calculate **evidence**:
+
+$$ Evidence = P(data) = P(data|model) \times P(model)$$
+Since we have 9 models, $P(data)$ is *sum* of the evidence of **every model**.
+
+```{r}
+evidence = likelihood * prior
+evidence = sum(evidence) # P(data) for all the plausible models
+evidence  
+```
+
+Therefore, the posterior probability of each model is:
+```{r}
+posterior = (prior * likelihood)/evidence
+posterior
+barplot(posterior, main = "Posterior")
+```
+
+#### Model selection
+
+Looking at the posterior probabilities above, the most likely model is *model 0.2* where $P(model 0.2) = 0.425$.
+
+Even though we had assigned a low prior to this model, the incorporation of the data gave this model a high probability. This should be surprising since 4 successes in 20 trials is 20%.
+
+Based on this posterior, we can now update our beliefs and evidence - the current posterior becomes the next experiments Prior.
+
+The Bayesian paradigm, unlike the frequentist approach, also allows us to make direct probability statements about our models. For example, we can calculate the probability that RU-486, is more effective than the control as the **sum of the posteriors** of the models where p is less than 0.5 (*based on the p*(H~0~) = 0.5).
+
+```{r}
+sum(posterior[1:4])
+```
+
+So there is a 92.15% chance that the treatment is more effective than the control.

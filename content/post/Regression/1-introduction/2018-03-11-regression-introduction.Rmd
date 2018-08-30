@@ -1,0 +1,17 @@
+---
+title: 'Regression: Introduction'
+author: Alireza
+date: '2018-03-11'
+slug: regression-1-introduction
+categories: []
+tags: []
+---
+
+This is the page for regression.
+
+
+[link](../regression-introduction-example/)
+
+[example 2](../regression-introduction-example-2/)
+
+http://127.0.0.1:4321/regression/1-introduction/example-1/

@@ -1,0 +1,77 @@
+---
+title: "Discrete Probability Distribution"
+author: Alireza Behzadnia
+date: '2018-03-12'
+slug: probability_discrete_distribution
+categories:
+  - Statistics
+  - Probability
+tags:
+  - Statistics
+  - Probability
+  - Discrete distribution
+  - PMF
+  - Bernoulli
+  - Poisson
+  - Binomial
+---
+
+
+
+<p>Probability distributions demonstrate the probability of an event. When dealing with discrete data, <strong>probability mass function</strong> of the <em>event</em> can come from various distributions. The most important discrete probability distributions are the <strong>Bernoulli</strong>, <strong>Binomial</strong> and <strong>Poisson</strong>.</p>
+<!--more-->
+<hr />
+<div id="bernoulli-distribution" class="section level2">
+<h2>Bernoulli distribution</h2>
+<p>The most widely known <em>unknown</em> discrete probability distribution is the <strong>Bernoulli distribution</strong>.</p>
+<p>Named after the Swiss mathematician <a href="https://en.wikipedia.org/wiki/Jacob_Bernoulli">Jacob Bernoulli</a>, the Bernoulli distribution is the probability distribution of the outcome of a single experiment with two possible outcomes. Each outcome is a Boolean-valued discrete random variable (<em>k=1</em> or <em>k=0</em>).</p>
+<p>Unlike the binomial distribution, the Bernoulli distribution is used in <strong>single trial (n=1)</strong> experiments. This is a special case of the Binomial distribution where a single experiment/trial is conducted (n=1).</p>
+<p><span class="math inline">\(X\)</span> is a discrete random variable that belongs to the Bernoulli distribution if: <span class="math display">\[ P(X=1) = p = 1 - P(X = 0) = 1 - q \]</span></p>
+<div id="bernoulli-probability-mass-function" class="section level3">
+<h3>Bernoulli Probability Mass Function</h3>
+<p>The probability mass function can be written as: <span class="math display">\[f(k;p) = \left\{ \begin{array}{lcl}p &amp;\mbox{if}&amp;k=1 \\ 1-p &amp;\mbox{if}&amp;k=0 \end{array} \right.\]</span> Can be expressed as: <span class="math display">\[f(k;p) = p^k(1-p)^{1-k} ~for~k\in \{0,1\}  \]</span></p>
+<hr />
+<p>A <strong>binomial variable</strong> of parameters (n,p) is the <strong>sum of <span class="math inline">\(n\)</span> Bernoulli variables</strong> of parameter p.</p>
+<hr />
+<div id="example" class="section level4">
+<h4>Example</h4>
+<p>While focusing on locating the NPHLM gene, the <a href="http://diablo.wikia.com/wiki/Kehjistan">Kehjistanian</a> scientists also discovered that, for any given birth at any given day, there is a fixed 0.60 chance that the newborn is a female.</p>
+<p>If on average there is one birth every 2 minutes, what is the projected population of males in Caldeum over 20 years?</p>
+<pre class="r"><code>n = (60*24*365*20)/2
+x = sample(c(0,1), n, replace=T, prob=c(.6,.4))</code></pre>
+<pre class="r"><code>plot(cumsum(x), type=&#39;l&#39;,
+     main=&quot;Cummulative sums of males (a Bernoulli variable)&quot;)</code></pre>
+<p><img src="/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="binomial-distribution" class="section level2">
+<h2>Binomial distribution</h2>
+<p>The binomial distribution describes the probability of having exactly <strong><em>k</em></strong> successes in <strong><em>n</em></strong> independent Bernoulli trials, given that the probability of <em>k = 1</em> is <strong><em>p</em></strong>. It is important to note that the success rate of the binary event remains constant for all n independent trials.</p>
+<p>To use a binomial distribution, data must come from a <strong>binomial experiment</strong>:</p>
+<ul>
+<li><span class="math inline">\(n\)</span> = fixed number of trials</li>
+<li>Trials must be <strong>independent</strong></li>
+<li>Each trial has <strong>two possible outcome</strong> where:
+<ul>
+<li><em>P</em>(sucess) = constant for each trial</li>
+<li><em>P</em>(failure) = 1 - <em>P</em>(sucess)</li>
+</ul></li>
+</ul>
+<p>Given the requirements are met, the probability distribution of our binary event has a mean of <span class="math inline">\(np\)</span> and variance of <span class="math inline">\(np(1-p)\)</span></p>
+<div id="example-1" class="section level3">
+<h3>Example</h3>
+<p>Kehjistanian scientists have identified the gene NPHLM on the locus 14p.61 which predisposes children to a certain lifestyle.</p>
+<p>It is estimated that 1 in 40 child under the age of 16 have this mutation. According to the last census at <a href="http://diablo.wikia.com/wiki/Caldeum">Caldeum</a>, number of kids under 16 is roughly 400,000.</p>
+<p>A sample of 200 has been collected. How many children with NPHLM mutation can we expect to find?</p>
+<pre class="r"><code>N = 400000
+n = 200
+p = 1/40
+x = rep(0,N)</code></pre>
+<pre class="r"><code>for (i in 1:N){{
+  x[i] = sum(runif(n)&lt;p)
+}}
+hist(x, main = &quot;Distribution of NPHLM mutation in a sample of 200&quot;)</code></pre>
+<p><img src="/post/statistics/probability/pmf_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+</div>

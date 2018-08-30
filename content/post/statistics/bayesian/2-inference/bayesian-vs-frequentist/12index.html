@@ -1,0 +1,131 @@
+---
+title: Bayesian vs. Frequentist
+author: Alireza Behzadnia
+date: '2018-03-11'
+categories:
+  - Bayesian
+  - Inference
+  - Frequentist
+slug: bayesian-vs-frequentist
+weight: 1
+---
+
+
+
+<p>Here we will look at how a Bayesian and frequentist may go about answering a simple inference question:</p>
+<div id="background" class="section level3">
+<h3>Background</h3>
+<p>As part of our commitment to good medical practice, we decide to conduct a quality assurance audit.</p>
+<blockquote>
+<p>Good Medical Practice<br />
+1.13: <em>“You must take steps to mintor and improve the quality of your work”</em><br />
+2.22: <em>“You must take part in systems of quality assurance and quality improvement to promote patient safety”</em></p>
+</blockquote>
+<p>We decide to audit how frequently cannulas are being changed in the ICU and HDU departments. According to <a href="https://www.nice.org.uk/guidance/qs61/chapter/quality-statement-5-vascular-access-devices">NICE: Infection prevention and control</a> guidance, an indwelling intravascular catheter used to deliver parenteral nutrition should be changed every 24 hours.</p>
+<div id="study" class="section level4">
+<h4>Study</h4>
+<p>In our audit we would like to know how closely our wards adhere to this guidance. After a discussion with colleagues we decide that total adherence can be defined as <em>P</em>(cannula changed every 24 hours) &gt; 0.9%; partial adherence <em>P</em>(change) &gt;0.8% and anything &lt;0.8 is considered inadequate adherence to the guidelines.</p>
+<p>We decide to follow all the patients currently admitted for 24 hours. Due to the small number of admissions requiring parenteral nutrition at our ICU and HDU, our sample size is only 5.</p>
+<p>After 24 hours we find: 4 of the patients had their cannula changed.</p>
+</div>
+</div>
+<div id="frequentists-approach" class="section level3">
+<h3>Frequentist’s Approach:</h3>
+<p>If we decide to wear the frequentist hat, we first need to set our hypothesis:</p>
+<ul>
+<li>H<sub>0</sub> : Our unit does follow the guidline
+<ul>
+<li>P(cannula change in 24 hours) = 0.90<br />
+</li>
+</ul></li>
+<li>H<sub>a</sub>: Our unit does NOT follow the guideline
+<ul>
+<li>P(cannula change in 24 hours) &lt; 0.90</li>
+</ul></li>
+</ul>
+<p>We can answer our question using the binomial distribution: - We have 5 patients (i.e. <strong>fixed</strong> number of trials; <span class="math inline">\(n=5\)</span>) - The care of each patient is <strong>independent</strong> - Although, this may not be realistic to assume; but ideally, healthcare providers treat every patient equally - We <em>assume</em> the probability of success or cannula change in 24 hours to be fixed at 90%.</p>
+<p>With the binomial requirements meants; we can proceed to use binomial distribution.</p>
+<ul>
+<li>We set out significance level at 0.05 (<span class="math inline">\(\alpha = 0.05\)</span>)
+<ul>
+<li>If the P(patient to not have their cannula changed) is &gt; 0.05, we fail to reject the H<sub>0</sub>.</li>
+</ul></li>
+</ul>
+<p>In other words, if the <em>p-value</em> &gt; 0.05, only 9 out of 10 patients in our units have their cannulas changed every 24 hours.</p>
+<p><span class="math inline">\(k = 4, n = 5\)</span> <span class="math inline">\(P(K \leq 4| n=5, p = 0.90)\)</span></p>
+<pre class="r"><code>sum(dbinom(0:4, size = 5, prob = 0.9))</code></pre>
+<pre><code>## [1] 0.40951</code></pre>
+<p>Since our <em>p-value</em> is greater than <span class="math inline">\(\alpha = 0.05\)</span>, we accept the null hypothesis: - <strong>H<sub>0</sub> = our unit does follow the guidance</strong></p>
+<div id="bayesians-approach" class="section level4">
+<h4>Bayesian’s Approach:</h4>
+<p>Now let’s look at our data through the Bayesian glass.The first strikingly different a Bayesian must do is to set up <em>hypotheses</em> instead of a <em>null hypothesis</em>: - H<sub>1</sub> = <em>complete adherence</em> - H<sub>2</sub> = <em>partial adherence</em> - H<sub>3</sub> = <em>non-adherence</em> - <em>lets assume, &lt;0.80 ~ 0.70</em></p>
+<p>These hypotheses are in fact our <strong>models</strong> in the Bayesian language. Here, we would like to evaluate the probability of each model being true.</p>
+</div>
+<div id="prior" class="section level4">
+<h4>Prior</h4>
+<p>We may or may not have prior probability of each model based on previous audits or pilot studies. In our example, let’s assume we don’t have any data available.</p>
+<p>In this instance, we would then give equal probability to all the models:</p>
+<blockquote>
+<p><em>P</em>(H<sub>1</sub>)=<em>P</em>(H<sub>2</sub>)=<em>P</em>(H<sub>3</sub>)=<span class="math inline">\(\frac{1}{3}\)</span></p>
+</blockquote>
+<pre class="r"><code>models = c(0.9, 0.8, 0.7)
+prior = c(rep(1/3, 3))
+names(prior) = models
+prior</code></pre>
+<pre><code>##       0.9       0.8       0.7 
+## 0.3333333 0.3333333 0.3333333</code></pre>
+</div>
+<div id="likelihood" class="section level4">
+<h4>Likelihood</h4>
+<p>We can calculate our $P(data|model):</p>
+<pre class="r"><code>likelihood = dbinom(4, size = 5, prob = models)
+names(likelihood) = models
+likelihood</code></pre>
+<pre><code>##     0.9     0.8     0.7 
+## 0.32805 0.40960 0.36015</code></pre>
+<pre class="r"><code>barplot(likelihood, main = &quot;Likelihood&quot;)</code></pre>
+<p><img src="/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-3-1.png" width="672" /> So far, our 2nd model looks promising.</p>
+</div>
+<div id="posteriori" class="section level4">
+<h4>Posteriori</h4>
+<p>Now, we can update our prioir <span class="math inline">\(P(model|data) =\frac{P(data|model) \times P(model)}{P(data)}\)</span> and</p>
+<pre class="r"><code>evidence = sum(likelihood * prior)
+posterior = (prior * likelihood)/evidence
+posterior</code></pre>
+<pre><code>##       0.9       0.8       0.7 
+## 0.2988249 0.3731099 0.3280652</code></pre>
+<pre class="r"><code>barplot(posterior, main = &quot;Posterior&quot;)</code></pre>
+<p><img src="/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="conclusion" class="section level4">
+<h4>conclusion</h4>
+<p>When looking at unit as a Bayesian, we then would conclude that we are only <strong>partially</strong> following the guidelines.</p>
+<hr />
+</div>
+</div>
+<div id="who-is-correct" class="section level2">
+<h2>Who is correct?</h2>
+<p>The Frequentist is very sensitive to the sample size. <em>Strength in number!!</em></p>
+<p>Let’s redo the calculations assuming we’ve looked at 50 patients when 40 have had their cannula changed within 24 hours.</p>
+<div id="frequentist" class="section level4">
+<h4>Frequentist</h4>
+<pre class="r"><code>sum(dbinom(0:40, size = 50, prob = 0.9))</code></pre>
+<pre><code>## [1] 0.02453794</code></pre>
+<p>We have to <strong>reject</strong> the null hypothesis!</p>
+</div>
+<div id="bayesian" class="section level4">
+<h4>Bayesian</h4>
+<pre class="r"><code>models = c(0.9, 0.8, 0.7)
+prior = c(rep(1/3, 3))
+likelihood = dbinom(40, size = 50, prob = models)
+names(likelihood) = models
+evidence = sum(likelihood * prior)
+posterior = (prior * likelihood)/evidence
+posterior</code></pre>
+<pre><code>##        0.9        0.8        0.7 
+## 0.07841767 0.72212604 0.19945628</code></pre>
+<pre class="r"><code>barplot(posterior, main = &quot;Posterior&quot;)</code></pre>
+<p><img src="/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/12index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>The second model is clearly the best.</p>
+</div>
+</div>
