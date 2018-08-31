@@ -21,7 +21,7 @@ toc: true
 Probability function is the function of a random variable distribution, whose value provides the *absolute* or *relative likelihood* of the value of the random variable in the sample.
 
 <!--more-->
-Depending on the *type* of our random variable, we can calculate:
+Depending on the *type* of the random variable, we can calculate:
 
   - **Absolute likelihood** for a <u>discrete variable</u>
   - **Relative likelihood** for a <u>continuous variable</u>
@@ -33,18 +33,20 @@ On this page we will discuss:
   - [Popular PMFs and PDFs](#pmfs-and-pdfs)
 
 ## Probability Mass Function
-Discrete random variables have discrete and countable values. That **PMF** tells us the probability that the random variable takes each of the possible values.
+Discrete random variables have discrete and countable values (e.g. white cell count). **Probability Mass Function**, is a function which assigns the probability of a random variable taking a certain value. For example, a coin toss.
 
-Assume a simple random experiment of coin toss where a **fair** coin is tossed twice. let $X =$ number of tails we get:
+Assume a simple random experiment: a **fair** coin is tossed twice. Let $ X $ be the number of tails we get:
 
   - $S = {(HH),(TH),(HT),(TT)}$
   - P(X = 0) = (HH)
   - P(X = 1) = (HT) or (TH)
   - P(X = 2) = (TT)
 
-Here we can use a binomial distribution to calcualte the **absolute** likelihood of (X = 2); using the Probability Mass Function formula for binomial distribution:
+Here we can use a binomial distribution to calcualte the **absolute** likelihood of (X = 2) using the Probability Mass Function for binomial distributions:
 
-$$P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\\k \end{array}\right) ~ p^k ~ (1-p)^{n-k}$$
+$$ P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\\k \end{array}\right) ~ p^k ~ (1-p)^{n-k} $$
+
+$$ \begin{bmatrix}a & b\\c & d\end{bmatrix} $$
 
 Here we can calculate the P(X = k) for each outcome:
 ```{r}

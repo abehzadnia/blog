@@ -1930,7 +1930,7 @@ x2 &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#
         <description>&lt;p&gt;Probability function is the function of a random variable distribution, whose value provides the &lt;em&gt;absolute&lt;/em&gt; or &lt;em&gt;relative likelihood&lt;/em&gt; of the value of the random variable in the sample.&lt;/p&gt;
 
 &lt;p&gt;
-Depending on the &lt;em&gt;type&lt;/em&gt; of our random variable, we can calculate:&lt;/p&gt;
+Depending on the &lt;em&gt;type&lt;/em&gt; of the random variable, we can calculate:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Absolute likelihood&lt;/strong&gt; for a &lt;u&gt;discrete variable&lt;/u&gt;&lt;/li&gt;
@@ -1947,9 +1947,9 @@ Depending on the &lt;em&gt;type&lt;/em&gt; of our random variable, we can calcul
 
 &lt;h2 id=&#34;probability-mass-function&#34;&gt;Probability Mass Function&lt;/h2&gt;
 
-&lt;p&gt;Discrete random variables have discrete and countable values. That &lt;strong&gt;PMF&lt;/strong&gt; tells us the probability that the random variable takes each of the possible values.&lt;/p&gt;
+&lt;p&gt;Discrete random variables have discrete and countable values (e.g. white cell count). &lt;strong&gt;Probability Mass Function&lt;/strong&gt;, is a function which assigns the probability of a random variable taking a certain value. For example, a coin toss.&lt;/p&gt;
 
-&lt;p&gt;Assume a simple random experiment of coin toss where a &lt;strong&gt;fair&lt;/strong&gt; coin is tossed twice. let &lt;code&gt;\(X =\)&lt;/code&gt; number of tails we get:&lt;/p&gt;
+&lt;p&gt;Assume a simple random experiment: a &lt;strong&gt;fair&lt;/strong&gt; coin is tossed twice. Let $ X $ be the number of tails we get:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;\(S = {(HH),(TH),(HT),(TT)}\)&lt;/code&gt;&lt;/li&gt;
@@ -1958,9 +1958,11 @@ Depending on the &lt;em&gt;type&lt;/em&gt; of our random variable, we can calcul
 &lt;li&gt;P(X = 2) = (TT)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Here we can use a binomial distribution to calcualte the &lt;strong&gt;absolute&lt;/strong&gt; likelihood of (X = 2); using the Probability Mass Function formula for binomial distribution:&lt;/p&gt;
+&lt;p&gt;Here we can use a binomial distribution to calcualte the &lt;strong&gt;absolute&lt;/strong&gt; likelihood of (X = 2) using the Probability Mass Function for binomial distributions:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$$P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\\k \end{array}\right) ~ p^k ~ (1-p)^{n-k}$$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$$ P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\k \end{array}\right) ~ p^k ~ (1-p)^{n-k} $$&lt;/p&gt;
+
+&lt;p&gt;$$ \begin{bmatrix}a &amp;amp; b\c &amp;amp; d\end{bmatrix} $$&lt;/p&gt;
 
 &lt;p&gt;Here we can calculate the P(X = k) for each outcome:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
