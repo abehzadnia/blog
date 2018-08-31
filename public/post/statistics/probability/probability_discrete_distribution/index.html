@@ -402,6 +402,8 @@
 
     
     <div class="post-content">
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ace3a88edf42810"></script>
       <p>Probability distributions demonstrate the probability of an event. When dealing with discrete data, <strong>probability mass function</strong> of the <em>event</em> can come from various distributions. The most important discrete probability distributions are the <strong>Bernoulli</strong>, <strong>Binomial</strong> and <strong>Poisson</strong>.</p>
 
 <p></p>
@@ -573,12 +575,44 @@ hist<span class="p">(</span>x<span class="p">,</span> main <span class="o">=</sp
 
   
   
-
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "abehzadnia/blog"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
   
 
   
 
   
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    Show Disqus Comments
+  </div>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'abehzadnia';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+  </div>
 
         </div>
       </div>

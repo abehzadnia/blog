@@ -381,6 +381,8 @@
 
     
     <div class="post-content">
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ace3a88edf42810"></script>
       <p>Bayes Rule in the discrete form, which allows us to calculate the probability of an event A given event B. This is what is called a conditional probability, and we will be working with conditional probabilities a whole lot in this module and also in the remainder of this course. One example of a conditional probability is the false positive or false negative rate of a medical test.</p>
 <p><span class="math display">\[P(A|B)= \frac{P(A\bigcap B)}{P(B)}\]</span></p>
 <p>Thomas Bayes, who lived between 1702 and 1761, was a mathematician who established a mathematical basis for probability inference, that is, a means of calculating from the number of times an event has not occurred the probability that it will occur in future trials. He wrote his findings on probability in essay towards solving a problem in the Doctrine of Chances published in 1763 after his death. Thomas Bayes’ contributions are immortalized by naming a fundamental proposition in probability called Bayes’ rule after him. Lets recalculate that same probability using Bayes’ rule.</p>
@@ -487,12 +489,44 @@
 
   
   
-
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "abehzadnia/blog"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
   
 
   
 
   
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    Show Disqus Comments
+  </div>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'abehzadnia';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+  </div>
 
         </div>
       </div>

@@ -385,6 +385,8 @@ Unfortunately, patients have an increased risk of other serious bone marrow malf
 
     
     <div class="post-content">
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ace3a88edf42810"></script>
       <p>We’ll introduce the beta distribution by using an example:</p>
 <div id="example" class="section level3">
 <h3>Example</h3>
@@ -493,12 +495,44 @@ alpha #we choose the 3rd</code></pre>
 
   
   
-
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "abehzadnia/blog"
+            issue-term="pathname"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
   
 
   
 
   
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    Show Disqus Comments
+  </div>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'abehzadnia';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+  </div>
 
         </div>
       </div>
