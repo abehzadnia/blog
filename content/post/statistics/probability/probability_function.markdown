@@ -99,23 +99,34 @@ The area under the histogram equals $ 1 $ (since the sum of P(X = x) = 1) and th
 
 ## Probability Density Function
 
-In contrast, the normal distribution also called the *Gaussian* distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable.
-
-Consider random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.
+In order to calculate the probability of an event of *continuous* type, a different function must be used. Distinguishing a discrete and continuous variables can be tricky at times: shirts come in different sizes (e.g. S, M, L, XL) and white two shirt may be size S they may differ in their measurements, even if only slightly. Here, the shirt size is a discrete data however if we were to measure the length and width of each shirt we are no longer working with discrete forms.
 
 The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a **probability density curve**.
-![](/probability/pdf.gif)
-The total area under the density curve equals 1, and the curve represents probabilities by area.
 
 
-When the random variable is continuous, it has *probability zero of taking any single value*, `\(P(X =x) =0\)`. Here we can only talk about the **relative likelihood** of the continuous random variable *within some interval*. Continuous random variables have **probability density functions** or pdfs instead of probability mass functions.
+```r
+x <- seq(-4,4,.001)
+y <- dnorm(x)
+plot(x,y)
+```
+
+<img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+
+The normal distribution also called the *Gaussian* distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable. The total area under the density curve equals 1, and the curve represents probabilities by area.
+
+***
+
+### Relative likelihood
+When the random variable is continuous, it has *probability zero of taking any single value*, $ P(X =x) =0 $. Here we can only talk about the **relative likelihood** of the continuous random variable *within some interval*. Continuous random variables have **probability density functions** or pdfs instead of probability mass functions.
 ![](/probability/pdf2.gif)
 
-The PDF curve of a random variable `\(X\)` with `\(M =\mu\)` and `\(SD = \sigma\)`:
-$$\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} $$
+The PDF curve of a random variable $ X $ with $ M =\mu $ and $ SD = \sigma $:
+$$ \large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} $$
 
 Here the area under the curve, or the **density** would be:
-$$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx$$
+$$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx $$
+
+The formula for the $ f(x) $ would depend on the type of distribution (e.g. Gaussian, Beta, Gamma etc)
 
 ## PMFs and PDFs
 There are many types of PMFs and PDFs, here are a handful of most famous distributions:

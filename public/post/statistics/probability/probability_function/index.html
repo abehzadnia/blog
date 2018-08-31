@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2018-03-11T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-03-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="594">
+<meta itemprop="wordCount" content="666">
 
 
 
@@ -356,8 +356,8 @@
             <a href="/categories/probability/"> Probability </a>
             
           </div>
-        <span class="more-meta"> 594 words </span>
-          <span class="more-meta"> 3 min read </span>
+        <span class="more-meta"> 666 words </span>
+          <span class="more-meta"> 4 min read </span>
 
         
         
@@ -377,7 +377,10 @@
 <li>
 <ul>
 <li><a href="#probability-mass-function">Probability Mass Function</a></li>
-<li><a href="#probability-density-function">Probability Density Function</a></li>
+<li><a href="#probability-density-function">Probability Density Function</a>
+<ul>
+<li><a href="#relative-likelihood">Relative likelihood</a></li>
+</ul></li>
 <li><a href="#pmfs-and-pdfs">PMFs and PDFs</a></li>
 </ul></li>
 </ul>
@@ -498,22 +501,39 @@ barplot<span class="p">(</span><span class="kp">table</span><span class="p">(</s
 
 <h2 id="probability-density-function">Probability Density Function</h2>
 
-<p>In contrast, the normal distribution also called the <em>Gaussian</em> distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable.</p>
+<p>In order to calculate the probability of an event of <em>continuous</em> type, a different function must be used. Distinguishing a discrete and continuous variables can be tricky at times: shirts come in different sizes (e.g. S, M, L, XL) and white two shirt may be size S they may differ in their measurements, even if only slightly. Here, the shirt size is a discrete data however if we were to measure the length and width of each shirt we are no longer working with discrete forms.</p>
 
-<p>Consider random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.</p>
+<p>The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a <strong>probability density curve</strong>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">x <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">-4</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">.001</span><span class="p">)</span>
+y <span class="o">&lt;-</span> dnorm<span class="p">(</span>x<span class="p">)</span>
+plot<span class="p">(</span>x<span class="p">,</span>y<span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 
-<p>The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a <strong>probability density curve</strong>.
-<img src="/probability/pdf.gif" alt="" />
-The total area under the density curve equals 1, and the curve represents probabilities by area.</p>
+<p>The normal distribution also called the <em>Gaussian</em> distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable. The total area under the density curve equals 1, and the curve represents probabilities by area.</p>
 
-<p>When the random variable is continuous, it has <em>probability zero of taking any single value</em>, <code>\(P(X =x) =0\)</code>. Here we can only talk about the <strong>relative likelihood</strong> of the continuous random variable <em>within some interval</em>. Continuous random variables have <strong>probability density functions</strong> or pdfs instead of probability mass functions.
+<hr />
+
+<h3 id="relative-likelihood">Relative likelihood</h3>
+
+<p>When the random variable is continuous, it has <em>probability zero of taking any single value</em>, $ P(X =x) =0 $. Here we can only talk about the <strong>relative likelihood</strong> of the continuous random variable <em>within some interval</em>. Continuous random variables have <strong>probability density functions</strong> or pdfs instead of probability mass functions.
 <img src="/probability/pdf2.gif" alt="" /></p>
 
-<p>The PDF curve of a random variable <code>\(X\)</code> with <code>\(M =\mu\)</code> and <code>\(SD = \sigma\)</code>:
-$$\large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} $$</p>
+<p>The PDF curve of a random variable $ X $ with $ M =\mu $ and $ SD = \sigma $:
+$$ \large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\times(x-\mu)^2]} $$</p>
 
 <p>Here the area under the curve, or the <strong>density</strong> would be:
-$$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx$$</p>
+$$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx $$</p>
+
+<p>The formula for the $ f(x) $ would depend on the type of distribution (e.g. Gaussian, Beta, Gamma etc)</p>
 
 <h2 id="pmfs-and-pdfs">PMFs and PDFs</h2>
 
