@@ -37,16 +37,15 @@ Discrete random variables have discrete and countable values (e.g. white cell co
 
 Assume a simple random experiment: a **fair** coin is tossed twice. Let $ X $ be the number of tails we get:
 
-  - `\(S = {(HH),(TH),(HT),(TT)}\)`
+  - $ S = {(HH),(TH),(HT),(TT)} $
   - P(X = 0) = (HH)
   - P(X = 1) = (HT) or (TH)
   - P(X = 2) = (TT)
 
 Here we can use a binomial distribution to calcualte the **absolute** likelihood of (X = 2) using the Probability Mass Function for binomial distributions:
 
-$$ P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\\k \end{array}\right) ~ p^k ~ (1-p)^{n-k} $$
+$$ P\left(X = k~|~~ n = n, p= p\right) = ^nC\_k \ p^k (1-p)^{n-k} $$
 
-$$ \begin{bmatrix}a & b\\c & d\end{bmatrix} $$
 
 Here we can calculate the P(X = k) for each outcome:
 
@@ -74,25 +73,35 @@ dbinom(2, 2, 0.5)
 ## [1] 0.25
 ```
 
-We can visualise *Probability Mass Function* using historframs. Let's Visualise what will happen if we repeat this experiment 1000 times:
+Since *Probability Mass Function* gives the probability of *discrete* data, we can visualize the probability distribution using histograms. Though the result may not be impressive when our sample size is rather small.
+
+
+```r
+Two_cointosses_5_times = sample(x=c("HH","HT","TT"), size=5, replace = T, prob=c(.25,.50,.25))
+barplot(table(Two_cointosses_5_times))
+```
+
+<img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
+
+Let's see what will happen if we repeat this experiment 1000 times:
+
 
 ```r
 Two_cointosses_1000_times = sample(x=c("HH","HT","TT"), size=1000, replace = T, prob=c(.25,.50,.25))
 barplot(table(Two_cointosses_1000_times))
 ```
 
-<img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
-The area under the histogram is one and the area of each bar is the probability
-of seeing a binomial random variable, whose value is equal to the x-value
-at the center of the bars base.
+The area under the histogram equals $ 1 $ (since the sum of P(X = x) = 1) and the area of each ~*bar*~ is the probability of given outcome. More precisely the area of each bin equals to finding a binomial variable with a value euqal to the one at the centred of its respective bin.
 
 
 ## Probability Density Function
 
 In contrast, the normal distribution also called the *Gaussian* distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable.
 
-Consider  random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.
+Consider random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.
 
 The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a **probability density curve**.
 ![](/probability/pdf.gif)

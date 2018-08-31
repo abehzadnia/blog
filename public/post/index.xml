@@ -6,33 +6,10 @@
     <description>Recent content in Posts on A data enthusiast blog - another wannabe &#39;statistician&#39;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Bayesian vs. Frequentist</title>
-      <link>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</guid>
-      <description>Here we will look at how a Bayesian and frequentist may go about answering a simple inference question:
-Background As part of our commitment to good medical practice, we decide to conduct a quality assurance audit.
- Good Medical Practice
-1.13: “You must take steps to mintor and improve the quality of your work”
-2.22: “You must take part in systems of quality assurance and quality improvement to promote patient safety”</description>
-    </item>
-    
-    <item>
-      <title>Introduction</title>
-      <link>/post/statistics/bayesian/1-introduction/bayesian-introduction/</link>
-      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/statistics/bayesian/1-introduction/bayesian-introduction/</guid>
-      <description>Bayes Rule in the discrete form, which allows us to calculate the probability of an event A given event B. This is what is called a conditional probability, and we will be working with conditional probabilities a whole lot in this module and also in the remainder of this course. One example of a conditional probability is the false positive or false negative rate of a medical test.
-\[P(A|B)= \frac{P(A\bigcap B)}{P(B)}\]</description>
-    </item>
     
     <item>
       <title>Discrete Probability Distribution</title>
@@ -43,25 +20,6 @@ Background As part of our commitment to good medical practice, we decide to cond
       <description>&lt;p&gt;Probability distributions demonstrate the probability of an event. When dealing with discrete data, &lt;strong&gt;probability mass function&lt;/strong&gt; of the &lt;em&gt;event&lt;/em&gt; can come from various distributions. The most important discrete probability distributions are the &lt;strong&gt;Bernoulli&lt;/strong&gt;, &lt;strong&gt;Binomial&lt;/strong&gt; and &lt;strong&gt;Poisson&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Inference</title>
-      <link>/post/statistics/bayesian/2-inference/bayesian-inference/</link>
-      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/statistics/bayesian/2-inference/bayesian-inference/</guid>
-      <description>In order to have a better understanding of the difference between the frequentist approach and the Bayesian approach to interference let’s use the following example:
-Efficacy of RU-486 as an emergency pill A randomized control trial was carried out to ask the question of whether Mifepristone (RU486) can be an effective morning after contraceptive. The study participants were 40 women who came to a health clinic asking for emergency contraception. Method: 20 women were randomly assigned to receive RU-486, and another 20 to receive standard therapy, consisting of high doses of estrogen and synthetic progesterone.</description>
-    </item>
-    
-    <item>
-      <title>Elicitation and Conjugacy</title>
-      <link>/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</link>
-      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</guid>
-      <description>Elicitation is the process of turning an expert’s prior beliefs about one or more uncertain quantities into a probability distribution for those quantities. The term expert simply refers to somebody within the field in which the experiment/analysis is to take place. A successful elicitation process will lead to a prior distribution which accurately reflects the expert’s beliefs. An elicitation is accurate even if the expert’s prior judgements turn out to be completely incorrect!</description>
     </item>
     
     <item>

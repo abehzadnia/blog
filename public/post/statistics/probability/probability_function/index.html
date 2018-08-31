@@ -69,7 +69,7 @@
 
 <meta itemprop="datePublished" content="2018-03-11T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-03-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="546">
+<meta itemprop="wordCount" content="594">
 
 
 
@@ -356,7 +356,7 @@
             <a href="/categories/probability/"> Probability </a>
             
           </div>
-        <span class="more-meta"> 546 words </span>
+        <span class="more-meta"> 594 words </span>
           <span class="more-meta"> 3 min read </span>
 
         
@@ -414,7 +414,7 @@ Depending on the <em>type</em> of the random variable, we can calculate:</p>
 <p>Assume a simple random experiment: a <strong>fair</strong> coin is tossed twice. Let $ X $ be the number of tails we get:</p>
 
 <ul>
-<li><code>\(S = {(HH),(TH),(HT),(TT)}\)</code></li>
+<li>$ S = {(HH),(TH),(HT),(TT)} $</li>
 <li>P(X = 0) = (HH)</li>
 <li>P(X = 1) = (HT) or (TH)</li>
 <li>P(X = 2) = (TT)</li>
@@ -422,9 +422,7 @@ Depending on the <em>type</em> of the random variable, we can calculate:</p>
 
 <p>Here we can use a binomial distribution to calcualte the <strong>absolute</strong> likelihood of (X = 2) using the Probability Mass Function for binomial distributions:</p>
 
-<p>$$ P\left(X = k~|~~ n = n, p= p\right) = \left(\begin{array}{c} n\k \end{array}\right) ~ p^k ~ (1-p)^{n-k} $$</p>
-
-<p>$$ \begin{bmatrix}a &amp; b\c &amp; d\end{bmatrix} $$</p>
+<p>$$ P\left(X = k~|~~ n = n, p= p\right) = ^nC_k \ p^k (1-p)^{n-k} $$</p>
 
 <p>Here we can calculate the P(X = k) for each outcome:</p>
 <div class="highlight"><div class="chroma">
@@ -470,7 +468,20 @@ Depending on the <em>type</em> of the random variable, we can calculate:</p>
 <pre class="chroma">## [1] 0.25</pre></td></tr></table>
 </div>
 </div>
-<p>We can visualise <em>Probability Mass Function</em> using historframs. Let&rsquo;s Visualise what will happen if we repeat this experiment 1000 times:</p>
+<p>Since <em>Probability Mass Function</em> gives the probability of <em>discrete</em> data, we can visualize the probability distribution using histograms. Though the result may not be impressive when our sample size is rather small.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-r" data-lang="r">Two_cointosses_5_times <span class="o">=</span> <span class="kp">sample</span><span class="p">(</span>x<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&#34;HH&#34;</span><span class="p">,</span><span class="s">&#34;HT&#34;</span><span class="p">,</span><span class="s">&#34;TT&#34;</span><span class="p">),</span> size<span class="o">=</span><span class="m">5</span><span class="p">,</span> replace <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> prob<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">.25</span><span class="p">,</span><span class="m">.50</span><span class="p">,</span><span class="m">.25</span><span class="p">))</span>
+barplot<span class="p">(</span><span class="kp">table</span><span class="p">(</span>Two_cointosses_5_times<span class="p">))</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+
+<p>Let&rsquo;s see what will happen if we repeat this experiment 1000 times:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-r" data-lang="r"><span class="lnt">1
@@ -481,17 +492,15 @@ Depending on the <em>type</em> of the random variable, we can calculate:</p>
 barplot<span class="p">(</span><span class="kp">table</span><span class="p">(</span>Two_cointosses_1000_times<span class="p">))</span></code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="/post/statistics/probability/probability_function_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 
-<p>The area under the histogram is one and the area of each bar is the probability
-of seeing a binomial random variable, whose value is equal to the x-value
-at the center of the bars base.</p>
+<p>The area under the histogram equals $ 1 $ (since the sum of P(X = x) = 1) and the area of each ~<em>bar</em>~ is the probability of given outcome. More precisely the area of each bin equals to finding a binomial variable with a value euqal to the one at the centred of its respective bin.</p>
 
 <h2 id="probability-density-function">Probability Density Function</h2>
 
 <p>In contrast, the normal distribution also called the <em>Gaussian</em> distribution can take any numerical value between negative infinity and positive infinity. Since it can take a continuum of values,it is a continuous random variable.</p>
 
-<p>Consider  random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.</p>
+<p>Consider random variable X = foot length of adult males. Unlike shoe size, this variable is not limited to distinct, separate values (i.e. It is not discrete), because foot lengths can take any value over a continuous range of possibilities, so we cannot present this variable with a probability histogram or a table.</p>
 
 <p>The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a <strong>probability density curve</strong>.
 <img src="/probability/pdf.gif" alt="" />

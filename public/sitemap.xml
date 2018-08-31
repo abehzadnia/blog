@@ -3,29 +3,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/post/statistics/bayesian/2-inference/bayesian-vs-frequentist/bayesian-vs-frequentist/</loc>
-    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/post/statistics/bayesian/1-introduction/bayesian-introduction/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>/post/statistics/probability/probability_discrete_distribution/</loc>
     <lastmod>2018-03-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/post/statistics/bayesian/2-inference/bayesian-inference/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -73,13 +52,6 @@
   <url>
     <loc>/post/research_methodology/research-design/clinical-research-components/</loc>
     <lastmod>2018-03-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/post/statistics/bayesian/3-elicitation/bayesian-elicitation-conjugacy/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -233,21 +205,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/bayesian/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/bayesian/</loc>
-    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -282,7 +240,6 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -337,20 +294,6 @@
   </url>
   
   <url>
-    <loc>/categories/frequentist/</loc>
-    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/inference/</loc>
-    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/pdf/</loc>
     <lastmod>2018-03-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -380,7 +323,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -408,7 +351,7 @@
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -462,7 +405,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
