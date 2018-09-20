@@ -57,6 +57,11 @@ defaultContentLanguage = "en"           # Default language to use
   identifier = "categories"
   url = "/categories/"
 
+  [[menu.main]]             # config your menu              # 配置目录
+    name = "About"
+    weight = 10
+    identifier = "home"
+    url = "/About"
 
 
 [[menu.main]]

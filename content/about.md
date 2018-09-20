@@ -1,24 +1,23 @@
 ---
-title: "About"
-date: 2017-08-20T21:38:52+08:00
-lastmod: 2017-08-28T21:41:52+08:00
-menu: "main"
+title: About
+date: 2017-08-20T13:38:52.000Z
+lastmod: 2017-08-28T13:41:52.000Z
+menu: main
 weight: 100
-
-# you can close something for this content if you open it in config.toml.
 comment: false
 mathjax: false
 ---
 
-Hugo is a static site engine written in Go.
+# About me and this blog
 
+Hey there, how's it going?
 
-It makes use of a variety of open source projects including:
+My name is Alrieza Behzadnia, I'm a fresh medical graduate interested in data science, statistical modelling and blogging about everything and anything.
 
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
+The purpose of this website is to collate my revision notes and share them freely with anyone interested in statistical analyses. However, I aim to write about whatever interests me.
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+![](/img/sixtypercent.gif)
 
+This is a Hugo static website; all statistical analyses are produced using R language. Site is rendered using R studio and Atom, published on GitHub and Netilfy.
+
+Looking forward to hear from you :)

@@ -135,243 +135,6 @@ hist&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;,
     </item>
     
     <item>
-      <title>Structure of Clinical Research</title>
-      <link>/post/clinical_research/design/components/research_design_intro/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/clinical_research/design/components/research_design_intro/</guid>
-      
-        <description>&lt;p&gt;Clinical research is an essential part of practice of medicine. In short it is a project carried out by to investigate a research question - which should be focused on clinical aspect of medicine (i.e. the practice of medicine).&lt;/p&gt;
-&lt;p&gt;Structure of the research is heavily dependant on the subject of interest. However, almost all studies follow a logical and focused organisation. A study has to have:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Research question(s)&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Which needs to be &lt;em&gt;FINER&lt;/em&gt;: feasible, interesting, novel, ethical and relevant&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Background and significance&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Put the question in context and provides rationale for the study&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Design&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Observation&lt;/em&gt;
-&lt;ul&gt;
-&lt;li&gt;Cohort studies: participants are divided into groups and are studied over a specified time frame
-&lt;ul&gt;
-&lt;li&gt;Time frame: prospective or retrospective&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Cross sectional study&lt;/li&gt;
-&lt;li&gt;Case control study&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Experimental&lt;/em&gt;
-&lt;ul&gt;
-&lt;li&gt;Clinical trials&lt;/li&gt;
-&lt;li&gt;Randomised blinded trials&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Subjects&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;The population of interest&lt;/li&gt;
-&lt;li&gt;Requires inclusion and exclusion criteria to define the population of interest&lt;/li&gt;
-&lt;li&gt;Sampling: How the population will be sampled and how the participants would be recruited&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Variables&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;Response variable(s): what will be studied - or more commonly - measured? -Also known as: outcome variable or dependent variable -Plotted on the Y-axis&lt;/li&gt;
-&lt;li&gt;Explanatory variable(s): what will be controled? the treatment
-&lt;ul&gt;
-&lt;li&gt;Also known as: predictor variable or independent variable&lt;/li&gt;
-&lt;li&gt;Plotted on the X-axis&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Confounding variable(s): variables that may influence our measured outcomes.
-&lt;ul&gt;
-&lt;li&gt;This should always be factored in the study design.&lt;/li&gt;
-&lt;li&gt;Randomization is a common method of minimizing the influence of confounding variables.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Statistics&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;The most important and crucial part of the study&lt;/li&gt;
-&lt;li&gt;Enables us to analyse and infer from our data&lt;/li&gt;
-&lt;li&gt;How will we go about answering our question?&lt;/li&gt;
-&lt;li&gt;Involves:
-&lt;ul&gt;
-&lt;li&gt;Hypothesis&lt;/li&gt;
-&lt;li&gt;Estimate of the required sample size (power of the study)&lt;/li&gt;
-&lt;li&gt;How data will be collected&lt;/li&gt;
-&lt;li&gt;Statistical method that will analyse the data&lt;/li&gt;
-&lt;li&gt;What can we infer about the hypothesis from our data&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Structure of Clinical Research</title>
-      <link>/post/research-design/clinical-research-components/research_design_intro/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/research-design/clinical-research-components/research_design_intro/</guid>
-      
-        <description>&lt;p&gt;Clinical research is an essential part of practice of medicine. In short it is a project carried out by to investigate a research question - which should be focused on clinical aspect of medicine (i.e. the practice of medicine).&lt;/p&gt;
-&lt;p&gt;Structure of the research is heavily dependant on the subject of interest. However, almost all studies follow a logical and focused organisation. A study has to have:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Research question(s)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Which needs to be &lt;em&gt;FINER&lt;/em&gt;: feasible, interesting, novel, ethical and relevant&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Background and significance&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Put the question in context and provides rationale for the study&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Design&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Observation&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Cohort studies: participants are divided into groups and are studied over a specified time frame
-&lt;ul&gt;
-&lt;li&gt;Time frame: prospective or retrospective&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Cross sectional study&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Case control study&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Experimental&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Clinical trials
-&lt;ul&gt;
-&lt;li&gt;Randomised blinded trial&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Subjects&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The population of interest&lt;/li&gt;
-&lt;li&gt;Requires inclusion and exclusion criteria to define the population of interest&lt;/li&gt;
-&lt;li&gt;Sampling: How the population will be sampled and how the participants would be recruited&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Response variable(s): what will be studied - or more commonly - measured?&lt;/li&gt;
-&lt;li&gt;Also known as: outcome variable or dependent variable&lt;/li&gt;
-&lt;li&gt;Plotted on the Y-axis&lt;/li&gt;
-&lt;li&gt;Explanatory variable(s): what will be controled? the treatment&lt;/li&gt;
-&lt;li&gt;Also known as: predictor variable or independent variable&lt;/li&gt;
-&lt;li&gt;Plotted on the X-axis&lt;/li&gt;
-&lt;li&gt;Confounding variable(s): variables that may influence our measured outcomes.&lt;/li&gt;
-&lt;li&gt;This should always be factored in the study design.&lt;/li&gt;
-&lt;li&gt;Randomization is a common method of minimizing the influence of confounding variables.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Statistics&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The most important and crucial part of the study&lt;/li&gt;
-&lt;li&gt;How will we go about answering our question?&lt;/li&gt;
-&lt;li&gt;Involves:&lt;/li&gt;
-&lt;li&gt;Hypothesis&lt;/li&gt;
-&lt;li&gt;Estimate of the required sample size (power of the study)&lt;/li&gt;
-&lt;li&gt;Statistical method that will assess the hypothesis&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Principles of Sampling</title>
-      <link>/post/clinical_research/design/components/research_design_intro/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/clinical_research/design/components/research_design_intro/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Principles of Sampling</title>
-      <link>/post/clinical_research/design/components/research_design_intro/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/clinical_research/design/components/research_design_intro/</guid>
-      
-        <description>&lt;!--chapter:end:CopyOfsampling.Rmd--&gt;
-&lt;p&gt;A a good research question is targeted at a specific population. For example, “What is the risk of developing lung cancer among smokers?” specifies the population of interest - those who smoke.&lt;/p&gt;
-&lt;p&gt;Logistically, prospects of studying the population of interest is dim. Instead, a sample is taken as a reprasentative subset of the population.&lt;/p&gt;
-&lt;p&gt;Here we will look at a few sampling t&lt;/p&gt;
-&lt;p&gt;Randmised sample allows for generalisation&lt;/p&gt;
-&lt;!--chapter:end:sampling.Rmd--&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Principles of Sampling</title>
-      <link>/post/clinical_research/design/components/research_design_intro/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/clinical_research/design/components/research_design_intro/</guid>
-      
-        <description>&lt;p&gt;A a good research question is targeted at a specific population. For example, “What is the risk of developing lung cancer among smokers?” specifies the population of interest - those who smoke.&lt;/p&gt;
-&lt;p&gt;Logistically, prospects of studying the population of interest is dim. Instead, a sample is taken as a reprasentative subset of the population.&lt;/p&gt;
-&lt;p&gt;Here we will look at a few sampling t&lt;/p&gt;
-&lt;p&gt;Randmised sample allows for generalisation&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Principles of Sampling</title>
-      <link>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Principles of Sampling</title>
-      <link>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Principles of Sampling</title>
-      <link>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
-      
-        <description>&lt;p&gt;A a good research question is targeted at a specific population. For example, “What is the risk of developing lung cancer among smokers?” specifies the population of interest - those who smoke.&lt;/p&gt;
-&lt;p&gt;Logistically, prospects of studying the population of interest is dim. Instead, a sample is taken as a reprasentative subset of the population.&lt;/p&gt;
-&lt;p&gt;Here we will look at a few sampling t&lt;/p&gt;
-&lt;p&gt;Randmised sample allows for generalisation&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Principles of Sampling</title>
-      <link>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/research_methodology/research-design/clinical-research-components/research_design_intro/</guid>
-      
-        <description>&lt;p&gt;A a good research question is targeted at a specific population. For example, &amp;ldquo;What is the risk of developing lung cancer among smokers?&amp;rdquo; specifies the population of interest - those who smoke.&lt;/p&gt;
-
-&lt;p&gt;Logistically, prospects of studying the population of interest is dim. Instead, a sample is taken as a reprasentative subset of the population.&lt;/p&gt;
-
-&lt;p&gt;Here we will look at a few sampling t&lt;/p&gt;
-
-&lt;p&gt;Randmised sample allows for generalisation&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
       <title>Bivariate Analysis</title>
       <link>/post/statistics/eda/eda_bivariate_analysis/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
@@ -1723,7 +1486,7 @@ barplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&g
 
 &lt;h2 id=&#34;probability-density-function&#34;&gt;Probability Density Function&lt;/h2&gt;
 
-&lt;p&gt;In order to calculate the probability of an event of &lt;em&gt;continuous&lt;/em&gt; type, a different function must be used. Distinguishing a discrete and continuous variables can be tricky at times: shirts come in different sizes (e.g. S, M, L, XL) and white two shirt may be size S they may differ in their measurements, even if only slightly. Here, the shirt size is a discrete data however if we were to measure the length and width of each shirt we are no longer working with discrete forms.&lt;/p&gt;
+&lt;p&gt;In order to calculate the probability of an event of &lt;em&gt;continuous&lt;/em&gt; type, a different function must be used. Distinguishing a discrete and continuous variables can be tricky at times: &lt;em&gt;shirts come in different sizes (e.g. S, M, L, XL) and white two shirt may be size S they may differ in their measurements, even if only slightly.&lt;/em&gt; Here, the shirt size is a discrete data however if we were to measure the length and width of each shirt we are no longer working with discrete forms.&lt;/p&gt;
 
 &lt;p&gt;The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a &lt;strong&gt;probability density curve&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1755,7 +1518,7 @@ $$ \large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\t
 &lt;p&gt;Here the area under the curve, or the &lt;strong&gt;density&lt;/strong&gt; would be:
 $$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx $$&lt;/p&gt;
 
-&lt;p&gt;The formula for the $ f(x) $ would depend on the type of distribution (e.g. Gaussian, Beta, Gamma etc)&lt;/p&gt;
+&lt;p&gt;The formula for the $ f(x) $ would depend on the type of distribution (e.g. Gaussian, Beta, Gamma etc).&lt;/p&gt;
 
 &lt;h2 id=&#34;pmfs-and-pdfs&#34;&gt;PMFs and PDFs&lt;/h2&gt;
 
@@ -1783,22 +1546,21 @@ $$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx $$&lt;/p&gt;
     <item>
       <title>About</title>
       <link>/about/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      <pubDate>Sun, 20 Aug 2017 13:38:52 +0000</pubDate>
       
       <guid>/about/</guid>
       
-        <description>&lt;p&gt;Hugo is a static site engine written in Go.&lt;/p&gt;
+        <description>&lt;p&gt;Hey there, how&amp;rsquo;s it going?&lt;/p&gt;
 
-&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+&lt;p&gt;My name is Alrieza Behzadnia, I&amp;rsquo;m a fresh medical graduate interested in data science, statistical modelling and blogging about everything and anything.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;Cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;Viper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/jWalterWeatherman&#34;&gt;J Walter Weatherman&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The purpose of this website is to collate my revision notes and share them freely with anyone interested in statistical analyses. However, I aim to write about whatever interests me.&lt;/p&gt;
 
-&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/sixtypercent.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a Hugo static website; all statistical analyses are produced using R language. Site is rendered using R studio and Atom, published on GitHub and Netilfy.&lt;/p&gt;
+
+&lt;p&gt;Looking forward to hear from you :)&lt;/p&gt;
 </description>
       
     </item>
@@ -1958,25 +1720,115 @@ alpha #we choose the 3rd&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Regression Introduction: Example</title>
-      <link>/post/regression/1-introduction/regression-introduction-example/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      <title>A Plain Markdown Post</title>
+      <link>/post/blog/2016-12-30-hello-markdown/</link>
+      <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
       
-      <guid>/post/regression/1-introduction/regression-introduction-example/</guid>
+      <guid>/post/blog/2016-12-30-hello-markdown/</guid>
       
-        <description>&lt;p&gt;Example 2 - why ? ??&lt;/p&gt;
+        <description>&lt;div class=&#34;panel panel-primary&#34;&gt;
+	
+	&lt;div class=&#34;panel-body&#34;&gt;this is panel&lt;/div&gt;
+	
+&lt;/div&gt;
+
+
+&lt;p&gt;This is a post written in plain Markdown (&lt;code&gt;*.md&lt;/code&gt;) instead of R Markdown (&lt;code&gt;*.Rmd&lt;/code&gt;). The major differences are:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (&lt;code&gt;```{r}&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;A plain Markdown post is rendered through &lt;a href=&#34;https://gohugo.io/overview/configuration/&#34;&gt;Blackfriday&lt;/a&gt;, and an R Markdown document is compiled by &lt;a href=&#34;http://rmarkdown.rstudio.com&#34;&gt;&lt;strong&gt;rmarkdown&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://pandoc.org&#34;&gt;Pandoc&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There are many differences in syntax between Blackfriday&amp;rsquo;s Markdown and Pandoc&amp;rsquo;s Markdown. For example, you can write a task list with Blackfriday but not with Pandoc:&lt;/p&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Write an R package.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Write a book.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; &amp;hellip;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Profit!&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Similarly, Blackfriday does not support LaTeX math and Pandoc does. I have added the MathJax support to this theme (&lt;a href=&#34;https://github.com/yihui/hugo-lithium-theme&#34;&gt;hugo-lithium-theme&lt;/a&gt;) but there is a caveat for plain Markdown posts: you have to include math expressions in a pair of backticks (inline: &lt;code&gt;`$ $`&lt;/code&gt;; display style: &lt;code&gt;`$$ $$`&lt;/code&gt;), e.g., &lt;code&gt;$S_n = \sum_{i=1}^n X_i$&lt;/code&gt;.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:This-is-because&#34;&gt;&lt;a href=&#34;#fn:This-is-because&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; For R Markdown posts, you do not need the backticks, because Pandoc can identify and process math expressions.&lt;/p&gt;
+
+&lt;p&gt;When creating a new post, you have to decide whether the post format is Markdown or R Markdown, and this can be done via the &lt;code&gt;ext&lt;/code&gt; argument of the function &lt;code&gt;blogdown::new_post()&lt;/code&gt;, e.g.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;blogdown&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;new_post&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Post Title&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; ext &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;.Rmd&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:This-is-because&#34;&gt;This is because we have to protect the math expressions from being interpreted as Markdown. You may not need the backticks if your math expression does not contain any special Markdown syntax such as underscores or asterisks, but it is always a safer choice to use backticks. When you happen to have a pair of literal dollar signs inside the same element, you can escape one dollar sign, e.g., &lt;code&gt;\$50 and $100&lt;/code&gt; renders &amp;ldquo;\$50 and $100&amp;rdquo;. &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:This-is-because&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
       
     </item>
     
     <item>
-      <title>Regression Introduction: Example</title>
-      <link>/post/regression/1-introduction/regression-introduction-example/</link>
-      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      <title>Hello R Markdown</title>
+      <link>/post/blog/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/regression/1-introduction/regression-introduction-example/</guid>
+      <guid>/post/blog/2015-07-23-r-rmarkdown/</guid>
       
-        <description>&lt;p&gt;regression example 1;&lt;/p&gt;
+        <description>&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown&lt;/h1&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Lorem Ipsum</title>
+      <link>/post/blog/2015-01-01-lorem-ipsum/</link>
+      <pubDate>Thu, 01 Jan 2015 13:09:13 -0600</pubDate>
+      
+      <guid>/post/blog/2015-01-01-lorem-ipsum/</guid>
+      
+        <description>&lt;p&gt;&lt;strong&gt;Lorem ipsum&lt;/strong&gt; dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore &lt;em&gt;magna aliqua&lt;/em&gt;. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
       
     </item>

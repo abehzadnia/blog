@@ -74,7 +74,7 @@ The area under the histogram equals $ 1 $ (since the sum of P(X = x) = 1) and th
 
 ## Probability Density Function
 
-In order to calculate the probability of an event of *continuous* type, a different function must be used. Distinguishing a discrete and continuous variables can be tricky at times: shirts come in different sizes (e.g. S, M, L, XL) and white two shirt may be size S they may differ in their measurements, even if only slightly. Here, the shirt size is a discrete data however if we were to measure the length and width of each shirt we are no longer working with discrete forms.
+In order to calculate the probability of an event of *continuous* type, a different function must be used. Distinguishing a discrete and continuous variables can be tricky at times: *shirts come in different sizes (e.g. S, M, L, XL) and white two shirt may be size S they may differ in their measurements, even if only slightly.* Here, the shirt size is a discrete data however if we were to measure the length and width of each shirt we are no longer working with discrete forms.
 
 The probability distribution of foot length (or any other continuous random variable) can be represented by a smooth curve called a **probability density curve**.
 
@@ -98,7 +98,7 @@ $$ \large f(x)=\frac{1}{\sigma\sqrt{2\pi}}~\times~ e^{\LARGE[-\frac{1}{2\pi^2}\t
 Here the area under the curve, or the **density** would be:
 $$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx $$
 
-The formula for the $ f(x) $ would depend on the type of distribution (e.g. Gaussian, Beta, Gamma etc)
+The formula for the $ f(x) $ would depend on the type of distribution (e.g. Gaussian, Beta, Gamma etc).
 
 ## PMFs and PDFs
 There are many types of PMFs and PDFs, here are a handful of most famous distributions:
