@@ -12,11 +12,11 @@ tags:
 weight: 500
 ---
 
-After two months of living data-mania-less-ness-ly, I finally got my hands on a small cohort data! Alas! This was going to be my first survival analysis project that I was responsible for. I seized this opportunity to blog about a n00b's take on SA.
+After three months of living data-mania-less-ness-ly, I finally got my hands on a small cohort data! Alas! This was going to be my first survival analysis project which I was responsible for. Naturally, I seized this opportunity to blog about my n00b take on SA.
 
 # Survival Analysis
 
-Survival Analysis (SA) is a time to event analysis of cases, where an event is pre-defined (e.g. remission, death, payment of a mortgage etc). Every case is followed up until:
+Survival Analysis (SA) is a time to event analysis of cases, where an event is pre-defined (e.g. remission, death, payment of a mortgage etc.). Every case is followed up until:
 
 1. Event (failure) has occurred
 2. End point of follow up has reached
