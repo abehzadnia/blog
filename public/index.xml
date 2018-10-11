@@ -1550,17 +1550,37 @@ $$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx $$&lt;/p&gt;
       
       <guid>/about/</guid>
       
-        <description>&lt;p&gt;Hey there, how&amp;rsquo;s it going?&lt;/p&gt;
+        <description>
 
-&lt;p&gt;My name is Alrieza Behzadnia, I&amp;rsquo;m a fresh medical graduate interested in data science, statistical modelling and blogging about everything and anything.&lt;/p&gt;
+&lt;h1 id=&#34;about-me-and-this-blog&#34;&gt;About me and this blog&lt;/h1&gt;
 
-&lt;p&gt;The purpose of this website is to collate my revision notes and share them freely with anyone interested in statistical analyses. However, I aim to write about whatever interests me.&lt;/p&gt;
+&lt;p&gt;Hey there, how&amp;rsquo;s it going?&lt;/p&gt;
+
+&lt;p&gt;My name is Alrieza Behzadnia, I&amp;rsquo;m a fresh medical graduate interested in statistical analysis and modelling. But most importantly I&amp;rsquo;m a datascientstiswannabe that pretends to know and understand medical data.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;/img/sixtypercent.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a Hugo static website; all statistical analyses are produced using R language. Site is rendered using R studio and Atom, published on GitHub and Netilfy.&lt;/p&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;I found the &lt;a href=&#34;https://cran.r-project.org/web/packages/blogdown/index.html&#34;&gt;rblogdown package on CRAN&lt;/a&gt; and instantly came to the conclusion that &lt;em&gt;I gots to have a blog!!!!&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;After going through the pain of learning Hugo and some SSC/HTML I built my first ambitious website. I called it Avic3nna &amp;ndash; thinking it was the cleaverest name I could come up with given that: I would focus on 1) statistical tools/analysis 2) Medically orientated posts (mainly re haematology) and 3) Philosophically orientated posts (mainly regarding propositional logic); and given that Avicenna was a Persian polymath interested in medicine, mathematics and philosophy I thought I&amp;rsquo;m a genius. Soon after the alpha release (i.e. uploading it without letting anyone else except me to access it) I realised I can&amp;rsquo;t be the jack of all trades and maintaining a heavily graphical website - even if its static - is a BIG undertaking for a N00b like me.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/confusedjack.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Feeling like a l0sEr I built this static website that you see, keeping it plain and pretty. With the sole purpose of writing down R/statistics related stuff that I learn to be able to access them later with ease and to publicly share them with whoever is interested in this kinda stuff.&lt;/p&gt;
+
+&lt;h2 id=&#34;aim&#34;&gt;Aim&lt;/h2&gt;
+
+&lt;p&gt;I aim to write on statistics, medicine, philosophy and perhaps other stuff that I come across that I personally find interesting. It&amp;rsquo;s gonna be a mixed bag - but its my mixed, &lt;em&gt;my preciousss&lt;/em&gt;. : D&lt;/p&gt;
 
 &lt;p&gt;Looking forward to hear from you :)&lt;/p&gt;
+
+&lt;h1 id=&#34;disclaimer&#34;&gt;DISCLAIMER:&lt;/h1&gt;
+
+&lt;p&gt;All posts strictly reflect my own views only. Posts are subject to constant revision and may not necessarily be scientifically valid. All posts are copyrighted under CC BY-NC-ND 4.0 license, therefore you are free to copy and redistribute the material in any medium or format but you may not use the material for commercial purposes.&lt;/p&gt;
+
+&lt;p&gt;Lastly, this is a Hugo static website; all statistical analyses are produced using R language. Site is rendered using R studio and Atom, published on GitHub and Netilfy.&lt;/p&gt;
 </description>
       
     </item>
@@ -1584,7 +1604,7 @@ $$ P( a \leq x \leq b) = \int_{a}^{b}f(x)dx $$&lt;/p&gt;
 &lt;script defer src=&#34;/mermaid/mermaid.js&#34;&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
 &lt;div class=&#34;mermaid&#34; align=&#34;center&#34; &gt;
 graph LR;
-    A[Population of interest] --&gt; B[Sampling]
+    A(Population of interest) --&gt; B(Sampling)
     B --&gt;C(Data)
 &lt;/div&gt;
 
@@ -1600,15 +1620,13 @@ graph LR;
     B --&gt; |EDA|E((Inferential &lt;br&gt; modeling))
     B --&gt; |Bayesian and &lt;br&gt; Frequenstist|F(Conclusion)
     E --&gt; F
-
 &lt;/div&gt;
 
 &lt;link href=&#34;/mermaid/mermaid.css&#34; type=&#34;text/css&#34; rel=&#34;stylesheet&#34;/&gt;
 &lt;script defer src=&#34;/mermaid/mermaid.js&#34;&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
 &lt;div class=&#34;mermaid&#34; align=&#34;center&#34; &gt;
 graph LR;
-    H(Conclusion) -.-&gt; |Bayesian|G[Updating priori &lt;br&gt; using the posteriori]
-
+    H(Conclusion) --&gt; |Bayesian|G(Updating priori &lt;br&gt; using the posteriori)
 &lt;/div&gt;
 </description>
       

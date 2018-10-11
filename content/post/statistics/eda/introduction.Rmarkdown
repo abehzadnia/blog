@@ -19,13 +19,16 @@ EDA is a philosophy rather than being statistical technique, in which the statis
 
 EDA analyses starts with descriptive statistics as the starting point for hypothesis formation and modelling.
 
+
 The sequence of events hence can be summarised as:
+
 
 {{<mermaid align="center">}}
 graph LR;
-    A[Population of interest] --> B[Sampling]
+    A(Population of interest) --> B(Sampling)
     B -->C(Data)
 {{< /mermaid >}}
+
 
 {{<mermaid align="center">}}
 graph LR;
@@ -37,11 +40,9 @@ graph LR;
     B --> |EDA|E((Inferential <br> modeling))
     B --> |Bayesian and <br> Frequenstist|F(Conclusion)
     E --> F
-
 {{< /mermaid >}}
 
 {{<mermaid align="center">}}
 graph LR;
-    H(Conclusion) -.-> |Bayesian|G[Updating priori <br> using the posteriori]
-
+    H(Conclusion) --> |Bayesian|G(Updating priori <br> using the posteriori)
 {{< /mermaid >}}
